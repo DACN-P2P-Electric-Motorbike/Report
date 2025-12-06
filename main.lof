@@ -1,0 +1,34 @@
+\babel@toc {american}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Application Use Case Diagram}}{21}{figure.caption.3}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Renter Use Case Diagram}}{22}{figure.caption.4}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Owner Use Case Diagram}}{23}{figure.caption.5}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Admin Use Case Diagram}}{23}{figure.caption.6}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Renting Activity Diagram}}{40}{figure.caption.7}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Returning Activity Diagram}}{41}{figure.caption.8}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Register Vehicle Activity Diagram}}{42}{figure.caption.9}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Manage Vehicle Activity Diagram}}{43}{figure.caption.10}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Administrative Action Activity Diagram}}{45}{figure.caption.11}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Sequence Diagram - Tìm và Đặt thuê xe}}{48}{figure.caption.12}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Sequence Diagram - Kết thúc chuyến đi \& Đánh giá}}{49}{figure.caption.13}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Sequence Diagram - Đăng ký xe cho thuê}}{50}{figure.caption.14}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Sequence Diagram - Quản lý xe}}{51}{figure.caption.15}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Sequence Diagram - Báo cáo sự cố}}{53}{figure.caption.16}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Sequence Diagram - Thông báo hệ thống}}{54}{figure.caption.17}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Sequence Diagram - Duyệt xe / Quản trị hệ thống}}{55}{figure.caption.18}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Sequence Diagram - Xem báo cáo / Thống kê}}{57}{figure.caption.19}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Sequence Diagram - Quản lý người dùng}}{60}{figure.caption.20}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Sequence Diagram - Đánh giá uy tín người dùng}}{61}{figure.caption.21}%
+\contentsline {figure}{\numberline {20}{\ignorespaces MVC Architectural Design Pattern}}{65}{figure.caption.22}%
+\contentsline {figure}{\numberline {21}{\ignorespaces MVP Architectural Design Pattern}}{66}{figure.caption.24}%
+\contentsline {figure}{\numberline {22}{\ignorespaces MVVM Architectural Design Pattern}}{67}{figure.caption.26}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Clean Architecture (Uncle Bob)}}{68}{figure.caption.28}%
+\contentsline {figure}{\numberline {24}{\ignorespaces A typical scenario for a system utilizing a database follow Clean Architecture}}{70}{figure.caption.36}%
+\contentsline {figure}{\numberline {25}{\ignorespaces Deployment Diagram}}{75}{figure.caption.37}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Sơ đồ cơ sở dữ liệu của hệ thống}}{76}{figure.caption.38}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Quan hệ giữa \texttt {User} và \texttt {Notification} (1:N)}}{78}{figure.caption.39}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Quan hệ giữa \texttt {Admin} và \texttt {AnalyticsReport} (1:N)}}{78}{figure.caption.40}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Quan hệ giữa \texttt {Owner} và \texttt {Vehicle} (1:N)}}{79}{figure.caption.41}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Quan hệ giữa \texttt {Renter} và \texttt {Booking} (1:N)}}{79}{figure.caption.42}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Quan hệ giữa \texttt {Vehicle} và \texttt {Booking} (1:N)}}{80}{figure.caption.43}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Quan hệ giữa \texttt {Booking} và \texttt {Payment} (1:N)}}{80}{figure.caption.44}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Quan hệ kế thừa giữa User với Renter, User, Admin}}{80}{figure.caption.45}%

@@ -1,0 +1,312 @@
+⚙️ Mô tả Sequence Diagram theo nhóm chức năng – Renter Flow
+1️⃣ Tìm và Đặt thuê xe (UC-02 → UC-04)
+🔹 Mô tả tổng quát
+
+Người thuê tìm kiếm xe điện gần vị trí hiện tại, xem chi tiết và tiến hành đặt thuê.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+Renter	Khởi tạo yêu cầu tìm xe, xem chi tiết, đặt thuê
+MobileApp	Giao diện và trung gian gửi yêu cầu
+RentalController	Xử lý logic chính, điều phối các dịch vụ
+VehicleService	Cung cấp dữ liệu xe khả dụng
+NotificationService	Gửi thông báo xác nhận cho chủ xe
+Database	Lưu trữ thông tin xe và đơn thuê
+🔹 Hành vi hệ thống
+
+Người thuê chọn “Tìm xe gần tôi”, app gửi yêu cầu vị trí GPS.
+
+RentalController gọi VehicleService truy vấn danh sách xe khả dụng trong bán kính.
+
+Kết quả hiển thị trên bản đồ, người thuê chọn 1 xe để xem chi tiết.
+
+Khi nhấn “Đặt thuê”, hệ thống kiểm tra tình trạng xe, ghi nhận đơn trong Database, gửi notification đến chủ xe.
+
+Nếu xe bận hoặc mạng lỗi → hiển thị thông báo lỗi.
+
+Người thuê có thể chỉnh sửa thời gian thuê trước khi chủ xe xác nhận.
+
+2️⃣ Theo dõi chuyến đi (UC-05)
+🔹 Mô tả tổng quát
+
+Hệ thống giám sát hành trình, pin và chi phí theo thời gian thực trong khi xe đang được thuê.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+Renter	Theo dõi hành trình
+MobileApp	Hiển thị bản đồ, đồng bộ dữ liệu
+RentalController	Xử lý truy vấn trạng thái
+VehicleService	Cập nhật thông tin xe
+Database	Lưu dữ liệu vị trí, pin, chi phí
+🔹 Hành vi hệ thống
+
+Sau khi chủ xe chấp nhận, booking chuyển sang active.
+
+App gửi yêu cầu cập nhật trạng thái định kỳ (polling mỗi 10s).
+
+Hệ thống lấy dữ liệu vị trí, pin, thời gian, chi phí từ DB.
+
+App hiển thị hành trình theo thời gian thực.
+
+Khi pin < 20% → gửi cảnh báo cho người dùng.
+
+Nếu lỗi GPS → cho phép nhập vị trí thủ công.
+
+3️⃣ Kết thúc chuyến đi & Đánh giá (UC-06 + UC-07)
+🔹 Mô tả tổng quát
+
+Người thuê kết thúc hành trình, hệ thống thực hiện thanh toán tự động và hiển thị giao diện đánh giá chủ xe.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+Renter	Kết thúc chuyến đi và thực hiện đánh giá
+MobileApp	Giao diện thanh toán và đánh giá
+RentalController	Quản lý kết thúc thuê và xử lý logic
+VehicleService	Cập nhật trạng thái xe về khả dụng
+PaymentService	Tính toán và xử lý thanh toán
+NotificationService	Gửi thông báo hoàn tất và cập nhật TrustScore
+Database	Lưu thanh toán và đánh giá
+🔹 Hành vi hệ thống
+
+Renter nhấn “Kết thúc chuyến đi”.
+
+RentalController cập nhật trạng thái xe về available qua VehicleService.
+
+PaymentService tính chi phí dựa trên thời gian và mức giá, thực hiện thanh toán.
+
+Nếu thanh toán thành công → lưu kết quả và gửi thông báo hoàn tất đến Renter & Owner.
+
+App hiển thị giao diện đánh giá sau thuê.
+
+Người thuê có thể:
+
+(a) Chấm sao và viết bình luận → lưu vào DB, cập nhật TrustScore.
+
+(b) Chỉ chấm sao → lưu tối giản.
+
+(c) Bỏ qua → đánh dấu review pending.
+
+Nếu mất mạng → dữ liệu được lưu tạm và gửi lại khi có kết nối.
+
+⚙️ Mô tả Sequence Diagram theo nhóm chức năng – Owner Flow
+1️⃣ Đăng ký xe cho thuê (UC-08)
+🔹 Mô tả tổng quát
+
+Chức năng cho phép chủ xe đăng ký phương tiện mới để đưa lên hệ thống cho thuê. Quá trình này yêu cầu xác nhận từ Admin trước khi xe được kích hoạt.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+Owner	Nhập thông tin và gửi yêu cầu đăng ký xe
+OwnerApp	Giao diện nhập và gửi dữ liệu xe
+VehicleController	Xử lý yêu cầu đăng ký, giao tiếp với DB và hệ thống duyệt
+Database	Lưu thông tin xe với trạng thái “pending”
+AdminSystem	Duyệt hoặc từ chối xe đăng ký
+NotificationService	Gửi thông báo về kết quả duyệt
+🔹 Hành vi hệ thống
+
+Owner nhập thông tin xe (ảnh, vị trí, giá, loại, pin).
+
+OwnerApp gửi yêu cầu đến VehicleController → ghi vào Database với trạng thái pending.
+
+VehicleController gửi yêu cầu duyệt đến AdminSystem.
+
+Khi Admin phê duyệt: hệ thống cập nhật trạng thái xe thành available và NotificationService gửi thông báo “Xe đã được duyệt”.
+
+Nếu bị từ chối: hiển thị lý do cho Owner.
+
+Nếu lỗi mạng khi gửi, dữ liệu được lưu tạm và đồng bộ khi có kết nối lại.
+
+2️⃣ Quản lý xe (UC-09)
+🔹 Mô tả tổng quát
+
+Cho phép chủ xe xem, cập nhật và theo dõi tình trạng xe trong danh mục của mình.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+Owner	Xem danh sách xe, chỉnh sửa thông tin
+OwnerApp	Hiển thị danh sách và giao diện cập nhật
+VehicleController	Điều phối truy vấn và cập nhật dữ liệu
+VehicleService	Cung cấp trạng thái xe (pin, vị trí, đánh giá)
+Database	Lưu và cập nhật thông tin xe
+NotificationService	Thông báo cho Renter nếu có thay đổi ảnh hưởng
+🔹 Hành vi hệ thống
+
+OwnerApp gửi yêu cầu xem danh sách xe → VehicleController truy vấn DB.
+
+Owner có thể chọn xem chi tiết 1 xe → lấy dữ liệu từ VehicleService (pin, vị trí, điểm đánh giá).
+
+Khi Owner cập nhật trạng thái hoặc giá:
+
+Nếu hợp lệ → DB cập nhật thành công và hiển thị thông báo.
+
+Nếu xe đang được thuê → từ chối thay đổi, hiển thị cảnh báo.
+
+Nếu có booking đang hoạt động, NotificationService gửi thông báo đến Renter.
+
+Khi mất kết nối, app hiển thị dữ liệu cache cũ và đồng bộ khi có mạng.
+
+3️⃣ Báo cáo sự cố (UC-16)
+🔹 Mô tả tổng quát
+
+Hỗ trợ chủ xe báo cáo vấn đề liên quan đến xe, hành vi thuê, hoặc sự cố kỹ thuật.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+Owner	Tạo báo cáo sự cố
+OwnerApp	Gửi yêu cầu báo cáo
+VehicleController	Ghi nhận và gửi báo cáo đến Admin
+Database	Lưu trạng thái và log báo cáo
+AdminSystem	Tiếp nhận và xác nhận xử lý
+NotificationService	Gửi phản hồi lại cho chủ xe
+🔹 Hành vi hệ thống
+
+Owner nhập mô tả sự cố và gửi đến VehicleController.
+
+Hệ thống lưu báo cáo (pending) và gửi lên AdminSystem để xử lý.
+
+Khi Admin phản hồi → cập nhật trạng thái acknowledged trong DB và thông báo cho Owner.
+
+Nếu timeout hoặc không phản hồi → hiển thị lỗi, cho phép gửi lại.
+
+4️⃣ Thông báo hệ thống (UC-17)
+🔹 Mô tả tổng quát
+
+Các thông báo push được gửi tự động từ NotificationService đến OwnerApp khi có sự kiện quan trọng.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+NotificationService	Phát sinh và gửi thông báo
+OwnerApp	Hiển thị thông báo, xử lý phản hồi
+VehicleController	Cập nhật trạng thái khi Owner phản hồi
+AdminSystem	Xử lý vi phạm hoặc phản hồi Owner
+Database	Lưu log và hàng đợi thông báo
+🔹 Hành vi hệ thống
+
+Khi có sự kiện như xe được duyệt, yêu cầu thuê mới, hoặc báo cáo được xử lý, NotificationService gửi push đến OwnerApp.
+
+OwnerApp hiển thị nội dung thông báo và cho phép phản hồi.
+
+Khi Owner phản hồi (ví dụ xác nhận booking), VehicleController cập nhật DB và gửi thông báo ngược lại cho Renter.
+
+Nếu lỗi kết nối → NotificationService lưu thông báo vào queue để gửi lại sau.
+
+⚙️ Mô tả Sequence Diagram – Nhóm chức năng Admin
+1️⃣ Duyệt xe / Quản trị hệ thống (UC-10)
+🔹 Mô tả tổng quát
+
+Admin chịu trách nhiệm duyệt xe mới đăng ký, xử lý xe vi phạm, và quản trị dữ liệu trong hệ thống.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+Admin	Thực hiện duyệt xe, khóa xe, hoặc quản trị chung
+AdminDashboard	Giao diện quản trị hiển thị danh sách xe chờ duyệt
+AdminController	Xử lý logic duyệt xe và thao tác dữ liệu
+Database	Lưu trữ thông tin xe và trạng thái duyệt
+NotificationService	Gửi thông báo cho Owner khi có thay đổi
+🔹 Mô tả hành vi
+
+Bước 1: Admin đăng nhập vào hệ thống qua AdminDashboard.
+Bước 2: AdminDashboard gửi yêu cầu đến AdminController để lấy danh sách xe đang chờ duyệt.
+Bước 3: AdminController truy vấn Database để lấy các bản ghi có status="pending".
+Bước 4: Hệ thống hiển thị danh sách xe đang chờ duyệt để Admin xem chi tiết từng xe.
+Bước 5: Khi Admin chọn một xe, AdminDashboard gửi yêu cầu lấy chi tiết xe đến AdminController.
+Bước 6: AdminController truy vấn Database để lấy thông tin xe và chủ xe tương ứng.
+Bước 7: Admin xem thông tin chi tiết (loại xe, hình ảnh, pin, vị trí, lịch sử của Owner).
+Bước 8: Admin chọn “Phê duyệt” hoặc “Từ chối”.
+Bước 9:
+
+Nếu phê duyệt: AdminController cập nhật Database status="available" và thông báo cho Owner qua NotificationService.
+
+Nếu từ chối: AdminController cập nhật status="rejected" kèm lý do, gửi thông báo từ chối đến Owner.
+Bước 10: AdminDashboard hiển thị kết quả xử lý cho Admin.
+Bước 11: Trường hợp có lỗi kết nối Database, hệ thống thông báo lỗi trên giao diện.
+Bước 12 (mở rộng): Nếu Admin phát hiện xe vi phạm, Admin có thể chọn “Khóa xe”, hệ thống cập nhật status="locked" và gửi thông báo cảnh báo cho Owner.
+
+2️⃣ Xem báo cáo / Thống kê (UC-11)
+🔹 Mô tả tổng quát
+
+Admin có thể xem thống kê tổng hợp hệ thống (doanh thu, số lượt thuê, sự cố, tỷ lệ loại xe) theo khoảng thời gian.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+Admin	Chọn khoảng thời gian, xuất báo cáo
+AdminDashboard	Giao diện hiển thị biểu đồ thống kê
+AnalyticsService	Tổng hợp và xử lý dữ liệu thống kê
+Database	Cung cấp dữ liệu thô (booking, report, revenue)
+🔹 Mô tả hành vi
+
+Bước 1: Admin chọn mục “Báo cáo & Thống kê” trên AdminDashboard.
+Bước 2: Admin nhập khoảng thời gian cần thống kê (startDate, endDate).
+Bước 3: AdminDashboard gửi yêu cầu đến AnalyticsService để tạo báo cáo.
+Bước 4: AnalyticsService truy vấn Database để lấy:
+
+Tổng số lượt thuê xe, doanh thu.
+
+Số lượng sự cố báo cáo.
+
+Phân bố loại xe được thuê.
+Bước 5: AnalyticsService tổng hợp và định dạng dữ liệu thành biểu đồ, số liệu thống kê, xu hướng.
+Bước 6: Hệ thống hiển thị báo cáo trực quan cho Admin.
+Bước 7 (mở rộng): Nếu Admin muốn xuất file, chọn “Xuất báo cáo PDF”, AnalyticsService tạo file PDF và gửi về dashboard để tải xuống.
+Bước 8: Nếu không có dữ liệu trong khoảng thời gian chọn, hệ thống hiển thị thông báo “Không có dữ liệu”.
+Bước 9: Nếu hệ thống phân tích (AnalyticsService) gặp lỗi, hiển thị cảnh báo “Hệ thống thống kê đang bảo trì.”
+
+3️⃣ Quản lý người dùng (UC-12)
+🔹 Mô tả tổng quát
+
+Chức năng cho phép Admin theo dõi, khóa, mở khóa tài khoản và xem điểm uy tín (Trust Score) của từng người dùng.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+Admin	Giám sát và điều chỉnh trạng thái tài khoản
+AdminDashboard	Hiển thị danh sách và chi tiết người dùng
+AdminController	Xử lý yêu cầu thay đổi trạng thái
+Database	Lưu thông tin người dùng, trạng thái, trust_score
+NotificationService	Gửi thông báo đến người dùng
+TrustEngine	Phân tích và tính toán điểm tin cậy
+🔹 Mô tả hành vi
+
+Bước 1: Admin chọn mục “Quản lý người dùng” trên AdminDashboard.
+Bước 2: AdminDashboard gửi yêu cầu đến AdminController để lấy danh sách người dùng.
+Bước 3: AdminController truy vấn Database và trả về danh sách gồm thông tin: họ tên, email, vai trò (Owner/Renter), trạng thái tài khoản, và điểm tin cậy (Trust Score).
+Bước 4: AdminDashboard hiển thị danh sách trên màn hình.
+Bước 5: Admin chọn một người dùng để xem chi tiết.
+Bước 6: AdminController truy vấn Database lấy thông tin tài khoản, lịch sử thuê xe, đánh giá và vi phạm của người đó.
+Bước 7: Hệ thống hiển thị chi tiết lịch sử hoạt động của người dùng.
+Bước 8:
+
+Nếu Admin muốn khóa tài khoản, nhập lý do → AdminController cập nhật status="locked" trong Database → gửi thông báo cho user qua NotificationService.
+
+Nếu Admin muốn mở khóa tài khoản, cập nhật status="active" và gửi thông báo xác nhận.
+Bước 9: Admin có thể chọn “Xem Trust Score chi tiết”, hệ thống truy vấn TrustEngine để hiển thị điểm tin cậy và các yếu tố ảnh hưởng (đánh giá, hủy đơn, vi phạm).
+Bước 10: Nếu xảy ra lỗi truy vấn Database, hệ thống hiển thị thông báo lỗi kết nối hoặc không thể truy xuất dữ liệu.
+
+4️⃣ Hệ thống Trust Score (UC-13)
+🔹 Mô tả tổng quát
+
+Trust Score Engine là mô-đun AI đánh giá độ uy tín người dùng dựa trên đánh giá, tần suất vi phạm, tỷ lệ hủy đơn, và lịch sử giao dịch.
+
+🔹 Thành phần và vai trò
+Thành phần	Vai trò
+Admin	Có thể kích hoạt cập nhật thủ công hoặc theo dõi điểm tin cậy
+TrustEngine	Mô-đun AI tính toán điểm tin cậy
+Database	Cung cấp dữ liệu hành vi người dùng
+NotificationService	Gửi cảnh báo cho admin khi điểm thấp
+AdminDashboard	Hiển thị điểm Trust Score và cảnh báo
+🔹 Mô tả hành vi
+
+Bước 1: Admin có thể kích hoạt cập nhật điểm tin cậy thủ công cho người dùng thông qua AdminDashboard.
+Bước 2: AdminDashboard gửi yêu cầu đến TrustEngine để thực hiện tính toán lại.
+Bước 3: TrustEngine truy xuất dữ liệu từ Database, bao gồm:
+
+Điểm đánh giá trung bình.
+
+Tỷ lệ hủy đơn.
+
+Số lần vi phạm được báo cáo.
+Bước 4: TrustEngine tính toán lại Trust Score dựa trên mô hình AI tích hợp (trust_score = f(rating, cancellation, violation)), sau đó cập nhật kết quả trở lại Database.
+Bước 5: NotificationService gửi thông báo đến AdminDashboard về việc cập nhật thành công.
+Bước 6: Trong trường hợp thiếu dữ liệu hoặc lỗi mô hình, hệ thống hiển thị “Không đủ dữ liệu để cập nhật Trust Score.”
+Bước 7: Ngoài ra, TrustEngine hoạt động tự động (event-driven) — khi có đánh giá mới hoặc vi phạm, hệ thống tự động cập nhật điểm tin cậy người dùng.
+Bước 8: TrustEngine định kỳ quét Database để phát hiện người dùng có trust_score < 30 và gửi cảnh báo đến AdminDashboard.
+Bước 9: Admin nhận cảnh báo và có thể xem chi tiết người dùng bị đánh giá thấp để kiểm tra hoặc xử lý.

@@ -1,0 +1,62 @@
+\subsection{Mô tả hệ thống}
+Hệ thống cho phép người dân trong cùng cộng đồng có thể chia sẻ và thuê xe máy điện qua ứng dụng di động.
+
+\subsubsection*{Xác định Stakeholders}
+
+\begin{longtable}{|>{\raggedright\arraybackslash}p{3cm}|
+>{\raggedright\arraybackslash}p{5cm}|
+>{\raggedright\arraybackslash}p{7cm}|}
+\hline
+\textbf{Stakeholder} & \textbf{Vai trò} & \textbf{Quan tâm chính} \\
+\hline
+Người thuê xe & Người dùng cuối & Giá, vị trí gần, xe uy tín \\
+\hline
+Chủ xe & Người sở hữu tài sản & Quản lý xe, bảo mật thông tin, uy tín \\
+\hline
+Quản trị viên hệ thống & Quản lý nền tảng & Phát hiện vi phạm, xử lý tranh chấp \\
+\hline
+Đối tác thanh toán & Ví điện tử/ngân hàng & Tính ổn định và bảo mật \\
+\hline
+Cộng đồng & Nền tảng triển khai & Giảm ô nhiễm, tăng tiện ích \\
+\hline
+\end{longtable}
+
+
+\subsubsection*{Lợi ích}
+
+\renewcommand{\arraystretch}{1.5} % tăng khoảng cách dòng
+\begin{longtable}{|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{13cm}|}
+\hline
+\textbf{Đối tượng} & \textbf{Lợi ích cụ thể} \\ \hline
+\endfirsthead
+\hline
+\textbf{Đối tượng} & \textbf{Lợi ích cụ thể} \\ \hline
+\endhead
+
+Người thuê & Chi phí thấp hơn so với sở hữu và bảo trì xe điện. \newline Không cần lo về sạc pin, bảo trì nếu nền tảng hỗ trợ.  \newline Tiếp cận dễ hơn và linh hoạt hơn (giờ thuê, địa điểm thuê). \\ \hline
+Chủ xe & Tạo dòng thu nhập từ thời gian xe không sử dụng.\newline Giảm chi phí chờ sử dụng và hao phí tài sản nhàn rỗi. \newline Được cộng đồng tin tưởng nếu xây dựng reputation tốt. \\ \hline
+Cộng đồng / môi trường & Giảm số lượng xe chạy/xăng, giảm khí thải, ô nhiễm. \newline Sử dụng năng lượng sạch nếu xe điện được sạc từ nguồn sạch. \newline thúc đẩy văn hóa chia sẻ, tiết kiệm tài nguyên. \\ \hline
+Nền tảng / quản trị viên & Chi phí thấp hơn (không cần đầu tư mua xe, bảo trì số lượng lớn). \newline Dễ mở rộng sang các khu vực hoặc cộng đồng khác. \newline Khai thác dữ liệu để cải tiến dịch vụ (AI dự báo nhu cầu, bảo trì, tối ưu hoạt động). \\ \hline
+
+\end{longtable}
+
+\vspace{0.5cm}
+\subsubsection*{Thách thức}
+
+\renewcommand{\arraystretch}{1.5} 
+\begin{longtable}{|>{\raggedright\arraybackslash}p{3cm}|>{\raggedright\arraybackslash}p{12.5cm}|}
+\hline
+\textbf{Vấn đề} & \textbf{Cách ảnh hưởng \& biện pháp giảm thiểu} \\ \hline
+\endfirsthead
+\hline
+\textbf{Vấn đề} & \textbf{Cách ảnh hưởng \& biện pháp giảm thiểu} \\ \hline
+\endhead
+
+Tin cậy \& kiểm soát chất lượng & Người thuê lo xe hỏng, pin yếu, chủ xe có thể bỏ bê bảo trì. \newline Cần hệ thống đánh giá, feedback, kiểm định định kỳ, hình ảnh trạng thái xe. \\ \hline
+Thanh toán \& rủi ro tài chính & Cần đảm bảo thanh toán an toàn, xử lý hỏng tài sản, trộm cắp, va chạm. \newline \textbf{Giải pháp:} có hợp đồng, bảo hiểm, khoản đặt cọc. \\ \hline
+Quy định pháp lý / bảo hiểm & Luật về phương tiện giao thông đường bộ, đăng ký xe, trách nhiệm dân sự. \textbf{Có thể cần giấy phép, bảo hiểm bắt buộc.} \\ \hline
+Đạt số lượng (critical mass) & Nếu không đủ chủ xe và người thuê thì dịch vụ không hiệu quả (xe ít, giá cao hoặc người thuê ít). \newline Cần chiến lược thu hút sớm – ưu đãi, tiếp thị trong cộng đồng. \\ \hline
+Chi phí hạ tầng \& vận hành & Dù không cần sở hữu xe, nền tảng vẫn cần chi phí cho backend, ứng dụng, bản đồ/GPS, IoT đo trạng thái, support khách hàng. \\ \hline
+Vấn đề vị trí \& logistics & Xe phải được đỗ ở chỗ dễ tiếp cận. \newline Di chuyển giữa các khu quan trọng. \newline Quản lý pin và sạc điện. \newline Nếu xe bị đặt ở nơi bất tiện, trải nghiệm người dùng bị ảnh hưởng. \\ \hline
+
+\end{longtable}

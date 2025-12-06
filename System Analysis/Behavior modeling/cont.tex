@@ -1,0 +1,315 @@
+\newpage
+\subsection{Mô hình hóa hành vi hệ thống}
+
+\subsection*{Renter Flow}
+
+\subsubsection{Tìm và Đặt thuê xe (UC-02, UC-03, UC-04) \small\textit{(Hình \ref{fig:rent-sequence})}}
+\subsubsection*{Mô tả tổng quát}
+Người thuê tìm kiếm xe điện gần vị trí hiện tại, xem chi tiết và tiến hành đặt thuê.
+
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{Renter:} Khởi tạo yêu cầu tìm xe, xem chi tiết, đặt thuê \\
+2. \textbf{MobileApp:} Giao diện và trung gian gửi yêu cầu \\
+3. \textbf{RentalController:} Xử lý logic chính, điều phối các dịch vụ \\
+4. \textbf{VehicleService:} Cung cấp dữ liệu xe khả dụng \\
+5. \textbf{NotificationService:} Gửi thông báo xác nhận cho chủ xe \\
+6. \textbf{Database:} Lưu trữ thông tin xe và đơn thuê
+
+\subsubsection*{Hành vi hệ thống}
+1. Người thuê chọn "Tìm xe gần tôi", app gửi yêu cầu vị trí GPS. \\
+2. RentalController gọi VehicleService truy vấn danh sách xe khả dụng trong bán kính. \\
+3. Kết quả hiển thị trên bản đồ, người thuê chọn 1 xe để xem chi tiết. \\
+4. Khi nhấn "Đặt thuê", hệ thống kiểm tra tình trạng xe, ghi nhận đơn trong Database, gửi notification đến chủ xe. \\
+5. Nếu xe bận hoặc mạng lỗi → hiển thị thông báo lỗi. \\
+6. Người thuê có thể chỉnh sửa thời gian thuê trước khi chủ xe xác nhận.
+
+\subsubsection{Theo dõi chuyến đi}
+
+\subsubsection*{Mô tả tổng quát}
+Hệ thống giám sát hành trình, pin và chi phí theo thời gian thực trong khi xe đang được thuê.
+
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{Renter:} Theo dõi hành trình \\
+2. \textbf{MobileApp:} Hiển thị bản đồ, đồng bộ dữ liệu \\
+3. \textbf{RentalController:} Xử lý truy vấn trạng thái \\
+4. \textbf{VehicleService:} Cập nhật thông tin xe \\
+5. \textbf{Database:} Lưu dữ liệu vị trí, pin, chi phí
+
+\subsubsection*{Hành vi hệ thống}
+1. Sau khi chủ xe chấp nhận, booking chuyển sang active. \\
+2. App gửi yêu cầu cập nhật trạng thái định kỳ (polling mỗi 10s). \\
+3. Hệ thống lấy dữ liệu vị trí, pin, thời gian, chi phí từ DB. \\
+4. App hiển thị hành trình theo thời gian thực. \\
+5. Khi pin < 20\% → gửi cảnh báo cho người dùng. \\
+6. Nếu lỗi GPS → cho phép nhập vị trí thủ công.
+
+\subsubsection{Kết thúc chuyến đi \& Đánh giá (UC-05, UC-06, UC-07) \small\textit{(Hình \ref{fig:return-sequence})}}
+
+\subsubsection*{Mô tả tổng quát}
+Người thuê kết thúc hành trình, hệ thống thực hiện thanh toán tự động và hiển thị giao diện đánh giá chủ xe.
+
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{Renter:} Kết thúc chuyến đi và thực hiện đánh giá \\
+2. \textbf{MobileApp:} Giao diện thanh toán và đánh giá \\
+3. \textbf{RentalController:} Quản lý kết thúc thuê và xử lý logic \\
+4. \textbf{VehicleService:} Cập nhật trạng thái xe về khả dụng \\
+5. \textbf{PaymentService:} Tính toán và xử lý thanh toán \\
+6. \textbf{NotificationService:} Gửi thông báo hoàn tất và cập nhật TrustScore \\
+7. \textbf{Database:} Lưu thanh toán và đánh giá
+
+\subsubsection*{Hành vi hệ thống}
+1. Renter nhấn "Kết thúc chuyến đi". \\
+2. RentalController cập nhật trạng thái xe về available qua VehicleService. \\
+3. PaymentService tính chi phí dựa trên thời gian và mức giá, thực hiện thanh toán. \\
+4. Nếu thanh toán thành công → lưu kết quả và gửi thông báo hoàn tất đến Renter \& Owner. \\
+5. App hiển thị giao diện đánh giá sau thuê. \\
+6. Người thuê có thể: \\
+\quad (a) Chấm sao và viết bình luận → lưu vào DB, cập nhật TrustScore. \\
+\quad (b) Chỉ chấm sao → lưu tối giản. \\
+\quad (c) Bỏ qua → đánh dấu review pending. \\
+7. Nếu mất mạng → dữ liệu được lưu tạm và gửi lại khi có kết nối.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{Images/Sequence/rent.png}
+    \caption{Sequence Diagram - Tìm và Đặt thuê xe}
+    \label{fig:rent-sequence}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{Images/Sequence/return.png}
+    \caption{Sequence Diagram - Kết thúc chuyến đi \& Đánh giá}
+    \label{fig:return-sequence}
+\end{figure}
+
+\subsection*{Owner Flow}
+\subsubsection{Đăng ký xe cho thuê (UC-08) \small\textit{(Hình \ref{fig:regis-sequence})}}
+
+\subsubsection*{Mô tả tổng quát}
+Chức năng cho phép chủ xe đăng ký phương tiện mới để đưa lên hệ thống cho thuê. Quá trình này yêu cầu xác nhận từ Admin trước khi xe được kích hoạt.
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{Owner:} Nhập thông tin và gửi yêu cầu đăng ký xe \\
+2. \textbf{OwnerApp:} Giao diện nhập và gửi dữ liệu xe \\
+3. \textbf{VehicleController:} Xử lý yêu cầu đăng ký, giao tiếp với DB và hệ thống duyệt \\
+4. \textbf{Database:} Lưu thông tin xe với trạng thái "pending" \\
+5. \textbf{AdminSystem:} Duyệt hoặc từ chối xe đăng ký \\
+6. \textbf{NotificationService:} Gửi thông báo về kết quả duyệt
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.9\textwidth]{Images/Sequence/regis.png}
+    \caption{Sequence Diagram - Đăng ký xe cho thuê}
+    \label{fig:regis-sequence}
+\end{figure}
+
+\subsubsection*{Hành vi hệ thống}
+1. Owner nhập thông tin xe (ảnh, vị trí, giá, loại, pin). \\
+2. OwnerApp gửi yêu cầu đến VehicleController → ghi vào Database với trạng thái pending. \\
+3. VehicleController gửi yêu cầu duyệt đến AdminSystem. \\
+4. Khi Admin phê duyệt: hệ thống cập nhật trạng thái xe thành available và NotificationService gửi thông báo "Xe đã được duyệt". \\
+5. Nếu bị từ chối: hiển thị lý do cho Owner. \\
+6. Nếu lỗi mạng khi gửi, dữ liệu được lưu tạm và đồng bộ khi có kết nối lại.
+
+\subsubsection{Quản lý xe (UC-09) \small\textit{(Hình \ref{fig:manage-sequence})}}
+
+\subsubsection*{Mô tả tổng quát}
+Cho phép chủ xe xem, cập nhật và theo dõi tình trạng xe trong danh mục của mình.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.95\textwidth]{Images/Sequence/manage.png}
+    \caption{Sequence Diagram - Quản lý xe}
+    \label{fig:manage-sequence}
+\end{figure}
+
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{Owner:} Xem danh sách xe, chỉnh sửa thông tin \\
+2. \textbf{OwnerApp:} Hiển thị danh sách và giao diện cập nhật \\
+3. \textbf{VehicleController:} Điều phối truy vấn và cập nhật dữ liệu \\
+4. \textbf{VehicleService:} Cung cấp trạng thái xe (pin, vị trí, đánh giá) \\
+5. \textbf{Database:} Lưu và cập nhật thông tin xe \\
+6. \textbf{NotificationService:} Thông báo cho Renter nếu có thay đổi ảnh hưởng
+
+\subsubsection*{Hành vi hệ thống}
+1. OwnerApp gửi yêu cầu xem danh sách xe → VehicleController truy vấn DB. \\
+2. Owner có thể chọn xem chi tiết 1 xe → lấy dữ liệu từ VehicleService (pin, vị trí, điểm đánh giá). \\
+3. Khi Owner cập nhật trạng thái hoặc giá: \\
+\quad - Nếu hợp lệ → DB cập nhật thành công và hiển thị thông báo. \\
+\quad - Nếu xe đang được thuê → từ chối thay đổi, hiển thị cảnh báo. \\
+4. Nếu có booking đang hoạt động, NotificationService gửi thông báo đến Renter. \\
+5. Khi mất kết nối, app hiển thị dữ liệu cache cũ và đồng bộ khi có mạng.
+
+\subsubsection{Báo cáo sự cố (UC-16) \small\textit{(Hình \ref{fig:accident-sequence})}}
+
+\subsubsection*{Mô tả tổng quát}
+Hỗ trợ chủ xe báo cáo vấn đề liên quan đến xe, hành vi thuê, hoặc sự cố kỹ thuật.
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{Owner:} Tạo báo cáo sự cố \\
+2. \textbf{OwnerApp:} Gửi yêu cầu báo cáo \\
+3. \textbf{VehicleController:} Ghi nhận và gửi báo cáo đến Admin \\
+4. \textbf{Database:} Lưu trạng thái và log báo cáo \\
+5. \textbf{AdminSystem:} Tiếp nhận và xác nhận xử lý \\
+6. \textbf{NotificationService:} Gửi phản hồi lại cho chủ xe
+\subsubsection*{Hành vi hệ thống}
+1. Owner nhập mô tả sự cố và gửi đến VehicleController. \\
+2. Hệ thống lưu báo cáo (pending) và gửi lên AdminSystem để xử lý. \\
+3. Khi Admin phản hồi → cập nhật trạng thái acknowledged trong DB và thông báo cho Owner. \\
+4. Nếu timeout hoặc không phản hồi → hiển thị lỗi, cho phép gửi lại.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/Sequence/accident.png}
+    \caption{Sequence Diagram - Báo cáo sự cố}
+    \label{fig:accident-sequence}
+\end{figure}
+
+\subsubsection{Thông báo hệ thống (UC-17) \small\textit{(Hình \ref{fig:notification-sequence})}}
+
+\subsubsection*{Mô tả tổng quát}
+Các thông báo push được gửi tự động từ NotificationService đến OwnerApp khi có sự kiện quan trọng.
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{NotificationService:} Phát sinh và gửi thông báo \\
+2. \textbf{OwnerApp:} Hiển thị thông báo, xử lý phản hồi \\
+3. \textbf{VehicleController:} Cập nhật trạng thái khi Owner phản hồi \\
+4. \textbf{AdminSystem:} Xử lý vi phạm hoặc phản hồi Owner \\
+5. \textbf{Database:} Lưu log và hàng đợi thông báo
+\subsubsection*{Hành vi hệ thống}
+1. Khi có sự kiện như xe được duyệt, yêu cầu thuê mới, hoặc báo cáo được xử lý, NotificationService gửi push đến OwnerApp. \\
+2. OwnerApp hiển thị nội dung thông báo và cho phép phản hồi. \\
+3. Khi Owner phản hồi (ví dụ xác nhận booking), VehicleController cập nhật DB và gửi thông báo ngược lại cho Renter. \\
+4. Nếu lỗi kết nối → NotificationService lưu thông báo vào queue để gửi lại sau.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/Sequence/notification.png}
+    \caption{Sequence Diagram - Thông báo hệ thống}
+    \label{fig:notification-sequence}
+\end{figure}
+
+\subsection*{Admin Flow}
+\subsubsection{Duyệt xe / Quản trị hệ thống (UC-10) \small\textit{(Hình \ref{fig:admin-approve-sequence})}}
+\subsubsection*{Mô tả tổng quát}
+Admin chịu trách nhiệm duyệt xe mới đăng ký, xử lý xe vi phạm, và quản trị dữ liệu trong hệ thống.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/Sequence/admin_approve.png}
+    \caption{Sequence Diagram - Duyệt xe / Quản trị hệ thống}
+    \label{fig:admin-approve-sequence}
+\end{figure}
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{Admin:} Thực hiện duyệt xe, khóa xe, hoặc quản trị chung \\
+2. \textbf{AdminDashboard:} Giao diện quản trị hiển thị danh sách xe chờ duyệt \\
+3. \textbf{AdminController:} Xử lý logic duyệt xe và thao tác dữ liệu \\
+4. \textbf{Database:} Lưu trữ thông tin xe và trạng thái duyệt \\
+5. \textbf{NotificationService:} Gửi thông báo cho Owner khi có thay đổi
+
+\subsubsection*{Hành vi hệ thống}
+1. Admin đăng nhập vào hệ thống qua AdminDashboard. \\
+2. AdminDashboard gửi yêu cầu đến AdminController để lấy danh sách xe đang chờ duyệt. \\
+3. AdminController truy vấn Database để lấy các bản ghi có status="pending". \\
+4. Hệ thống hiển thị danh sách xe đang chờ duyệt để Admin xem chi tiết từng xe. \\
+5. Khi Admin chọn một xe, AdminDashboard gửi yêu cầu lấy chi tiết xe đến AdminController. \\
+6. AdminController truy vấn Database để lấy thông tin xe và chủ xe tương ứng. \\
+7. Admin xem thông tin chi tiết (loại xe, hình ảnh, pin, vị trí, lịch sử của Owner). \\
+8. Admin chọn "Phê duyệt" hoặc "Từ chối". \\
+9. \\
+\quad - Nếu phê duyệt: AdminController cập nhật Database status="available" và thông báo cho Owner qua NotificationService. \\
+\quad - Nếu từ chối: AdminController cập nhật status="rejected" kèm lý do, gửi thông báo từ chối đến Owner. \\
+10. AdminDashboard hiển thị kết quả xử lý cho Admin. \\
+11. Trường hợp có lỗi kết nối Database, hệ thống thông báo lỗi trên giao diện. \\
+12. (Mở rộng) Nếu Admin phát hiện xe vi phạm, Admin có thể chọn "Khóa xe", hệ thống cập nhật status="locked" và gửi thông báo cảnh báo cho Owner.
+
+\subsubsection{Xem báo cáo / Thống kê (UC-11) \small\textit{(Hình \ref{fig:admin-statistic-sequence})}}
+
+\subsubsection*{Mô tả tổng quát}
+Admin có thể xem thống kê tổng hợp hệ thống (doanh thu, số lượt thuê, sự cố, tỷ lệ loại xe) theo khoảng thời gian.
+
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{Admin:} Chọn khoảng thời gian, xuất báo cáo \\
+2. \textbf{AdminDashboard:} Giao diện hiển thị biểu đồ thống kê \\
+3. \textbf{AnalyticsService:} Tổng hợp và xử lý dữ liệu thống kê \\
+4. \textbf{Database:} Cung cấp dữ liệu thô (booking, report, revenue)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/Sequence/admin_statistic.png}
+    \caption{Sequence Diagram - Xem báo cáo / Thống kê}
+    \label{fig:admin-statistic-sequence}
+\end{figure}
+\subsubsection*{Hành vi hệ thống}
+1. Admin chọn mục "Báo cáo \& Thống kê" trên AdminDashboard. \\
+2. Admin nhập khoảng thời gian cần thống kê (startDate, endDate). \\
+3. AdminDashboard gửi yêu cầu đến AnalyticsService để tạo báo cáo. \\
+4. AnalyticsService truy vấn Database để lấy: \\
+\quad - Tổng số lượt thuê xe, doanh thu. \\
+\quad - Số lượng sự cố báo cáo. \\
+\quad - Phân bố loại xe được thuê. \\
+5. AnalyticsService tổng hợp và định dạng dữ liệu thành biểu đồ, số liệu thống kê, xu hướng. \\
+6. Hệ thống hiển thị báo cáo trực quan cho Admin. \\
+7. (Mở rộng) Nếu Admin muốn xuất file, chọn "Xuất báo cáo PDF", AnalyticsService tạo file PDF và gửi về dashboard để tải xuống. \\
+8. Nếu không có dữ liệu trong khoảng thời gian chọn, hệ thống hiển thị thông báo "Không có dữ liệu". \\
+9. Nếu hệ thống phân tích (AnalyticsService) gặp lỗi, hiển thị cảnh báo "Hệ thống thống kê đang bảo trì."
+
+\subsubsection{Quản lý người dùng (UC-12)}
+\small\textit{(Hình \ref{fig:admin-user-management-sequence})}
+\subsubsection*{Mô tả tổng quát}
+Chức năng cho phép Admin theo dõi, khóa, mở khóa tài khoản và xem điểm uy tín (Trust Score) của từng người dùng.
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{Admin:} Giám sát và điều chỉnh trạng thái tài khoản \\
+2. \textbf{AdminDashboard:} Hiển thị danh sách và chi tiết người dùng \\
+3. \textbf{AdminController:} Xử lý yêu cầu thay đổi trạng thái \\
+4. \textbf{Database:} Lưu thông tin người dùng, trạng thái, trust\_score \\
+5. \textbf{NotificationService:} Gửi thông báo đến người dùng \\
+6. \textbf{TrustEngine:} Phân tích và tính toán điểm tin cậy
+\subsubsection*{Hành vi hệ thống}
+1. Admin chọn mục "Quản lý người dùng" trên AdminDashboard. \\
+2. AdminDashboard gửi yêu cầu đến AdminController để lấy danh sách người dùng. \\
+3. AdminController truy vấn Database và trả về danh sách gồm thông tin: họ tên, email, vai trò (Owner/Renter), trạng thái tài khoản, và điểm tin cậy (Trust Score). \\
+4. AdminDashboard hiển thị danh sách trên màn hình. \\
+5. Admin chọn một người dùng để xem chi tiết. \\
+6. AdminController truy vấn Database lấy thông tin tài khoản, lịch sử thuê xe, đánh giá và vi phạm của người đó. \\
+7. Hệ thống hiển thị chi tiết lịch sử hoạt động của người dùng. \\
+8. \\
+\quad - Nếu Admin muốn khóa tài khoản, nhập lý do → AdminController cập nhật status="locked" trong Database → gửi thông báo cho user qua NotificationService. \\
+\quad - Nếu Admin muốn mở khóa tài khoản, cập nhật status="active" và gửi thông báo xác nhận. \\
+9. Admin có thể chọn "Xem Trust Score chi tiết", hệ thống truy vấn TrustEngine để hiển thị điểm tin cậy và các yếu tố ảnh hưởng (đánh giá, hủy đơn, vi phạm). \\
+10. Nếu xảy ra lỗi truy vấn Database, hệ thống hiển thị thông báo lỗi kết nối hoặc không thể truy xuất dữ liệu.
+
+\subsubsection{Hệ thống Trust Score (UC-13) \small\textit{(Hình \ref{fig:trust-score-sequence})}}
+
+\subsubsection*{Mô tả tổng quát}
+Trust Score Engine là mô-đun AI đánh giá độ uy tín người dùng dựa trên đánh giá, tần suất vi phạm, tỷ lệ hủy đơn, và lịch sử giao dịch.
+
+\subsubsection*{Thành phần và vai trò}
+1. \textbf{Admin:} Có thể kích hoạt cập nhật thủ công hoặc theo dõi điểm tin cậy \\
+2. \textbf{TrustEngine:} Mô-đun AI tính toán điểm tin cậy \\
+3. \textbf{Database:} Cung cấp dữ liệu hành vi người dùng \\
+4. \textbf{NotificationService:} Gửi cảnh báo cho admin khi điểm thấp \\
+5. \textbf{AdminDashboard:} Hiển thị điểm Trust Score và cảnh báo
+
+\subsubsection*{Hành vi hệ thống}
+1. Admin có thể kích hoạt cập nhật điểm tin cậy thủ công cho người dùng thông qua AdminDashboard. \\
+2. AdminDashboard gửi yêu cầu đến TrustEngine để thực hiện tính toán lại. \\
+3. TrustEngine truy xuất dữ liệu từ Database, bao gồm: \\
+\quad - Điểm đánh giá trung bình. \\
+\quad - Tỷ lệ hủy đơn. \\
+\quad - Số lần vi phạm được báo cáo. \\
+4. TrustEngine tính toán lại Trust Score dựa trên mô hình AI tích hợp (trust\_score = f(rating, cancellation, violation)), sau đó cập nhật kết quả trở lại Database. \\
+5. NotificationService gửi thông báo đến AdminDashboard về việc cập nhật thành công. \\
+6. Trong trường hợp thiếu dữ liệu hoặc lỗi mô hình, hệ thống hiển thị "Không đủ dữ liệu để cập nhật Trust Score." \\
+7. Ngoài ra, TrustEngine hoạt động tự động (event-driven) — khi có đánh giá mới hoặc vi phạm, hệ thống tự động cập nhật điểm tin cậy người dùng. \\
+8. TrustEngine định kỳ quét Database để phát hiện người dùng có trust\_score < 30 và gửi cảnh báo đến AdminDashboard. \\
+9. Admin nhận cảnh báo và có thể xem chi tiết người dùng bị đánh giá thấp để kiểm tra hoặc xử lý.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/Sequence/admin_user_management.png}
+    \caption{Sequence Diagram - Quản lý người dùng}
+    \label{fig:admin-user-management-sequence}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{Images/Sequence/admin_trust_score.png}
+    \caption{Sequence Diagram - Đánh giá uy tín người dùng}
+    \label{fig:trust-score-sequence}
+\end{figure}

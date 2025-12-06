@@ -1,0 +1,63 @@
+\babel@toc {american}{}\relax 
+\contentsline {section}{\numberline {1}Giới thiệu}{7}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Động cơ của đề tài}{7}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Mục tiêu}{8}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Đối tượng và phạm vi nghiên cứu của đề tài}{8}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Ý nghĩa}{9}{subsection.1.4}%
+\contentsline {subsubsection}{\numberline {1.4.1}Ý nghĩa thực tiễn}{9}{subsubsection.1.4.1}%
+\contentsline {subsubsection}{\numberline {1.4.2}Ý nghĩa khoa học}{9}{subsubsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.5}Cấu trúc báo cáo}{9}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Kiến thức và công nghệ nền tảng}{11}{section.2}%
+\contentsline {subsection}{\numberline {2.1}P2P Marketplace}{11}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Các hình thức phổ biến của P2P Marketplace}{11}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Sharing Economy }{12}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Công trình liên quan}{14}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Các mô hình sharing economy}{14}{subsection.3.1}%
+\contentsline {section}{\numberline {4}Hệ thống đề xuất}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Mô tả hệ thống}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Yêu cầu chức năng}{17}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Yêu cầu phi chức năng}{19}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Data requirements}{20}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Phân tích hệ thống}{21}{section.5}%
+\contentsline {subsection}{\numberline {5.1} Mô hình hóa tương tác}{21}{subsection.5.1}%
+\contentsline {subsubsection}{\numberline {5.1.1}Use case diagram}{21}{subsubsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.2}Use case description}{24}{subsubsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.2}Mô hình hoá quy trình nghiệp vụ}{39}{subsection.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}Quy trình thuê xe (UC-02, UC-03, UC-04)}{39}{subsubsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}Quy trình trả xe (UC-05, UC-06, UC-07)}{39}{subsubsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}Quy trình đăng ký xe cho thuê (UC-08)}{41}{subsubsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.4}Quy trình quản lý xe của chủ (UC-09)}{44}{subsubsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.5}Quy trình quản trị hệ thống (UC-10, UC-11, UC-12)}{44}{subsubsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.3}Mô hình hóa hành vi hệ thống}{46}{subsection.5.3}%
+\contentsline {subsubsection}{\numberline {5.3.1}Tìm và Đặt thuê xe (UC-02, UC-03, UC-04) \small \textit {(Hình \ref {fig:rent-sequence})}}{46}{subsubsection.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.3.2}Theo dõi chuyến đi}{46}{subsubsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.3}Kết thúc chuyến đi \& Đánh giá (UC-05, UC-06, UC-07) \small \textit {(Hình \ref {fig:return-sequence})}}{47}{subsubsection.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.3.4}Đăng ký xe cho thuê (UC-08) \small \textit {(Hình \ref {fig:regis-sequence})}}{50}{subsubsection.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.3.5}Quản lý xe (UC-09) \small \textit {(Hình \ref {fig:manage-sequence})}}{51}{subsubsection.5.3.5}%
+\contentsline {subsubsection}{\numberline {5.3.6}Báo cáo sự cố (UC-16) \small \textit {(Hình \ref {fig:accident-sequence})}}{52}{subsubsection.5.3.6}%
+\contentsline {subsubsection}{\numberline {5.3.7}Thông báo hệ thống (UC-17) \small \textit {(Hình \ref {fig:notification-sequence})}}{53}{subsubsection.5.3.7}%
+\contentsline {subsubsection}{\numberline {5.3.8}Duyệt xe / Quản trị hệ thống (UC-10) \small \textit {(Hình \ref {fig:admin-approve-sequence})}}{54}{subsubsection.5.3.8}%
+\contentsline {subsubsection}{\numberline {5.3.9}Xem báo cáo / Thống kê (UC-11) \small \textit {(Hình \ref {fig:admin-statistic-sequence})}}{56}{subsubsection.5.3.9}%
+\contentsline {subsubsection}{\numberline {5.3.10}Quản lý người dùng (UC-12)}{58}{subsubsection.5.3.10}%
+\contentsline {subsubsection}{\numberline {5.3.11}Hệ thống Trust Score (UC-13) \small \textit {(Hình \ref {fig:trust-score-sequence})}}{59}{subsubsection.5.3.11}%
+\contentsline {subsection}{\numberline {5.4}Logical data flows}{61}{subsection.5.4}%
+\contentsline {section}{\numberline {6}Thiết kế hệ thống}{62}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Kiến trúc hệ thống}{62}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Đặc trưng của hệ thống}{62}{subsubsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.2}Các Architectural Styles phổ biến}{63}{subsubsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.3}Layered Architecture}{65}{subsubsection.6.1.3}%
+\contentsline {subsection}{\numberline {6.2}Lựa chọn công nghệ}{71}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Frontend}{71}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Backend}{72}{subsubsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.3}Database}{74}{subsubsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.3}Sơ đồ triển khai hệ thống}{75}{subsection.6.3}%
+\contentsline {section}{\numberline {7}Thiết kế chi tiết hệ thống}{76}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Database}{76}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Các thực thể chính}{76}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Quan hệ giữa các thực thể}{78}{subsubsection.7.1.2}%
+\contentsline {section}{\numberline {8}System Implementation}{81}{section.8}%
+\contentsline {section}{\numberline {9}System Evaluation}{82}{section.9}%
+\contentsline {section}{\numberline {10}Conclusion}{83}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Achievements}{83}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Limitations}{83}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Further improvements}{83}{subsection.10.3}%
