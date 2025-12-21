@@ -1,24 +1,44 @@
 \documentclass[12pt,a4paper]{article}
-% \usepackage[english, vietnam]{babel}
+\usepackage[english, vietnamese]{babel}
+\selectlanguage{vietnamese}
 \usepackage[T5,T1]{fontenc}
 % \usepackage{mathptmx}[ptm]
 %\usepackage[utf8]{inputenc}
 \usepackage[utf8]{vietnam}
 %\usepackage[francais]{babel}
 \usepackage{a4wide,amssymb,epsfig,latexsym,array,hhline,fancyhdr}
-\usepackage[american]{babel}
+% \usepackage[american]{babel}
 % Disable autostyle and automatic punctuation detection to avoid csquotes warnings for T5 encoding
 % (T5 encoding lacks space-factor codes; the punctuation tracker may fail)
 \usepackage[autostyle=false,autopunct=false]{csquotes}
+% Suppress the csquotes T5 warning by filtering it out
+\usepackage{silence}
+\WarningFilter{csquotes}{No space factor codes}
 % Improve URL line-breaking for long URLs (helps fix overfull boxes)
 \usepackage{xurl}
-\usepackage[style=apa, citestyle=numeric, backend=biber, sorting=none]{biblatex}
+\usepackage[style=numeric, citestyle=numeric, backend=biber, sorting=none, language=english]{biblatex}
+% Format citations as superscript numbers
+\DeclareCiteCommand{\cite}
+  {\usebibmacro{prenote}}
+  {%
+    \mkbibsuperscript{%
+      \scriptsize
+      \printtext[bibhyperref]{[\printfield{labelnumber}]}%
+    }%
+  }
+  {}
+  {\usebibmacro{postnote}}
+
 % \usepackage{apacite}
 \usepackage[toc,page]{appendix}
 \usepackage{pifont,amssymb}
 \newcommand{\emptysquare}{$\square$}
 \newcommand{\checkedsquare}{\makebox[0pt][l]{\raisebox{1pt}[0pt][0pt]{\large\hspace{1pt}\cmark}}$\square$}
 \newcommand{\cmark}{\ding{51}}
+
+\newcommand{\ngay}{\number\day}
+\newcommand{\thang}{\number\month}
+\newcommand{\nam}{\number\year}
 
 \DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
 
@@ -46,7 +66,9 @@
 %     \textbf{Source:} #2%
 %   }%
 % }
-
+\DefineBibliographyStrings{english}{
+  references = {Tài liệu tham khảo},
+}
 \usepackage{vcell}
 \usepackage{tabularray}
 %\usepackage{soul}
@@ -81,6 +103,9 @@
 \usepackage{url}
 \usepackage{ragged2e}
 \usepackage{makecell}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
 % \usepackage[style=apa]{biblatex}
 % \usepackage{natbib}
 % \bibliographystyle{ieeetr}
@@ -91,6 +116,7 @@
 \usepackage{hyperref}
 \hypersetup{urlcolor=blue,linkcolor=black,citecolor=black,colorlinks=true}
 \usepackage{listings}
+\usepackage[vi-VN]{datetime2}
 
 \usepackage{xcolor}
 \usepackage{newunicodechar}
@@ -163,8 +189,8 @@
    \end{picture}&
 	%\includegraphics[width=12mm, height=12mm]{hcmut.png} & %
 	\begin{tabular}{l}
-		\textbf{  Ho Chi Minh City University of Technology }\\
-		\textbf{  Faculty of Computer Science and Engineering }
+		\textbf{ Trường Đại Học Bách Khoa Thành Phố Hồ Chí Minh }\\
+		\textbf{  Khoa Khoa Học và Kỹ Thuật Máy Tính }
 	\end{tabular} 	
  \end{tabular}
 }
@@ -174,7 +200,7 @@
 		\tiny \bf 
 	\end{tabular}  }
 \fancyfoot{} % clear all footer fields
-\fancyfoot[L]{\scriptsize  Specialized project report}
+\fancyfoot[L]{\scriptsize  Báo cáo Đồ Án Chuyên Ngành}
 \fancyfoot[R]{\scriptsize  Page {\thepage}/\pageref{LastPage}}
 \renewcommand{\headrulewidth}{0.3pt}
 \renewcommand{\footrulewidth}{0.3pt}
@@ -230,11 +256,11 @@
 \begin{singlespace}
 \vspace{-2cm}
 \begin{center}
-\fontsize{15}{12} \textbf{Vietnam National University Ho Chi Minh City} \\
+\fontsize{15}{12} \textbf{Đại Học Quốc Gia Thành Phố Hồ Chí Minh} \\
 \vspace{0.2cm}
-\fontsize{15}{12} \textbf{University of Technology} \\
+\fontsize{15}{12} \textbf{Trường Đại Học Bách Khoa} \\
 \vspace{0.2cm}
-\fontsize{15}{12} \textbf{Faculty of Computer Science and Engineering}
+\fontsize{15}{12} \textbf{Khoa Khoa Học và Kỹ Thuật Máy Tính}
 \end{center}
 \end{singlespace}
 
@@ -249,16 +275,17 @@
 \vspace{0.3cm}
 
 \begin{center}
-\fontsize{15}{12} \textbf{SPECIALIZED PROJECT}  \\ 
-\fontsize{15}{12} \textbf{REPORT}  \\ 
+\fontsize{15}{12} \textbf{BÁO CÁO}  \\ 
+\fontsize{15}{12} \textbf{ĐỒ ÁN CHUYÊN NGÀNH}  \\ 
 \end{center}
 
 \vspace{0.5cm}
 
 \begin{center}
-    \setstretch{1.9}\fontsize{23}{12} \textbf{Peer-to-Peer Electric Motorbike Sharing Platform for Local Communities} \\
+    \setstretch{1.9}\fontsize{23}{12} \textbf{Phát triển hệ thống} \\
+    \setstretch{1.9}\fontsize{23}{12} \textbf{chia sẻ xe máy điện ngang hàng (P2P) trong cộng đồng dân cư} \\
     \vspace{0.5em}
-    \fontsize{15}{12}\selectfont Major: Computer Science \\
+    \fontsize{15}{12}\selectfont Chuyên ngành: Khoa học máy tính \\
 \end{center}
 
 \vspace{0.5cm}
@@ -267,22 +294,23 @@
 \fontsize{15}{12}\selectfont{
 \renewcommand{\arraystretch}{1.3}
 \begin{tabular}{rl}
-    \textbf{THESIS COMMITTEE:} &   \\
-    \textbf{SUPERVISOR:} & Assoc. Prof. Trương Tuấn Anh, PhD  \\
-    \textbf{REVIEWER:} & Assoc. Dương Huỳnh Anh Đức, PhD \\
+    \textbf{HỘI ĐỒNG:} &  Hội đồng 16L Đồ án chuyên ngành \\
+    \textbf{GVHD 1:} & TS. Trương Tuấn Anh  \\
+    \textbf{GVHD 2:} & CN. Dương Huỳnh Anh Đức \\
     \multicolumn{2}{c}{\textbf{---o0o---}} \\
-    \textbf{STUDENT 1:} & Dương Hoàng Long 2211873 \\
-    \textbf{STUDENT 2}: & Hàng Nhựt Long 2211874 \\
-    \textbf{STUDENT 3:} & Âu Nguyễn Hùng Mạnh 2211991
-    
+    \textbf{SV 1:} & Dương Hoàng Long 2211873 \\
+    \textbf{SV 2:} & Hàng Nhựt Long 2211874 \\
+    \textbf{SV 3:} & Âu Nguyễn Hùng Mạnh 2211991
 \end{tabular}
 }
 \end{center}
 
+
 \vspace{2.2cm}
 
 \begin{center}
-    \fontsize{15}{12}\selectfont Ho Chi Minh City, June 2025
+    \fontsize{15}{12}\selectfont\textit{TP. Hồ Chí Minh, tháng \thang~ năm \nam}
+
 \end{center}
 \end{titlepage}
 
@@ -299,71 +327,78 @@
 
 % \vspace{2\baselineskip}
 
-% (etc.)
-\newpage
-\begin{center}
-    \textbf{\Large PROTESTATION}
-\end{center}
+\input{Intro/protestation.tex}
+\input{Intro/acknoeledgement.tex}
+\input{Intro/abstract-vn.tex}
+\input{Intro/abstract-en.tex}
 
-\par\hfill\textbf{Authors}\hspace{1cm}
-\par\hfill\textit{Dương Hoàng Long}
-\par\hfill\textit{Hàng Nhựt Long}\hspace{0.3cm}
-\par\hfill\textit{Âu Nguyễn Hùng Mạnh}\hspace{0.2cm}
-\newpage
+% \newpage
+% \begin{singlespace}
+% \thispagestyle{empty}
+% \tableofcontents
+% \end{singlespace}
+% \newpage
 
-\begin{center}
-    \textbf{\Large ACKNOWLEDGEMENTS}
-\end{center}
+% \begin{singlespace}
+% \thispagestyle{empty}
+% \listoffigures
+% \end{singlespace}
+% \newpage
 
-\par\hfill\textbf{Authors}\hspace{1cm}
-\par\hfill\textit{Dương Hoàng Long}
-\par\hfill\textit{Hàng Nhựt Long}\hspace{0.3cm}
-\par\hfill\textit{Âu Nguyễn Hùng Mạnh}\hspace{0.2cm}
-\newpage
-
-\begin{center}
-    \textbf{\Large Abstract}
-\end{center}
-\newpage
+% \begin{singlespace}
+% \thispagestyle{empty}
+% \listoftables
+% \end{singlespace}
+% \newpage
+\cleardoublepage
+\pagestyle{empty}
 
 \begin{singlespace}
 \tableofcontents
 \end{singlespace}
-\newpage
 
+\cleardoublepage
 \begin{singlespace}
 \listoffigures
 \end{singlespace}
-\newpage
 
+\cleardoublepage
 \begin{singlespace}
 \listoftables
 \end{singlespace}
-\newpage
 
+\cleardoublepage
+\pagestyle{fancy}
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
 \section{Giới thiệu}
 \input{Intro/Motivation/cont}
 \input{Intro/Objectives/cont}
 \input{Intro/Scope/cont}
 \input{Intro/Significance/cont}
 \subsection{Cấu trúc báo cáo}
+
+Báo cáo được tổ chức thành các chương chính sau đây nhằm trình bày một cách có hệ thống quá trình nghiên cứu, phân tích, thiết kế và triển khai hệ thống:
+
 \begin{itemize}
-    \item Chương 1: Giới thiệu đề tài, mục tiêu, phạm vi và ý nghĩa.
-    \item Chương 2: Trình bày các kiến thức và công nghệ nền tảng.
-    \item Chương 3: Tổng hợp và phân tích các công trình liên quan.
-    \item Chương 4: Mô tả hệ thống đề xuất.
-    \item Chương 5: Phân tích và thiết kế chi tiết.
-    \item Chương 6: Hiện thực và kiểm thử.
-    \item Chương 7: Đánh giá hệ thống.
-    \item Chương 8: Tổng kết và hướng phát triển.
-\end{itemize}
+    \item \textbf{Chương 1: Giới thiệu}
+    \item \textbf{Chương 2: Kiến thức và công nghệ nền tảng}
+    \item \textbf{Chương 3: Tổng hợp và phân tích các công trình liên quan}
+    \item \textbf{Chương 4: Mô tả hệ thống đề xuất}
+    \item \textbf{Chương 5: Phân tích hệ thống}
+    \item \textbf{Chương 6: Thiết kế hệ thống}
+    \item \textbf{Chương 7: Triển khai}
+    % \item \textbf{Chương 6: Kiểm thử}
+    % \item \textbf{Chương 7: Đánh giá hệ thống} 
+    \item \textbf{Chương 8: Kế hoạch triển khai giai đoạn 2 - Đồ án Tốt Nghiệp}
+  \end{itemize}
+
+Ngoài các chương chính, báo cáo còn bao gồm phần tóm tắt (tiếng Việt và tiếng Anh), tài liệu tham khảo và phụ lục chứa các tài liệu bổ trợ như kết quả khảo sát, prototype giao diện và tài liệu pháp lý liên quan.
 
 \newpage
 \section{Kiến thức và công nghệ nền tảng}
 \input{Knowledge/Base/cont}
-
-% \newpage
-% \section{Technology Stack}
 
 \newpage
 \section{Công trình liên quan}
@@ -374,40 +409,45 @@
 \input{System Elictication/User/cont}
 \input{System Elictication/Function_require/cont}
 \input{System Elictication/Non_function_require/cont}
-\input{System Elictication/Data_require/cont}
+
 \newpage
 \section{Phân tích hệ thống}
 \input{System Analysis/Usecase/cont}
 \input{System Analysis/Business process/cont}
 \input{System Analysis/Behavior modeling/cont.tex}
-\input{System Analysis/DataFlow/cont}
+\input{System Analysis/Class Diagram/cont.tex}
+
 \newpage
 \section{Thiết kế hệ thống}
 \input{System Design/Architecture/cont}
 \input{System Design/Techstack/cont.tex}
+\input{System Design/Database/cont.tex}
+\input{System Design/UIUX/cont.tex}
 
 \newpage
-\section{Thiết kế chi tiết hệ thống}
-\input{System Details/Database/cont.tex}
-\newpage
-\section{System Implementation}
+\input{Implement/cont.tex}
 
 \newpage
-\section{System Evaluation}
+\input{Plan/cont.tex}
+
+% \newpage
+% \section{System Evaluation}
+
+% \newpage
+% \section{Conclusion}
+% \subsection{Achievements}
+
+% \subsection{Limitations}
+% \subsection{Further improvements}
+
+% \newpage
+% \input{Refs/cont}
 
 \newpage
-\section{Conclusion}
-\subsection{Achievements}
-
-\subsection{Limitations}
-\subsection{Further improvements}
-
-\newpage
-\input{Refs/cont}
-% \addcontentsline{toc}{section}{References}
-% \bibliographystyle{apa}
-% \bibliography{refs.bib} % Entries are in the refs.bib file
 \printbibliography
 
+\newpage
+\section*{Phụ lục}
+\input{SubTable/cont.tex}
 
 \end{document}

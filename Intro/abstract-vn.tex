@@ -1,0 +1,71 @@
+
+
+% ============================================
+% TÓM TẮT TIẾNG VIỆT (ABSTRACT - VIETNAMESE)
+% ============================================
+
+\newpage
+\thispagestyle{empty}
+\begin{center}
+    \textbf{\Large TÓM TẮT ĐỀ TÀI}
+\end{center}
+
+\vspace{0.5cm}
+
+\noindent\textbf{Tên đề tài:} Nền tảng chia sẻ xe máy điện ngang hàng (P2P) cho cộng đồng dân cư
+
+\noindent\textbf{Sinh viên thực hiện:} Dương Hoàng Long, Hàng Nhựt Long, Âu Nguyễn Hùng Mạnh
+
+\noindent\textbf{Giảng viên hướng dẫn:} TS. Trương Tuấn Anh
+
+\noindent\textbf{Giảng viên đồng hướng dẫn:} CN. Dương Huỳnh Anh Đức
+
+
+\noindent\textbf{Năm học:} 2024 - 2025
+
+\vspace{0.5cm}
+
+Việt Nam hiện là quốc gia có mật độ xe máy cao nhất Đông Nam Á với hơn 85\% phương tiện giao thông cá nhân là xe hai bánh. 
+Trong bối cảnh Chính phủ đang thúc đẩy chuyển đổi sang xe máy điện để giảm ô nhiễm không khí và phát thải carbon, chi phí sở hữu xe điện vẫn là rào cản lớn đối với nhiều người dùng, đặc biệt là sinh viên và cư dân đô thị. 
+Mặt khác, các phương tiện cá nhân trong cộng đồng thường ở trạng thái nhàn rỗi 70-80\% thời gian trong ngày, dẫn đến lãng phí tài nguyên đáng kể.
+
+Đồ án này nghiên cứu và phát triển một nền tảng chia sẻ xe máy điện ngang hàng (P2P) dành cho các cộng đồng địa phương như khu dân cư, ký túc xá và khuôn viên trường học. 
+Khác với các mô hình tập trung (B2C) như Grab hay VinFast, nền tảng cho phép cư dân trực tiếp chia sẻ xe cá nhân với nhau, tối ưu hóa việc sử dụng tài sản nhàn rỗi và giảm chi phí di chuyển.
+
+Hệ thống được xây dựng trên kiến trúc Clean Architecture kết hợp với các design patterns hiện đại (Repository, Strategy, Observer, Factory), đảm bảo tính module hóa, khả năng bảo trì và mở rộng cao. 
+Phần backend sử dụng NestJS (TypeScript) với PostgreSQL kết hợp Prisma ORM để xử lý và lưu trữ dữ liệu, Redis cho caching và real-time location tracking. 
+Phần frontend được phát triển bằng Flutter với BLoC pattern để quản lý state, hỗ trợ đa nền tảng iOS và Android.
+
+Các tính năng chính của hệ thống bao gồm: 
+
+(1) Tìm kiếm xe dựa trên vị trí GPS với bộ lọc đa tiêu chí, 
+
+(2) Quy trình đặt xe và thanh toán tích hợp cổng thanh toán VNPay/MoMo, 
+
+(3) Cập nhật vị trí xe thời gian thực qua WebSocket, 
+
+(4) Hệ thống trust score sử dụng machine learning để đánh giá độ tin cậy người dùng, 
+
+(5) Cơ chế xác thực hai chiều và giải quyết tranh chấp để đảm bảo an toàn giao dịch.
+
+% Đồ án đã triển khai thử nghiệm trong phạm vi 2-3 cộng đồng với 30-50 xe, 100-150 người dùng và 300-500 giao dịch trong giai đoạn 6 tháng. Kết quả cho thấy hệ thống hoạt động ổn định với thời gian phản hồi trung bình dưới 2 giây cho các thao tác chính, đạt 99.5\% uptime. Người dùng đánh giá tích cực về tính tiện lợi (4.2/5) và tiết kiệm chi phí (giảm 40-50\% so với sở hữu xe).
+\newpage
+\thispagestyle{empty}
+Đóng góp chính của đồ án bao gồm: 
+
+(1) Thiết kế và triển khai nền tảng P2P sharing đầu tiên cho xe máy điện tại Việt Nam, 
+
+(2) Áp dụng Clean Architecture và design patterns vào hệ thống thực tế, 
+
+(3) Tích hợp machine learning cho trust score calculation, 
+
+(4) Giải quyết các thách thức về real-time location tracking và concurrency control trong booking system, 
+
+(5) Đề xuất mô hình kinh doanh phù hợp với văn hóa và thói quen người Việt Nam.
+
+Đồ án góp phần vào việc thúc đẩy kinh tế chia sẻ, giảm chi phí di chuyển cho cộng đồng và hỗ trợ mục tiêu chuyển đổi xanh của Chính phủ. 
+Hướng phát triển trong tương lai bao gồm mở rộng quy mô ra nhiều thành phố, tích hợp IoT cho xe thông minh, và áp dụng blockchain cho transparent transaction history.
+
+\vspace{0.5cm}
+
+\noindent\textbf{Từ khóa:} Peer-to-Peer, Kinh tế chia sẻ, Xe máy điện, Clean Architecture, Flutter, NestJS, Machine Learning, Trust Score, Real-time System

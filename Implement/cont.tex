@@ -1,0 +1,472 @@
+\section{Triển khai}
+\subsection{Tổng quan hệ thống}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{Images/Arch/arch-w-tech.png}
+    \caption{Sơ đồ triển khai hệ thống}
+    \label{fig:implement-diagram}
+\end{figure}
+Hình \ref{fig:implement-diagram} trình bày sơ đồ triển khai hệ thống, thể hiện cách các thành phần được phân bố và tích hợp với công nghệ đã lựa chọn. 
+% Kiến trúc Clean Architecture được áp dụng để đảm bảo tính tách biệt giữa các lớp: Entities (Domain Entities), Use Cases (Application Business Rules), Controllers/Presenters (Interface Adapters), và Frameworks/Drivers (Data Access, External Services). 
+
+\subsubsection{Phía Client-side}
+- Ứng dụng di động Flutter phục vụ cả hai vai trò chính: Renter và Owner. 
+Người dùng kết nối qua WebSocket để nhận cập nhật realtime và qua HTTP để thực hiện các request thông thường.\\
+- Giao diện quản trị Admin UI được triển khai riêng (có thể là web-based với React).
+
+\subsubsection{Phía Server-side}
+Hệ thống backend được xây dựng trên NestJS Application Server, tuân thủ nghiêm ngặt Clean Architecture với bốn lớp chính:\\
+(1) \textbf{Domain}: Chứa Domain Entities – các thực thể nghiệp vụ cốt lõi (User, Vehicle, Booking, Payment, Review...).\\
+(2) \textbf{Application Business Rules}: Bao gồm các Use Cases (AdminUseCase, RenterUseCase, OwnerUseCase) đại diện cho các quy tắc nghiệp vụ ứng dụng.\\
+(3) \textbf{Interface Adapters}:\\
+  - Controllers (AdminController, RenterController, OwnerController) xử lý HTTP requests từ API Gateway.\\
+  - Presenters (AdminPresenter, RenterPresenter, OwnerPresenter) chuyển đổi dữ liệu từ Use Cases sang định dạng phù hợp để trả về client.\\
+(4) \textbf{Frameworks \& Drivers}:\\
+  - Data Access layer với InterfaceRepository và RepositoryImplementation sử dụng Prisma ORM để tương tác với PostgreSQL Database.\\
+  - Redis Cache cho caching và hỗ trợ realtime.\\
+  - External Services: PDF Export Service, MonitorService, GPS Service, File Upload Service, Map Service.
+
+\subsubsection{Giao tiếp realtime và không đồng bộ}
+- NestJS EventEmitter phát ra các Message (ví dụ: BookingEvent) đến Lightweight Event Bus\\
+- WebSocket Gateway (Notify Module) xử lý kết nối realtime từ các Socket Client, nhận message là các Booking Event và xử lý tương ứng từ Booking Publisher.\\
+- Mở rộng trong tương lại: AI Recommendation module (Python-based) được tích hợp qua Message Broker (RabbitMQ/Kafka), với các subscriber riêng cho 
+File, Data Training và Updated Data. Publisher từ backend gửi dữ liệu đến Message Broker để AI xử lý.
+\subsubsection{Lưu trữ và external integration}
+- PostgreSQL là cơ sở dữ liệu chính, hỗ trợ đầy đủ transaction và relational data.\\
+- Redis được sử dụng cho cache và pub/sub realtime.\\
+- Các dịch vụ bên ngoài (GPS, Map, File Upload, Monitor, PDF Export) được gọi qua các adapter trong lớp Frameworks \& Drivers.
+\subsection{MODULE 1: Authentication \& User Management}
+
+\subsubsection{Mục tiêu}
+Module Authentication đảm nhận việc xác thực người dùng và quản lý phiên làm việc trong toàn bộ hệ thống. Mục tiêu chính là tạo ra một cơ chế đăng nhập an toàn, hỗ trợ multi-role (RENTER, OWNER, ADMIN), và cho phép người dùng quản lý tài khoản của mình bao gồm cả việc nâng cấp vai trò.
+
+\subsubsection{Công nghệ sử dụng}
+Backend sử dụng NestJS với Passport JWT strategy để xác thực. Password được hash bằng bcrypt với salt rounds = 10. JWT token có thời gian sống 7 ngày, được verify tự động thông qua JwtAuthGuard. Email OTP được gửi qua NodeMailer với Gmail SMTP. Frontend Flutter lưu trữ token trong SharedPreferences và tự động attach vào mọi request thông qua Dio interceptor.
+
+\subsubsection{Quy trình đăng ký người dùng}
+Quy trình đăng ký bắt đầu khi người dùng điền form đăng ký trên mobile app. Hệ thống client thực hiện validation cơ bản (email format, phone format, password strength) trước khi gửi request đến backend.
+
+Backend nhận request và thực hiện validation toàn diện hơn. Đầu tiên, hệ thống kiểm tra xem email đã tồn tại hay chưa bằng cách query database. Nếu email đã được sử dụng, trả về lỗi Conflict. Tương tự với số điện thoại - hệ thống đảm bảo mỗi số điện thoại chỉ được đăng ký một lần.
+
+Khi validation thành công, password được hash sử dụng bcrypt. Hash được tính toán với 10 salt rounds để đảm bảo bảo mật. User record được tạo trong database với role mặc định là RENTER và status là ACTIVE. Trust score khởi tạo ở mức 100 điểm.
+
+Sau khi tạo user thành công, hệ thống generate JWT token chứa userId, email và roles. Token này được trả về client cùng với thông tin user (không bao gồm password). Client lưu token vào local storage và sử dụng cho các request tiếp theo.
+
+\subsubsection{Quy trình đăng nhập}
+Người dùng nhập email và password vào form đăng nhập. Client gửi request đến endpoint \texttt{/auth/login} với credentials. Backend tìm user theo email trong database. Nếu không tìm thấy, trả về lỗi Unauthorized với message chung chung để tránh leak thông tin.
+
+Khi tìm thấy user, hệ thống verify password bằng cách so sánh hash. Bcrypt tự động handle việc extract salt từ stored hash và compute hash của password input, sau đó so sánh. Nếu password không khớp, trả về lỗi tương tự như trường hợp không tìm thấy user.
+
+Trước khi generate token, hệ thống kiểm tra user status. Nếu status là BLOCKED, từ chối đăng nhập và thông báo user liên hệ support. Nếu mọi thứ hợp lệ, JWT token được generate và trả về client.
+
+Client nhận token và lưu vào storage. Từ thời điểm này, mọi request đến protected endpoints đều attach token vào Authorization header dưới dạng "Bearer \{token\}".
+
+\subsubsection{Cơ chế xác thực JWT}
+Mỗi khi client gửi request đến protected endpoint, NestJS JwtAuthGuard được trigger. Guard này extract token từ Authorization header, verify signature sử dụng JWT\_SECRET, và kiểm tra expiration time.
+
+Nếu token hợp lệ, JwtStrategy được gọi. Strategy này decode payload để lấy userId, sau đó load user từ database. Hệ thống kiểm tra lại user status - nếu user đã bị block sau khi token được issue, request sẽ bị từ chối.
+
+User object được attach vào request context thông qua CurrentUser decorator. Từ đây, controller có thể access user information một cách type-safe. Nếu ở bất kỳ bước nào token invalid hoặc user không hợp lệ, request bị reject với status 401 Unauthorized.
+
+\subsubsection{Quy trình reset mật khẩu}
+Người dùng quên mật khẩu và truy cập màn hình "Forgot Password", nhập email của mình. Client gửi request đến \texttt{/auth/forgot-password}. Backend verify email tồn tại trong database. Nếu không tồn tại, trả về lỗi 404 với message rõ ràng.
+
+Hệ thống generate OTP code 5 chữ số random. OTP được lưu vào database với thông tin: code, userId, type (PASSWORD\_RESET), expiresAt (current time + 10 minutes), và isUsed flag (false). Trước khi tạo OTP mới, tất cả OTP cũ của user với type PASSWORD\_RESET được mark là isUsed = true để tránh tái sử dụng.
+
+Email chứa OTP được gửi qua NodeMailer. Email template được format đẹp với branding và instruction rõ ràng. Trong development environment, nếu email service không được config, OTP được log ra console để developer test.
+
+User nhận email, nhập OTP vào app. Client gửi OTP đến endpoint \texttt{/auth/verify-otp}. Backend tìm OTP record với điều kiện: userId khớp, code khớp, type là PASSWORD\_RESET, isUsed = false, và expiresAt > current time. Nếu không tìm thấy, trả về lỗi "Invalid or expired OTP".
+
+Khi OTP valid, client cho phép user nhập mật khẩu mới. Request đến \texttt{/auth/reset-password} chứa email, OTP và new password. Backend thực hiện verify OTP lần nữa, hash password mới, update vào database, và mark OTP là isUsed. Transaction được sử dụng để đảm bảo cả hai operations (update password và mark OTP) đều thành công hoặc đều fail.
+
+\subsubsection{Quy trình nâng cấp lên OWNER}
+User với role RENTER muốn trở thành owner để đăng ký xe. User truy cập màn hình "Become Owner" trong app, điền form đăng ký xe đầu tiên (yêu cầu bắt buộc để trở thành owner). Form bao gồm thông tin xe: license plate, model, brand, giá thuê, ảnh xe, và giấy tờ xe.
+
+Client gửi request đến \texttt{/auth/become-owner} với JWT token và vehicle data. Backend verify user đang đăng nhập, kiểm tra user chưa có role OWNER. Nếu đã là owner, trả về message thông báo không cần upgrade nữa.
+
+Hệ thống thực hiện transaction: thêm role OWNER vào mảng roles của user, và tạo vehicle record với status PENDING\_APPROVAL. Cả hai operations phải thành công. Sau khi commit transaction, JWT token mới được generate với roles đã update (bây giờ bao gồm cả RENTER và OWNER).
+
+Token mới được trả về client. Client update local storage với token mới này. User interface refresh để hiển thị các features dành cho owner như "My Vehicles", "Manage Bookings", etc.
+
+\subsection{MODULE 2: Vehicle Management}
+
+\subsubsection{Mục tiêu}
+Vehicle Management module quản lý toàn bộ vòng đời của xe từ khi đăng ký, duyệt, cho thuê, bảo trì cho đến khi ngừng hoạt động. Module này phải đảm bảo chỉ owner được phép quản lý xe của mình, và admin có quyền kiểm soát toàn bộ xe trong hệ thống.
+
+\subsubsection{Công nghệ sử dụng}
+Backend sử dụng Prisma ORM để interact với PostgreSQL database. File uploads được xử lý bằng Multer middleware, lưu trữ tạm trong memory trước khi upload lên AWS S3 thông qua AWS SDK v3. Frontend sử dụng image\_picker package để chọn ảnh từ gallery hoặc camera, compress ảnh trước khi upload để tiết kiệm bandwidth.
+
+\subsubsection{State machine của Vehicle}
+Mỗi vehicle có một lifecycle rõ ràng được quản lý bởi state machine. State ban đầu khi owner đăng ký xe là PENDING\_APPROVAL. Ở state này, xe chưa visible cho renters, chỉ admin review và approve.
+
+Admin có thể approve hoặc reject xe. Nếu approve, xe chuyển sang AVAILABLE và xuất hiện trong search results. Nếu reject, xe chuyển sang REJECTED với lý do từ chối được lưu lại. Owner có thể edit thông tin và submit lại để request approval.
+
+Từ AVAILABLE, xe có thể chuyển sang nhiều states khác nhau. Khi có booking được confirm và trip bắt đầu, xe tự động chuyển sang RENTED. Owner không thể edit thông tin xe hoặc thay đổi availability khi đang RENTED.
+
+Owner có thể chủ động chuyển xe từ AVAILABLE sang MAINTENANCE khi cần sửa chữa hoặc bảo trì. Ở state này, xe không xuất hiện trong search results. Sau khi bảo trì xong, owner chuyển lại AVAILABLE.
+
+Admin có quyền lock vehicle bằng cách chuyển sang state LOCKED trong trường hợp vi phạm policy hoặc có dispute. State LOCKED cao hơn tất cả các states khác - owner không thể thay đổi gì cho đến khi admin unlock.
+
+\subsubsection{Quy trình đăng ký xe mới}
+Owner đã được upgrade role, truy cập màn hình "Register Vehicle". Form yêu cầu các thông tin bắt buộc: license plate (biển số xe theo format Việt Nam), model, brand, giá thuê theo giờ và theo ngày, địa chỉ đỗ xe, và ít nhất một ảnh xe.
+
+Khi owner submit form, client thực hiện validation cơ bản. Với ảnh xe, client compress ảnh xuống dưới 1MB mỗi ảnh để tối ưu upload speed. Nếu có location permission, client tự động lấy GPS coordinates của owner để fill vào form.
+
+Client gửi ảnh lên server trước thông qua endpoint \texttt{/upload/vehicle-images}. Request sử dụng multipart/form-data với max 10 files. Backend validate file types (chỉ chấp nhận jpg, png, webp, gif) và file size (max 5MB mỗi file).
+
+Mỗi file được rename thành format \texttt{vehicles/\{uuid\}.\{extension\}} để tránh conflict. File được upload lên S3 bucket với public-read access. S3 trả về public URL cho mỗi ảnh. URLs này được collect lại và client sẽ submit trong vehicle registration payload.
+
+Khi có đủ image URLs, client gửi request tạo xe đến \texttt{/vehicles}. Payload bao gồm tất cả thông tin xe và mảng image URLs. Backend verify user có role OWNER, kiểm tra license plate chưa tồn tại trong database (unique constraint).
+
+Vehicle record được tạo với status PENDING\_APPROVAL và isAvailable = true. Owner được redirect đến "My Vehicles" page với message thông báo xe đang chờ duyệt. Notification được gửi cho admin về có xe mới cần review.
+
+\subsubsection{Quy trình tìm kiếm xe}
+Renter mở app, vào màn hình "Find Vehicle". Giao diện hiển thị search bar và filters. Client request location permission để lấy current location của renter. Nếu được cấp, location được sử dụng làm default search center.
+
+Renter có thể filter theo: vehicle type (scooter, bike, motorcycle), brand, price range (min/max per hour), minimum rating, và distance radius (default 5km). Client build query parameters và gửi đến \texttt{/vehicles/available}.
+
+Backend query database với điều kiện: status = AVAILABLE và isAvailable = true. Nếu có filters, thêm WHERE clauses tương ứng. Kết quả được sort theo distance từ search center (nếu có location) hoặc theo creation date mới nhất.
+
+Pagination được implement với default limit = 20 items per page. Response bao gồm array vehicles, total count, và pagination metadata. Client hiển thị vehicles dưới dạng cards với ảnh đầu tiên, rating, price, và distance.
+
+Renter tap vào một vehicle card để xem chi tiết. Client fetch full vehicle details từ \texttt{/vehicles/:id}. Response bao gồm đầy đủ vehicle info, owner info (name, avatar, trust score, response time), và array reviews. Owner password và sensitive info không được include trong response.
+
+\subsubsection{Quy trình cập nhật thông tin xe}
+Owner vào "My Vehicles", chọn một xe, tap "Edit". Form được pre-fill với thông tin hiện tại. Owner có thể thay đổi description, price, address, thêm hoặc xóa ảnh, và thay đổi availability status.
+
+Một số fields không được phép edit: license plate (immutable), brand và model (nếu muốn đổi phải đăng ký xe mới). Owner cũng không thể tự thay đổi status thành RENTED hoặc LOCKED - chỉ có thể toggle giữa AVAILABLE và MAINTENANCE.
+
+Khi submit, client gửi PATCH request đến \texttt{/vehicles/:id} với only changed fields (không gửi toàn bộ object). Backend verify ownership bằng cách check vehicle.ownerId === currentUser.id. Nếu không phải owner, trả về 403 Forbidden.
+
+Backend validate status transition. Owner chỉ được phép: AVAILABLE $\rightarrow$ MAINTENANCE, MAINTENANCE $\rightarrow$ AVAILABLE. Mọi transition khác đều bị reject. Nếu xe đang RENTED, không được phép thay đổi status.
+
+Update được apply vào database. Nếu có thay đổi về giá hoặc availability, hệ thống có thể emit event để notify users đang watch vehicle này. Response trả về updated vehicle object.
+
+\subsubsection{Quy trình xóa xe}
+Owner có thể xóa xe nếu xe không còn sử dụng hoặc đã bán. Trong "My Vehicles", owner tap menu và chọn "Delete". App hiển thị confirmation dialog warning rằng action này không thể undo.
+
+Client gửi DELETE request đến \texttt{/vehicles/:id}. Backend verify ownership như thường lệ. Quan trọng nhất là check vehicle status - không được phép xóa xe đang RENTED. Nếu đang có active booking, trả về error message yêu cầu đợi booking kết thúc.
+
+Hệ thống cũng check xem có booking nào trong tương lai không. Nếu có confirmed bookings sắp tới, cũng không cho phép xóa để tránh impact đến renters. Owner cần cancel hết bookings trước khi có thể delete xe.
+
+Khi validation pass, vehicle record bị xóa khỏi database. Cascade delete được config trong database schema để tự động xóa related records như reviews và bookings đã hoàn thành. Ảnh trên S3 không bị xóa ngay mà được giữ lại cho audit log.
+
+\subsection{MODULE 3: Booking System}
+
+\subsubsection{Mục tiêu}
+Booking System là trái tim của toàn bộ platform. Module này quản lý vòng đời booking từ khi renter tạo request, owner approve/reject, đến khi trip hoàn thành. Mục tiêu là tạo ra một flow trơn tru, rõ ràng, và an toàn cho cả hai bên tham gia giao dịch.
+
+\subsubsection{Công nghệ sử dụng}
+Backend sử dụng NestJS EventEmitter để implement event-driven architecture, tách biệt booking logic và notification logic. Database transactions được sử dụng ở mọi operation có nhiều bước để đảm bảo data consistency. Frontend implement optimistic updates để UI responsive ngay lập tức, sau đó sync với server state.
+
+\subsubsection{State machine của Booking}
+Booking lifecycle bắt đầu ở state PENDING khi renter tạo request. Từ PENDING, có ba possible transitions: CONFIRMED (owner approve), REJECTED (owner reject), hoặc CANCELLED (renter cancel hoặc booking timeout).
+
+Từ CONFIRMED, booking chuyển sang ONGOING khi renter start trip ở pickup time. ONGOING là state active - vehicle đang được sử dụng. Từ ONGOING chỉ có một way forward: COMPLETED khi trip kết thúc thành công.
+
+CANCELLED và COMPLETED là terminal states - không có transition nào từ đây. REJECTED cũng là terminal state, nhưng có một exception: admin có thể manually move từ REJECTED về PENDING nếu có dispute.
+
+Mỗi state transition đều được log với timestamp và actor (ai thực hiện action). Audit trail này quan trọng cho dispute resolution và analytics.
+
+\subsubsection{Quy trình tạo booking}
+Renter đã chọn xe và time slot, tap "Book Now" ở vehicle detail page. Client mở booking form hiển thị summary: vehicle info, selected time range, calculated price (hourly hoặc daily rate), và deposit amount.
+
+Form cho phép renter nhập optional notes cho owner (ví dụ: "Tôi cần xe để đi du lịch Đà Lạt"). Client validate time range: start time phải sau current time, end time phải sau start time, và duration phải reasonable (không quá 30 ngày).
+
+Khi renter confirm, client gửi POST request đến \texttt{/bookings} với vehicleId, startTime, endTime, và notes. Backend bắt đầu một series validations quan trọng.
+
+Đầu tiên, verify renter không phải là chủ xe. Nếu user.id === vehicle.ownerId, trả về error "You cannot book your own vehicle". Check này tránh circular booking và gaming system.
+
+Tiếp theo, check vehicle availability. Vehicle phải có status = AVAILABLE và isAvailable = true. Nếu không, trả về error với current vehicle status để renter hiểu lý do.
+
+Quan trọng nhất là check time conflicts. Backend query database tìm tất cả bookings của vehicle này với status là PENDING, CONFIRMED, hoặc ONGOING. Với mỗi existing booking, check xem có overlap với requested time range không.
+
+Overlap detection sử dụng logic: (start1 < end2) AND (start2 < end1). Nếu condition này true, có conflict. Hệ thống trả về error "Vehicle already booked for this time slot" kèm với suggested alternative times.
+
+Khi validations pass, system calculate total price. Nếu duration >= 24 hours, sử dụng daily rate. Nếu < 24 hours, sử dụng hourly rate. Total price = (rate $\times$ duration) rounded up. Deposit được lấy từ vehicle.deposit field.
+
+Booking record được create với status = PENDING, calculated prices, và link đến user, owner, và vehicle. Ngay sau khi create, hệ thống emit event "booking.created" với booking details.
+
+Response được trả về renter với booking object. Client show success message và navigate đến booking detail page. Renter thấy status PENDING với message "Waiting for owner approval".
+
+\subsubsection{Quy trình owner approve booking}
+Owner nhận real-time notification (thông qua WebSocket hoặc FCM) về có booking request mới. Notification payload chứa bookingId và basic info. Owner tap notification để mở booking detail page.
+
+Page hiển thị đầy đủ thông tin: renter profile (name, avatar, trust score, số trips đã hoàn thành), vehicle info, requested time range, pricing breakdown, và renter's notes. Owner có context đầy đủ để quyết định.
+
+Owner có hai buttons: "Approve" (green) và "Reject" (red). Nếu tap Approve, một confirmation dialog xuất hiện cho phép owner nhập optional message cho renter (ví dụ: "Welcome! Please arrive on time").
+
+Khi confirm approve, client gửi PATCH request đến \texttt{/owner/bookings/:id/approve} với optional message. Backend verify ownership: booking.ownerId phải match currentUser.id. Nếu không match, trả về 403.
+
+Backend check booking status = PENDING. Nếu booking đã bị cancel hoặc reject, trả về error "Booking is no longer available for approval". Race condition này có thể xảy ra nếu renter cancel cùng lúc owner approve.
+
+Hệ thống re-validate time conflicts một lần nữa. Trong khoảng thời gian từ khi booking được tạo đến khi owner approve, có thể có booking khác đã được approve cho cùng time slot (nếu owner approve nhiều bookings cùng lúc). Check này đảm bảo không có double booking.
+
+Nếu validation pass, transaction bắt đầu: update booking status từ PENDING sang CONFIRMED, set confirmedAt timestamp, và save owner's message. Transaction commit, event "booking.approved" được emit với booking details.
+
+Response trả về owner với updated booking object. Client update UI ngay lập tức để reflect confirmed status. Owner thấy booking move từ "Pending" sang "Confirmed" tab.
+
+\subsubsection{Quy trình owner reject booking}
+Owner review booking và quyết định reject. Có thể vì: time không convenient, renter trust score quá thấp, hoặc đơn giản là owner không muốn cho thuê nữa. Owner tap "Reject" button.
+
+Dialog xuất hiện yêu cầu nhập lý do reject (required field). Lý do này sẽ được gửi cho renter để họ hiểu tại sao. Common reasons: "Vehicle not available at that time", "Need vehicle for personal use", "Renter profile concerns".
+
+Client gửi PATCH request đến \texttt{/owner/bookings/:id/reject} với reason text. Backend verify ownership và status = PENDING như flow approve. Transaction update booking status sang REJECTED, set cancellationReason, và cancelledAt timestamp.
+
+Event "booking.rejected" được emit. Response trả về owner. Client update UI và show success message "Booking rejected". Booking move sang "History" tab với REJECTED badge.
+
+\subsubsection{Quy trình renter cancel booking}
+Renter có thể cancel booking ở status PENDING hoặc CONFIRMED (trước khi trip start). Trong booking detail page, renter thấy "Cancel Booking" button. Tap button mở confirmation dialog warning về cancellation.
+
+Dialog yêu cầu nhập cancellation reason. Client gửi PATCH request đến \texttt{/bookings/:id/cancel} với reason. Backend verify booking.renterId === currentUser.id và status cho phép cancel (PENDING hoặc CONFIRMED).
+
+Transaction update status sang CANCELLED với cancellation metadata. Event "booking.cancelled" được emit với info về ai cancel (renter) và reason. Notification được gửi cho owner thông báo renter đã cancel.
+
+Nếu booking ở gần pickup time (ví dụ: < 2 hours), system có thể apply cancellation penalty hoặc mark flag trên renter profile để track cancellation behavior. Policy này được define ở business level.
+
+\subsubsection{Auto-expiry của pending bookings}
+Backend chạy scheduled job (cron) mỗi 15 phút để scan pending bookings. Nếu booking đã pending quá X hours (ví dụ: 24 hours) mà chưa được approve, tự động cancel.
+
+Job query bookings với status = PENDING và createdAt < (now - 24 hours). Với mỗi booking, update status sang CANCELLED với reason "Expired - no response from owner". Event được emit để notify renter.
+
+Auto-expiry đảm bảo renters không phải đợi vô thời hạn và có thể book xe khác. Nó cũng giúp keep booking list của owners clean.
+
+\subsection{MODULE 4: Notification System}
+
+\subsubsection{Mục tiêu}
+Notification System đảm bảo users luôn được thông báo kịp thời về mọi sự kiện quan trọng. Mục tiêu là delivery notification trong vòng < 1 second khi user online, và đảm bảo không miss notification khi offline thông qua FCM push.
+
+\subsubsection{Công nghệ sử dụng}
+Backend sử dụng Socket.IO cho WebSocket connections, NestJS EventEmitter cho event bus, Firebase Admin SDK cho push notifications. Frontend Flutter sử dụng socket\_io\_client cho WebSocket, firebase\_messaging cho FCM, và local notifications plugin cho in-app toasts.
+
+\subsubsection{Kiến trúc Hybrid}
+Notification system được thiết kế theo mô hình hybrid với ba channels: Database storage, WebSocket real-time, và FCM push. Ba channels này work together để đảm bảo zero message loss và optimal delivery time.
+
+Database channel lưu trữ mọi notifications như permanent records. Mỗi notification có: id, receiverId, senderId, type, title, message, bookingId (optional), isRead flag, createdAt, và readAt timestamps. Database serve như source of truth và inbox history.
+
+WebSocket channel deliver notifications real-time cho users đang online. Khi notification được tạo, system check nếu receiver đang có active WebSocket connection. Nếu có, notification được emit immediately đến client. Client hiển thị toast và update badge count.
+
+FCM channel đảm bảo delivery cho offline users. Mọi notification đều được gửi qua FCM bất kể user online hay offline. FCM xử lý việc queue messages và deliver khi device online trở lại. System track FCM tokens trong database và handle token refresh automatically.
+
+\subsubsection{Event-driven notification flow}
+Notification flow bắt đầu từ business events. Khi có sự kiện xảy ra trong system (booking created, trip started, payment completed), service emit event thông qua EventEmitter. Event payload chứa đầy đủ context: actor, target, action, và related entities.
+
+Event listeners được register ở notification module. Mỗi listener handle một loại event cụ thể. Ví dụ: BookingEventListener handle tất cả booking-related events như booking.created, booking.approved, booking.rejected, booking.cancelled.
+
+Khi listener receive event, nó extract thông tin cần thiết, determine recipients (ai nên nhận notification), và compose notification content. Content được customize dựa trên recipient role và event type. Ví dụ: khi booking created, owner nhận "New booking request", còn admin nhận "New booking requires review".
+
+Notification record được create trong database với all metadata. Ngay sau đó, system check xem recipient có đang online không bằng cách lookup trong WebSocket connection map. Nếu online, notification được emit qua WebSocket. Parallel với đó, FCM notification được trigger.
+
+Flow này đảm bảo: notifications được persist (không mất), delivery nhanh nếu possible (WebSocket), và fallback robust nếu user offline (FCM). Architect tách biệt business logic và notification logic, make system dễ extend và maintain.
+
+\subsubsection{WebSocket connection management}
+Khi Flutter app start, SocketService được initialize trong main(). Service extract JWT token từ local storage và establish WebSocket connection đến server với token trong handshake auth.
+
+Server-side NotificationGateway receive connection request. Gateway extract token từ handshake, verify token bằng JwtService. Nếu token invalid, connection bị reject immediately. Nếu valid, userId được extract từ token payload.
+
+Gateway maintain một Map<userId, Set<socketId>> để track connections. Một user có thể có nhiều active connections nếu login từ nhiều devices. Khi connection established, socketId được add vào Set của user đó.
+
+Client socket được join vào personal room với name format \texttt{user\_\$\{userId\}}. Room concept trong Socket.IO cho phép broadcast message đến tất cả sockets trong room. Khi cần send notification đến user, server emit đến room này, và tất cả devices của user receive message.
+
+Server gửi confirmation message "connected" với userId về client. Client setup event listeners cho các notification types: booking\_request, booking\_confirmed, booking\_rejected, booking\_cancelled, trip\_started, trip\_completed, payment\_success.
+
+Connection monitoring được implement. Nếu connection drop, client tự động reconnect với exponential backoff. Server track connection state và clean up Map khi socket disconnect.
+
+\subsubsection{Notification delivery flow}
+Khi notification được tạo, NotificationService execute delivery flow parallel. Flow bắt đầu bằng save notification to database. Database insert return generated id và timestamps.
+
+Parallel task 1: Check user online status bằng NotificationGateway.isUserOnline(userId). Method này check xem userId có trong connection Map không. 
+Nếu online, call gateway.sendToUser(userId, eventType, payload). Gateway emit message đến room \texttt{user\_\$\{userId\}}. 
+All active sockets của user receive message instantly.
+
+Parallel task 2: Query FCM tokens của user từ database. User có thể có nhiều tokens từ nhiều devices. 
+Filter tokens với isActive = true. Compose FCM message với notification (title, body) và data payload (bookingId, type, etc).
+
+FCM message được send qua Firebase Admin SDK. Method sendEachForMulticast() send đến multiple tokens cùng lúc và return results. 
+Results indicate success/failure cho mỗi token. Failed tokens được check: nếu error code là invalid-token hoặc registration-token-not-registered, mark token as inactive trong database.
+
+Client-side, WebSocket message được receive bởi SocketService. Service emit message vào notificationStream. 
+NotificationListenerWidget listen stream này, trigger NotificationBloc reload, show toast notification, và play sound (optional).
+
+FCM message được receive bởi FirebaseMessaging. Nếu app foreground, onMessage handler được trigger. Nếu background, onBackgroundMessage handler được trigger. 
+Payload được parse và local notification được show với action buttons.
+
+\subsubsection{Badge count management}
+Badge count represent số lượng unread notifications. Count này được display trên notification icon trong app bar. 
+Count phải update real-time khi có notification mới hoặc khi user đọc notifications.
+
+Initial load: Khi app start, client gửi GET \texttt{/notifications/unread-count}. Server query database với condition \texttt{receiverId = userId AND isRead = false}, return count. 
+Client lưu count vào NotificationBloc state.
+
+Real-time update: Khi notification mới arrive qua WebSocket, NotificationListenerWidget trigger NotificationBloc reload. 
+Bloc gọi repository fetch notifications, trong đó có unreadCount. New state được emit với updated count. Badge widget rebuild và animate count increase.
+
+Mark as read: Khi user tap notification item để view detail, hoặc tap "Mark all as read", client gửi PATCH \texttt{/notifications/read} hoặc \texttt{/notifications/read-all}. 
+Server update isRead = true và set readAt timestamp. Response confirm success. Client trigger bloc reload để fetch updated count.
+
+Badge animation: Khi count increase, badge widget thực hiện scale animation để draw attention. Animation được control bởi AnimationController với duration 300ms và curve elasticOut.
+
+% \subsection{MODULE 5: Trip Management}
+
+% \subsubsection{Mục tiêu}
+% Trip Management module quản lý physical usage của vehicle từ lúc renter nhận xe đến lúc trả xe. Module capture essential metrics: location, distance, battery usage, duration, và issues encountered. Data này serve multiple purposes: billing verification, dispute resolution, và vehicle maintenance scheduling.
+
+% \subsubsection{Công nghệ sử dụng}
+% Backend implement Haversine formula để calculate distance giữa start và end coordinates. Flutter sử dụng geolocator package để get GPS location và location permission. Location tracking có thể được enhance sau này với background tracking cho live trip monitoring.
+
+% \subsubsection{Quy trình start trip}
+% Booking đã được confirmed, pickup time đến. Renter mở app, vào booking detail page. Page hiển thị pickup location và "Start Trip" button. Button chỉ enabled khi current time trong khoảng [startTime - 15 minutes, startTime + 2 hours] để allow flexibility.
+
+% Renter tap "Start Trip". App request location permission nếu chưa có. Nếu user deny, show educational message explain why location needed và retry request. Nếu có permission, app get current location với desired accuracy = high.
+
+% Form hiển thị với pre-filled data: current location (latitude, longitude, address reverse-geocoded from coordinates), và input field cho battery level. User được instruct đọc battery level từ vehicle dashboard và nhập vào form.
+
+% Optional: User có thể chụp ảnh vehicle từ nhiều góc độ để document initial condition. Photos serve như evidence nếu có dispute về damages. Photos được upload tương tự như vehicle registration flow.
+
+% Khi user confirm, client gửi POST request đến \texttt{/trips/start} với bookingId, start coordinates, start battery level, và optional photo URLs. Backend validate booking thuộc về user, booking status = CONFIRMED, và current time reasonable so với booking startTime.
+
+% Trip record được create với status = ONGOING, start location, start battery, start timestamp. Transaction update booking status từ CONFIRMED sang ONGOING. Vehicle status update sang RENTED. Event "trip.started" được emit.
+
+% Owner nhận notification "Renter has started the trip" với link đến trip tracking page. Renter được navigate đến active trip screen showing trip timer, current battery (estimate), và button "End Trip".
+
+% \subsubsection{Trip monitoring}
+% Trong suốt trip, renter có trip screen open hoặc minimized. Screen display:
+% \begin{itemize}
+% \item Elapsed time (counted từ startedAt)
+% \item Estimated distance (nếu có background tracking)
+% \item Current battery level (estimate dựa trên initial và time elapsed)
+% \item Button "Report Issue" để report problems
+% \end{itemize}
+
+% Renter có thể report issues bất cứ lúc nào. Issues có thể là: vehicle malfunction, accident, flat tire, battery depleted unexpectedly. Reporting issue không cancel trip nhưng create record trong database.
+
+% Issue report form có: severity (Low/Medium/High), description (text), và optional photos. Report được submit qua PATCH \texttt{/trips/:id/report-issue}. Backend save issue info và send notification cho owner immediately.
+
+% Owner có thể contact renter để resolve issue. Trong serious cases, owner hoặc renter có thể decide end trip early. System support này thông qua admin intervention nếu cần.
+
+% \subsubsection{Quy trình end trip}
+% Khi renter trả xe, tap "End Trip" button. Form tương tự như start trip nhưng capture end state: end location, end battery level, issue report (nếu có). User được remind check vehicle condition và report mọi damages discovered.
+
+% Client submit POST request đến \texttt{/trips/:id/end} với end data. Backend validate trip status = ONGOING và time elapsed reasonable (không thể end trip sau 2 phút start - likely error).
+
+% Backend calculate trip metrics:
+% \begin{itemize}
+% \item Distance: Haversine formula between start và end coordinates, return khoảng cách theo km
+% \item Duration: (endedAt - startedAt) converted to hours and minutes
+% \item Battery used: (startBattery - endBattery) as percentage
+% \end{itemize}
+
+% Transaction update trip status sang COMPLETED, save end data và calculated metrics. Booking status update sang COMPLETED. Vehicle status update lại AVAILABLE. Vehicle.totalTrips increment by 1.
+
+% Event "trip.completed" được emit. Notification được gửi cho cả owner và renter với trip summary. Renter được navigate đến trip summary page hiển thị all metrics và prompt rate vehicle.
+
+% Owner receive notification và có thể review trip details. Nếu có issues reported, owner follow up với renter. Deposit được return hoặc deduct based trên vehicle condition.
+
+% \subsubsection{Distance calculation}
+% Haversine formula được dùng để calculate great-circle distance giữa hai points trên sphere. Formula account cho Earth's curvature, accurate cho distances up to $\sim$500km (sufficient cho motorbike trips).
+
+% Formula steps:
+% \begin{enumerate}
+% \item Convert latitudes và longitudes từ degrees sang radians
+% \item Calculate differences: dLat = lat2 - lat1, dLon = lon2 - lon1
+% \item Calculate a = $\sin^2$(dLat/2) + $\cos$(lat1) $\times$ $\cos$(lat2) $\times$ $\sin^2$(dLon/2)
+% \item Calculate c = 2 $\times$ atan2($\sqrt{a}$, $\sqrt{1-a}$)
+% \item Distance = Earth radius (6371 km) $\times$ c
+% \end{enumerate}
+
+% Implementation trong backend service được test với known distances để ensure accuracy. Distance được round đến 1 decimal place (0.1 km) cho display purposes.
+
+% \subsection{MODULE 6: Payment System}
+
+% \subsubsection{Mục tiêu}
+% Payment module handle financial transactions giữa renter và owner, với platform collecting fee. Mục tiêu là tạo flow payment đơn giản, secure, và support multiple payment methods popular ở Vietnam (VNPay, MoMo, Credit Card).
+
+% \subsubsection{Công nghệ sử dụng}
+% Backend integrate với payment gateways thông qua REST APIs. Each gateway có SDK riêng và webhook endpoint để receive callbacks. Payments được record trong database với full audit trail. Future enhancements có thể add escrow service để hold funds until trip completion.
+
+% \subsubsection{Fee structure}
+% Platform áp dụng fee structure: Renter pay total amount (rental cost + deposit). Platform take 15\% commission từ rental cost. Owner receive 85\% rental cost + full deposit back (assuming no damages).
+
+% Example calculation:
+% \begin{itemize}
+% \item Rental: 200,000 VND (8 hours $\times$ 25,000/hour)
+% \item Deposit: 300,000 VND
+% \item Total renter pays: 500,000 VND
+% \item Platform fee: 200,000 $\times$ 0.15 = 30,000 VND
+% \item Owner receives: 170,000 + 300,000 = 470,000 VND
+% \end{itemize}
+
+% Fee được calculate tại booking creation time nhưng actual payment xảy ra khi trip confirmed hoặc completed (depending on business policy).
+
+% \subsubsection{Quy trình payment}
+% Booking confirmed, renter được prompt create payment. Flow có thể trigger immediately sau approval hoặc khi renter decide pay (before trip start). Trong booking detail page, "Proceed to Payment" button được enable.
+
+% Renter tap button, được navigate đến payment method selection page. Page hiển thị available methods: VNPay, MoMo, Credit Card, Cash (cash chỉ available trong certain cases). Renter chọn preferred method.
+
+% Client gửi POST request đến \texttt{/payments} với bookingId và selected method. Backend validate booking status appropriate cho payment và chưa có payment record. Payment record được create với status = PENDING, amount, platform fee, owner amount, method, và timestamps.
+
+% Backend call payment gateway API để initiate payment session. Gateway return payment URL hoặc QR code. Client handle redirection hoặc display based on method:
+% \begin{itemize}
+% \item VNPay/MoMo: Redirect to gateway website trong webview
+% \item Credit Card: Display card input form (PCI-compliant)
+% \item QR Code: Display code cho user scan với banking app
+% \end{itemize}
+
+% User complete payment trên gateway. Gateway process transaction và redirect back to app với transaction result. Callback URL được hit với transaction status và verification signature.
+
+% Backend verify callback authenticity bằng signature check. Nếu valid và transaction successful, update payment status từ PENDING sang COMPLETED, set transactionId và paidAt timestamp. Event "payment.success" được emit.
+
+% Notifications được gửi cho both parties. Renter see success screen với receipt. Owner receive notification "Payment received" với payout details. Payment record được use cho generating invoices và financial reports.
+
+% \subsubsection{Failure handling}
+% Payment có thể fail vì nhiều reasons: insufficient funds, card declined, network timeout, user cancel. Mỗi failure có treatment khác nhau.
+
+% Nếu payment failed, gateway callback indicate error với code. Backend update payment status sang FAILED, save error details trong gatewayResponse field. Renter được notified với user-friendly error message và option retry payment.
+
+% User có thể retry payment multiple times. Each retry create new payment record linked to same booking. Previous failed payments kept cho audit but marked inactive. User được instruct fix issue (add funds, use different card) và try again.
+
+% Nếu payment không completed before trip start time, booking có thể bị auto-cancel (business policy). Renter được notified trước khi cancel để có chance complete payment.
+
+% Refunds được handle qua admin panel. Nếu trip cancelled sau payment, refund được initiate thông qua gateway refund API. Refund status được track separately và notification sent khi refund completed.
+
+% \subsection{MODULE 7: Review System}
+
+% \subsubsection{Mục tiêu}
+% Review system cho phép renters rate và review vehicles sau khi complete trips. Reviews help future renters make informed decisions và incentivize owners maintain vehicles properly. System cũng track owner's response time và reliability.
+
+% \subsubsection{Công nghệ sử dụng}
+% Reviews được store trong relational database với foreign keys đến users và vehicles. Rating aggregation được calculate bằng simple average nhưng có thể enhance với weighted average dựa trên recency. Review moderation có thể được add sau này để filter spam hoặc inappropriate content.
+
+% \subsubsection{Quy trình tạo review}
+% Trip completed, renter được prompted rate vehicle. Prompt có thể show ngay trong trip completion screen hoặc via notification sau vài hours. Renter tap "Rate this vehicle" để mở review form.
+
+% Form gồm hai parts:
+% \begin{itemize}
+% \item Rating: 1-5 stars với mô tả cho mỗi level (1 = Very Poor, 5 = Excellent)
+% \item Comment: Text field cho detailed feedback (optional nhưng encouraged)
+% \end{itemize}
+
+% Renter submit review. Client gửi POST request đến \texttt{/reviews} với vehicleId, rating, và comment. Backend validate:
+% \begin{itemize}
+% \item User đã complete ít nhất một trip với vehicle này (query trips table)
+% \item User chưa review vehicle này trước đó (one review per user per vehicle)
+% \end{itemize}
+
+% Nếu validations pass, review record được create. Immediately sau đó, system trigger recalculation của vehicle's average rating. Query tất cả reviews của vehicle, calculate average rating và count total reviews. Update vehicle.totalRating và vehicle.reviewCount.
+
+% Owner được notified về có review mới. Review được display trên vehicle detail page cho tất cả users. Reviews được sort theo newest first, với option sort by highest/lowest rating.
+
+% \subsubsection{Review display và filtering}
+% Vehicle detail page có dedicated "Reviews" section. Section hiển thị:
+% \begin{itemize}
+% \item Overall rating (average với 1 decimal place, ví dụ: 4.7)
+% \item Total review count
+% \item Rating distribution (số lượng reviews cho mỗi star level)
+% \item Individual reviews (paginated)
+% \end{itemize}
+
+% Mỗi review card show: reviewer name (hoặc anonymous), avatar, rating stars, comment text, và time ago. Owner có thể respond to reviews (future feature) để address concerns hoặc thank positive feedback.
+
+% Users có thể filter reviews by rating (show only 5-star, 4-star, etc.) hoặc sort by newest/oldest. Search functionality có thể được add để find reviews mention specific keywords (ví dụ: "battery", "comfortable").
+
+% Review system contribute đến trust building trong platform. High-rated vehicles get more bookings. Low-rated vehicles được flagged cho owner attention. Aggregate statistics được use trong search ranking algorithm.

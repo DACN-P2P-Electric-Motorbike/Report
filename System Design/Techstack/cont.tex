@@ -1,244 +1,117 @@
 \subsection{Lựa chọn công nghệ}
 
-\subsubsection{Frontend}
+Việc lựa chọn công nghệ cho hệ thống phần mềm yêu cầu đánh giá có hệ thống dựa trên yêu cầu kỹ thuật, năng lực nhóm và ràng buộc dự án \cite{bass2021}. Phần này tài liệu hóa quá trình ra quyết định cho công nghệ frontend, backend và database sử dụng Phân tích Quyết định Đa tiêu chí (MCDA) để đảm bảo các lựa chọn khách quan và có thể truy xuất.
 
-\subsubsection*{Mục tiêu}
-\begin{itemize}[leftmargin=*]
-    \item Cross-platform mobile (Android/iOS)
-    \item Hiển thị bản đồ, GPS, cập nhật real-time
-    \item Kết nối REST API \& WebSocket
-    \item Hiệu năng tốt, UI thân thiện
-\end{itemize}
+\subsubsection{Lựa chọn công nghệ Frontend}
 
-% \subsubsection{So sánh ngôn ngữ phổ biến}
+\subsubsection*{Yêu cầu và tiêu chí đánh giá}
 
-% \begin{table}[h]
-% \centering
-% \begin{tabular}{>{\bfseries}p{3cm}p{5cm}p{5.5cm}}
-% \toprule
-% \textbf{Ngôn ngữ} & \textbf{Ưu điểm} & \textbf{Nhược điểm} \\
-% \midrule
-% Dart (Flutter) & Hiệu năng cao (native code). \newline UI đồng nhất, đẹp. \newline Clean Architecture tự nhiên. \newline Hot reload nhanh. & Không cùng stack với backend. \newline Không tái sử dụng code web. \newline Kích thước APK lớn. \\
-% \addlinespace
-% JavaScript/TypeScript (React Native) & Cùng ngôn ngữ backend. \newline Tái sử dụng logic web. \newline Cộng đồng lớn. \newline APK nhỏ hơn. & Hiệu năng thấp hơn Flutter. \newline Phụ thuộc bridge JS-Native. \newline UI ít đồng nhất. \\
-% \bottomrule
-% \end{tabular}
-% \end{table}
+Frontend phải đáp ứng một số yêu cầu kỹ thuật và vận hành: triển khai đa nền tảng (iOS và Android), hiển thị bản đồ thời gian thực với tích hợp GPS, tiêu thụ RESTful API với hỗ trợ WebSocket cho cập nhật trực tiếp, hiển thị UI hiệu năng cao (60 FPS cho animation mượt mà) và năng suất phát triển cho lặp nhanh. Dựa trên các yêu cầu này, thiết lập tiêu chí đánh giá có trọng số theo các ưu tiên dự án:
 
-\subsubsection*{Một số framework front-end phổ biến}
+\begin{table}[h]
+\centering
+\caption{Tiêu chí đánh giá công nghệ frontend}
+\begin{tabular}{|p{3.5cm}|p{2cm}|p{8cm}|}
+\hline
+\textbf{Tiêu chí} & \textbf{Trọng số} & \textbf{Mô tả} \\
+\hline
+Hiệu năng & 0.25 & Ổn định tốc độ khung hình, mượt mà animation, thời gian khởi động app \\
+\hline
+Tốc độ phát triển & 0.20 & Đường cong học tập, hot reload, công cụ debug, độ trưởng thành hệ sinh thái \\
+\hline
+Tái sử dụng code & 0.15 & Khả năng chia sẻ code giữa các nền tảng và với frontend web \\
+\hline
+Tính đồng nhất UI & 0.15 & Đồng bộ giao diện đa nền tảng, khả năng tùy chỉnh widget \\
+\hline
+Khả năng tích hợp & 0.15 & Hỗ trợ bản đồ, giao tiếp thời gian thực, tính năng thiết bị gốc \\
+\hline
+Cộng đồng \& hỗ trợ & 0.10 & Chất lượng tài liệu, thư viện bên thứ ba, bảo trì tích cực \\
+\hline
+\end{tabular}
+\end{table}
 
-\begin{longtable}{|>{\raggedright\arraybackslash}p{3.5cm}|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{5cm}|}
-\hline
-\textbf{Tiêu chí} & \textbf{Flutter (Dart)} & \textbf{React Native (JS/TS)} \\
-\hline
-\endfirsthead
-\hline
-\textbf{Tiêu chí} & \textbf{Flutter} & \textbf{React Native} \\
-\hline
-\endhead
-\hline
-\endfoot
+\subsubsection*{So sánh công nghệ}
 
-Hiệu năng & \textbf{Rất cao (native code)} & Tốt (bridge JS-Native) \\
-\hline
-Tích hợp bản đồ & Google Maps, Mapbox plugin & react-native-maps \\
-\hline
-Real-time (WebSocket) & socket\_io\_client & Socket.io (cùng stack) \\
-\hline
-UI customization & \textbf{Rất cao, đồng nhất} & Phụ thuộc native components \\
-\hline
-Kích thước APK & Lớn hơn (60-80MB) & Nhỏ hơn (40-50MB) \\
-\hline
-Cộng đồng & Đang phát triển mạnh & Lớn, nhiều thư viện \\
-\hline
-Clean Architecture & \textbf{Tốt nhất (domain-data-presentation)} & Khả thi (Redux + layers) \\
-\hline
-Hot reload & \textbf{Rất nhanh} & Nhanh \\
-\hline
-Learning curve & Cao (Dart mới) & Thấp (JS phổ biến) \\
-\hline
-Tích hợp backend Node.js & Tốt (REST/WebSocket) & \textbf{Rất tốt (cùng JS)} \\
-\hline
-Tái sử dụng code web & Không (riêng Flutter Web) & \textbf{Có (React.js)} \\
-\hline
-\end{longtable}
+Tiến hành đánh giá ba framework đa nền tảng nổi bật: Flutter (Dart), React Native (JavaScript/TypeScript) và phát triển native (Swift/Kotlin).
 
-% \subsubsection{Lựa chọn: Flutter}
-
-\textbf{Lựa chọn Flutter:}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{Hiệu năng vượt trội}: Compile ra native code, không cần bridge → mượt mà hơn, quan trọng cho ứng dụng bản đồ real-time
-    \item \textbf{UI đồng nhất và đẹp}: Widget system mạnh mẽ, giao diện giống hệt trên iOS và Android
-    \item \textbf{Clean Architecture tự nhiên}: Dart hỗ trợ tốt pattern domain-data-presentation, dependency injection rõ ràng
-    \item \textbf{Hot reload nhanh}: Tăng tốc độ phát triển, debug dễ dàng
-    \item \textbf{Phù hợp dự án học tập}: Thể hiện kỹ năng học công nghệ mới, kiến trúc rõ ràng hơn
-    \item \textbf{Google hỗ trợ}: Tài liệu tốt, plugin chính thức (Maps, Location, WebSocket)
-\end{itemize}
-
-\textbf{Trade-off chấp nhận được:}
-\begin{itemize}[leftmargin=*]
-    \item Không cùng ngôn ngữ với backend: Vẫn giao tiếp tốt qua REST API và WebSocket, không ảnh hưởng kiến trúc Clean
-    \item APK lớn hơn: Chấp nhận được với mobile hiện đại (storage đủ lớn)
-    \item Learning curve: Dart dễ học, syntax giống Java/JavaScript
-\end{itemize}
-
-\subsubsection{Backend}
-
-\subsubsection*{Mục tiêu}
-\begin{itemize}[leftmargin=*]
-    \item Tương thích Clean Architecture (Layered)
-    \item Hỗ trợ REST API, WebSocket, database
-    \item Tích hợp AI module và P2P service
-    \item Dễ deploy trên cloud
-    \item Dễ mở rộng module (Auth, Payment, AI)
-\end{itemize}
-
-\subsubsection*{Lựa chọn ngôn ngữ}
-
-\begin{longtable}{|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{5.5cm}|}
+\begin{table}[h]
+\centering
+\caption{Ma trận chấm điểm công nghệ frontend. \\ \small{(1) Flutter\; (2) React Native\; (3) Native.}}
+\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Ngôn ngữ} & \textbf{Ưu điểm} & \textbf{Nhược điểm / Đánh giá} \\
+\textbf{STT} & \textbf{Hiệu năng} & \textbf{Tốc độ} & \textbf{Tái sử dụng} &
+\textbf{UI} & \textbf{Tích hợp} & \textbf{Cộng đồng} & \textbf{Điểm} \\
+ & (0.25) & (0.20) & (0.15) & (0.15) & (0.15) & (0.10) & \textbf{Tổng} \\
 \hline
-\endfirsthead
+1 & 5 & 4 & 3 & 5 & 4 & 4 & \textbf{4.30} \\
 \hline
-\textbf{Ngôn ngữ} & \textbf{Ưu điểm} & \textbf{Nhược điểm / Đánh giá} \\
+2 & 3 & 5 & 5 & 3 & 4 & 5 & \textbf{4.05} \\
 \hline
-\endhead
+3 & 5 & 2 & 1 & 5 & 5 & 4 & \textbf{3.70} \\
 \hline
-\endfoot
+\end{tabular}
+\end{table}
 
-Java & Chuẩn doanh nghiệp, DI tốt, bảo mật mạnh & Nặng, setup phức tạp. \newline \textbf{Không phù hợp đồ án.} \\
-\hline
-JavaScript/ TypeScript (Node.js) & Non-blocking I/O, hiệu năng cao. \newline Hỗ trợ real-time tốt (Socket.io). \newline Dễ tổ chức Clean Architecture. \newline Cùng ngôn ngữ với frontend. & Xử lý logic đồng bộ phức tạp cần cẩn thận. \newline \textbf{Rất phù hợp.} \\
-\hline
-Python & ORM mạnh (Django), dễ tích hợp AI & WebSocket phức tạp (Channels). \newline Cấu trúc MTV cứng nhắc. \newline \textbf{Phù hợp trung bình.} \\
-\hline
-\end{longtable}
+\textbf{Flutter (Dart).} Flutter biên dịch sang mã ARM gốc, loại bỏ chi phí cầu nối JavaScript và đạt được hiển thị 60 FPS nhất quán ngay cả với các phần tử UI phức tạp \cite{biorn2018}. Các benchmark chứng minh lợi thế hiệu năng animation của Flutter: trong các tình huống UI tốn kém với hiển thị bản đồ và cập nhật vị trí thời gian thực đồng thời, Flutter duy trì tốc độ khung hình cao hơn 15-20\% so với React Native \cite{amatya2020}. Mô hình kết hợp dựa trên widget của framework cho phép tính đồng nhất UI đa nền tảng hoàn hảo ở mức pixel mà không cần điều chỉnh theo nền tảng cụ thể. Tuy nhiên, Flutter yêu cầu học Dart - một ngôn ngữ ít phổ biến hơn JavaScript và tạo ra các file APK lớn hơn (thường là 15-20 MB chi phí cơ bản).
 
-\textbf{Lựa chọn: JavaScript/TypeScript (Node.js)}
-\begin{itemize}[leftmargin=*]
-    \item Cùng ngôn ngữ với frontend React Native → chia sẻ types, dễ debug
-    \item Non-blocking I/O → phù hợp xử lý nhiều request đồng thời
-    \item Hỗ trợ WebSocket tốt → phù hợp P2P và real-time
-    \item Dễ gọi AI service Python qua REST API
-    \item Cộng đồng lớn, dễ deploy
-\end{itemize}
+Tích hợp bản đồ của Flutter thông qua plugin chính thức \texttt{google\_maps\_flutter} cung cấp hiệu năng native với API theo phong cách Dart. Giao tiếp WebSocket qua \texttt{socket\_io\_client} hỗ trợ cập nhật vị trí xe thời gian thực. Khả năng hot reload của framework cho phép lặp UI trong vài giây, cải thiện đáng kể tốc độ phát triển mặc dù có đường cong học ngôn ngữ.
 
-\subsubsection*{Các framework back-end Node.js phổ biến}
+\textbf{React Native (JavaScript/TypeScript).} React Native tận dụng thực thi JavaScript thông qua một cầu nối đến các thành phần UI native, đạt hiệu năng hợp lý cho hầu hết các tình huống \cite{biorn2018}. Lợi thế chính của framework nằm ở khả năng tái sử dụng code: khoảng 70-80\% code logic nghiệp vụ có thể được chia sẻ giữa các ứng dụng di động và web khi sử dụng React.js cho frontend web \cite{amatya2020}. Khả năng tái sử dụng này đẩy nhanh phát triển và đảm bảo tính nhất quán trong quản lý trạng thái và logic tích hợp API.
 
-\begin{longtable}{|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{6cm}|}
+Tuy nhiên, cầu nối JavaScript của React Native gây ra chi phí hiệu năng cho các giao diện tốn animation. Frame drops xảy ra khi đồng thời hiển thị bản đồ phức tạp và xử lý cập nhật vị trí với tần suất cao. Sự phụ thuộc của framework vào các module native cho các tính năng cụ thể của nền tảng đôi khi tạo ra sự không nhất quán giữa triển khai iOS và Android, yêu cầu các nhánh code cụ thể theo nền tảng làm giảm giá trị đề xuất đa nền tảng.
+
+\textbf{Ra quyết định.} Chọn \textbf{Flutter} làm framework frontend dựa trên điểm số có trọng số (4.30) và các cân nhắc định tính. Lợi thế hiệu năng tỏ ra quan trọng cho một ứng dụng tập trung vào tương tác dựa trên bản đồ và theo dõi vị trí thời gian thực. Nghiên cứu trải nghiệm người dùng chỉ ra rằng tính nhất quán tốc độ khung hình dưới 55 FPS làm giảm khả năng phản hồi cảm nhận và tăng tải nhận thức \cite{biorn2018}. Hiển thị 60 FPS nhất quán của Flutter đảm bảo cuộn bản đồ mượt mà và cập nhật marker thời gian thực ngay cả trên các thiết bị tầm trung, chiếm đa số thị trường smartphone Việt Nam.
+
+Quyết định thừa nhận các đánh đổi: kích thước ứng dụng lớn hơn (20 MB chi phí bổ sung) và yêu cầu học Dart. Tuy nhiên, những chi phí này đại diện cho các khoản đầu tư một lần. Smartphone hiện đại có đủ dung lượng lưu trữ để chứa sự tăng kích thước mà không ảnh hưởng người dùng, và sự tương đồng của Dart với Java/JavaScript cho phép phát triển hiệu quả trong vòng một sprint (2 tuần) dựa trên kinh nghiệm của nhóm với các chuyển đổi ngôn ngữ tương tự.
+
+\subsubsection{Lựa chọn công nghệ Backend}
+
+\subsubsection*{Yêu cầu và tiêu chí đánh giá}
+
+Backend phải hỗ trợ triển khai Clean Architecture, cung cấp khả năng RESTful API và WebSocket mạnh mẽ, tích hợp với cơ sở dữ liệu PostgreSQL và các dịch vụ bên ngoài, cho phép mở rộng theo chiều ngang thông qua thiết kế không trạng thái, và đáp ứng phát triển nhanh trong các ràng buộc thời gian dự án.
+
+\begin{table}[h]
+\centering
+\caption{Ma trận chấm điểm công nghệ backend. \\ \small {(1) NestJS,\; (2) Express.js,\; (3) Spring Boot.}}
+\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
 \hline
-\textbf{Framework} & \textbf{Ưu điểm} & \textbf{Nhược điểm / Đánh giá} \\
+\textbf{STT} & \textbf{Kiến trúc} & \textbf{Async} & \textbf{Hệ sinh thái} &
+\textbf{Tốc độ} & \textbf{Triển khai} & \textbf{Type safety} & \textbf{Điểm} \\
+ & (0.25) & (0.20) & (0.20) & (0.15) & (0.10) & (0.10) & \textbf{Tổng} \\
 \hline
-\endfirsthead
+1 & 5 & 5 & 4 & 4 & 5 & 5 & \textbf{4.65} \\
 \hline
-\textbf{Framework} & \textbf{Ưu điểm} & \textbf{Nhược điểm / Đánh giá} \\
+2 & 2 & 5 & 5 & 5 & 5 & 2 & \textbf{3.95} \\
 \hline
-\endhead
+3 & 5 & 3 & 5 & 2 & 4 & 5 & \textbf{4.05} \\
 \hline
-\endfoot
-
-Express.js & Nhẹ, linh hoạt, đơn giản & Không có cấu trúc sẵn, cần tự tổ chức. \newline Thiếu DI, decorator. \newline \textbf{Phù hợp dự án nhỏ.} \\
-\hline
-NestJS & Kiến trúc module rõ ràng. \newline DI, decorator tích hợp sẵn. \newline Hỗ trợ TypeScript tốt. \newline Template Clean Architecture có sẵn. \newline WebSocket built-in. & Phức tạp hơn Express. \newline Learning curve cao hơn. \newline \textbf{Rất phù hợp Clean Architecture.} \\
-\hline
-Fastify & Hiệu năng cao nhất & Cộng đồng nhỏ hơn. \newline Plugin ít hơn. \newline \textbf{Phù hợp trung bình.} \\
-\hline
-\end{longtable}
-
-\textbf{Lựa chọn: NestJS}
-\begin{itemize}[leftmargin=*]
-    \item Hỗ trợ Clean Architecture tốt nhất (module, DI, layers)
-    \item Decorator và TypeScript → code rõ ràng, dễ bảo trì
-    \item WebSocket tích hợp sẵn → phù hợp P2P và real-time
-    \item Template có sẵn cho Clean Architecture
-    \item Dễ mở rộng module (Auth, Payment, AI)
-\end{itemize}
-
-\textbf{Ngoài ra chọn: Python (FastAPI) cho triển khai AI/ML Service sau này}
-\begin{itemize}[leftmargin=*]
-    \item Python là ngôn ngữ chuẩn cho ML/AI (scikit-learn, TensorFlow, PyTorch)
-    \item FastAPI: hiệu năng cao, async, dễ tích hợp model
-    \item Chạy độc lập như microservice, giao tiếp với backend qua REST API
-    \item Không ảnh hưởng đến kiến trúc chính
-\end{itemize}
-
-\subsubsection{Database}
-\subsubsection*{Mục tiêu}
-\begin{itemize}[leftmargin=*]
-    \item Lưu trữ dữ liệu quan hệ (users, vehicles, rentals, payments)
-    \item Hỗ trợ transaction (ACID) cho payment và booking
-    \item Hiệu năng tốt cho truy vấn phức tạp (join, aggregation)
-    \item Khả năng mở rộng và backup dễ dàng
-    \item Tích hợp tốt với NestJS (ORM)
-\end{itemize}
-\textbf{Lựa chọn PostgreSQL:}
-\begin{itemize}[leftmargin=*]
-    \item \textbf{ACID compliance}: Đảm bảo tính toàn vẹn dữ liệu cho payment và rental transactions
-    \item \textbf{Spatial data support}: PostGIS extension hỗ trợ location queries (tìm xe gần, tính khoảng cách)
-    \item \textbf{JSON support}: Lưu trữ metadata linh hoạt (vehicle specifications, user preferences)
-    \item \textbf{TypeORM integration}: NestJS tích hợp sẵn TypeORM, hỗ trợ PostgreSQL tốt nhất
-    \item \textbf{Advanced features}: Full-text search, materialized views, trigger cho event-driven
-    \item \textbf{Scalability}: Replication, partitioning cho mở rộng sau này
-    \item \textbf{Open-source}: Không phí license, cộng đồng lớn
-\end{itemize}
-% \subsubsection*{Một số cơ sở dữ liệu phổ biến}
-
-% \begin{longtable}{|>{\raggedright\arraybackslash}p{2.5cm}|>{\raggedright\arraybackslash}p{5cm}|>{\raggedright\arraybackslash}p{6cm}|}
-% \hline
-% \textbf{Database} & \textbf{Ưu điểm} & \textbf{Nhược điểm / Đánh giá} \\
-% \hline
-% \endfirsthead
-% \hline
-% \textbf{Database} & \textbf{Ưu điểm} & \textbf{Nhược điểm / Đánh giá} \\
-% \hline
-% \endhead
-% \hline
-% \endfoot
-
-% PostgreSQL & ACID compliance mạnh. \newline Hỗ trợ JSON, spatial data (PostGIS). \newline TypeORM tích hợp tốt với NestJS. \newline Open-source, cộng đồng lớn. \newline Hỗ trợ index, full-text search. & Setup phức tạp hơn MySQL. \newline \textbf{Rất phù hợp cho dữ liệu quan hệ + location.} \\
-% \hline
-
-% MySQL & Phổ biến, dễ setup. \newline Hiệu năng tốt cho read-heavy. \newline Cộng đồng lớn. & Không mạnh về JSON và spatial queries. \newline Ít tính năng nâng cao hơn PostgreSQL. \newline \textbf{Phù hợp trung bình.} \\
-% \hline
-
-% MongoDB & Linh hoạt schema (NoSQL). \newline Tốt cho dữ liệu phi cấu trúc. & Không ACID mặc định. \newline Không phù hợp dữ liệu quan hệ phức tạp. \newline \textbf{Không phù hợp làm DB chính.} \\
-% \hline
-% \end{longtable}
+\end{tabular}
+\end{table}
 
 
+\textbf{NestJS (TypeScript/Node.js).} NestJS cung cấp giàn giáo kiến trúc được thiết kế rõ ràng cho triển khai Clean Architecture và Domain-Driven Design \cite{nest2024}. 
+Tiêm phụ thuộc dựa trên decorator, hệ thống module và tổ chức phân lớp của framework phù hợp tự nhiên với các lớp entity-use case-adapter-framework của Clean Architecture. 
+Kiểu tĩnh của TypeScript cho phép xác minh thời gian biên dịch các hợp đồng giao diện giữa các lớp - một khả năng quan trọng để duy trì ranh giới kiến trúc trong phát triển nhóm.
 
-% \subsection{Cache \& Message Queue}
+Mô hình I/O non-blocking, hướng sự kiện của Node.js mang lại hiệu năng xuất sắc cho các hoạt động ràng buộc I/O điển hình của ứng dụng web. 
+Các benchmark TechEmpower cho thấy Node.js xử lý hơn 40.000 yêu cầu/giây cho khối lượng công việc tuần tự hóa JSON nhiều hơn đủ cho tải hệ thống dự kiến (100-200 người dùng đồng thời, ~1.000 yêu cầu/giờ đỉnh) \cite{techempower2024}. 
+Hỗ trợ WebSocket tích hợp thông qua module \texttt{@nestjs/websockets} loại bỏ các phụ thuộc bên thứ ba cho giao tiếp thời gian thực.
 
-% \subsubsection{Redis - Multi-purpose}
+\textbf{Ra quyết định.} Chọn \textbf{NestJS} làm framework backend (điểm số có trọng số: 4.65).
+Hệ thống module, tiêm phụ thuộc và các mẫu decorator của NestJS cung cấp giàn giáo tự nhiên cho triển khai Clean Architecture. 
+Framework thực thi tách biệt mối quan tâm thông qua ranh giới module rõ ràng, giảm rủi ro trôi kiến trúc trong phát triển nhóm. 
+Phân tích so sánh các repository GitHub triển khai các ứng dụng tương tự cho thấy codebase NestJS duy trì tách biệt lớp rõ ràng hơn các đối tác Express.js \cite{nest2024}.
 
-% \textbf{Vai trò:}
-% \begin{itemize}[leftmargin=*]
-%     \item \textbf{Cache layer}: Cache API response, session data, frequently accessed data
-%     \item \textbf{Session store}: Lưu JWT tokens, user sessions
-%     \item \textbf{Pub/Sub}: Message queue cho event-driven architecture
-%     \item \textbf{Real-time data}: Lưu vị trí xe real-time (geospatial data)
-%     \item \textbf{Rate limiting}: Giới hạn API requests
-% \end{itemize}
+\subsubsection{Lựa chọn Database}
 
-% \textbf{Use cases cụ thể:}
-% \begin{table}[h]
-% \centering
-% \small
-% \begin{tabular}{>{\bfseries}p{4cm}p{9.5cm}}
-% \toprule
-% \textbf{Feature} & \textbf{Cách sử dụng Redis} \\
-% \midrule
-% Session Management & Key: \texttt{session:\{userId\}}, Value: JWT token + metadata, TTL: 7 days \\
-% \addlinespace
-% Vehicle Location Cache & Sorted Set: \texttt{vehicles:location}, Score: timestamp, Member: vehicleId + lat/lng \\
-% \addlinespace
-% Event-driven & Pub/Sub channels: \texttt{rental:started}, \texttt{vehicle:updated}, \texttt{payment:completed} \\
-% \addlinespace
-% API Cache & Key: \texttt{api:\{endpoint\}:\{params\}}, TTL: 5-60 minutes \\
-% \addlinespace
-% Rate Limiting & Key: \texttt{ratelimit:\{userId\}:\{endpoint\}}, Increment + TTL: 1 minute \\
-% \bottomrule
-% \end{tabular}
-% \end{table}
-\input{System Design/Architecture/deployment.tex}
+PostgreSQL đại diện cho lựa chọn rõ ràng cho hệ quản trị cơ sở dữ liệu quan hệ dựa trên yêu cầu kỹ thuật và sự phù hợp tính năng:
+
+\textbf{Tuân thủ ACID.} Các giao dịch tài chính (xử lý thanh toán, đặt xe) yêu cầu đảm bảo nguyên tử và nhất quán. PostgreSQL cung cấp tuân thủ ACID đầy đủ với cô lập giao dịch mạnh mẽ, ngăn chặn các tình huống hỏng dữ liệu như đặt xe hai lần hoặc tính toán thanh toán không chính xác \cite{postgresql2024}.
+
+\textbf{Hỗ trợ dữ liệu không gian.} Phần mở rộng PostGIS cho phép truy vấn địa lý hiệu quả để tìm kiếm gần ("tìm xe trong vòng 5 km") sử dụng chỉ mục R-tree. Các benchmark chứng minh PostGIS vượt trội hơn tính toán khoảng cách tầng ứng dụng 10-20 lần cho các tập dữ liệu vượt quá 1.000 xe \cite{postgis2024}.
+
+\textbf{Tính linh hoạt JSON.} Các kiểu cột JSON/JSONB native của PostgreSQL đáp ứng dữ liệu bán cấu trúc (thông số kỹ thuật xe, tùy chọn người dùng) mà không có tính cứng nhắc schema, cung cấp tính linh hoạt cho các mô hình dữ liệu phát triển trong khi duy trì tính toàn vẹn quan hệ cho các entity cốt lõi.
+
+\textbf{Độ trưởng thành tích hợp.} Hỗ trợ PostgreSQL của TypeORM bao gồm phạm vi tính năng toàn diện: migration, query builder, chiến lược loading relation và quản lý giao dịch. Chất lượng tích hợp này giảm sự không khớp trở kháng giữa code ứng dụng và hoạt động cơ sở dữ liệu.

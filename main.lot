@@ -1,3 +1,20 @@
-\babel@toc {american}{}\relax 
-\contentsline {table}{\numberline {1}{\ignorespaces Các hình thức phổ biến của P2P Marketplace}}{11}{table.caption.2}%
-\contentsline {table}{\numberline {2}{\ignorespaces So sánh các mô hình tiêu biểu trong lĩnh vực chia sẻ và di chuyển}}{15}{table.2}%
+\babel@toc {vietnamese}{}\relax 
+\babel@toc {vietnamese}{}\relax 
+\contentsline {table}{\numberline {1}{\ignorespaces Các hình thức phổ biến của P2P Marketplace}}{5}{table.caption.2}%
+\contentsline {table}{\numberline {2}{\ignorespaces So sánh các mô hình chia sẻ phương tiện theo tiêu chí định lượng}}{11}{table.caption.3}%
+\contentsline {table}{\numberline {24}{\ignorespaces Yêu cầu phi chức năng với trọng số ưu tiên}}{67}{table.caption.27}%
+\contentsline {table}{\numberline {25}{\ignorespaces Ma trận chấm điểm các phong cách kiến trúc. \small { (1) Monolithic, (2) Microservices, (3) Layered, (4) Event-Driven.}}}{68}{table.caption.28}%
+\contentsline {table}{\numberline {26}{\ignorespaces Tiêu chí đánh giá công nghệ frontend}}{73}{table.caption.32}%
+\contentsline {table}{\numberline {27}{\ignorespaces Ma trận chấm điểm công nghệ frontend. \small {(1) Flutter\tmspace +\thickmuskip {.2777em} (2) React Native\tmspace +\thickmuskip {.2777em} (3) Native.}}}{74}{table.caption.33}%
+\contentsline {table}{\numberline {28}{\ignorespaces Ma trận chấm điểm công nghệ backend. \small {(1) NestJS,\tmspace +\thickmuskip {.2777em} (2) Express.js,\tmspace +\thickmuskip {.2777em} (3) Spring Boot.}}}{75}{table.caption.34}%
+\contentsline {table}{\numberline {29}{\ignorespaces Bảng users (Bảng cha, Single Table Inheritance)}}{77}{table.29}%
+\contentsline {table}{\numberline {30}{\ignorespaces Bảng renters (Thuộc tính riêng người thuê)}}{78}{table.30}%
+\contentsline {table}{\numberline {31}{\ignorespaces Bảng owners (Thuộc tính riêng chủ xe)}}{78}{table.31}%
+\contentsline {table}{\numberline {32}{\ignorespaces Bảng admins (Thuộc tính quản trị viên)}}{79}{table.32}%
+\contentsline {table}{\numberline {33}{\ignorespaces Bảng vehicles (Thông tin xe)}}{79}{table.33}%
+\contentsline {table}{\numberline {34}{\ignorespaces Bảng bookings (Đơn đặt xe)}}{80}{table.34}%
+\contentsline {table}{\numberline {35}{\ignorespaces Bảng payments (Giao dịch thanh toán)}}{80}{table.35}%
+\contentsline {table}{\numberline {36}{\ignorespaces Bảng reviews (Đánh giá chuyến đi)}}{81}{table.36}%
+\contentsline {table}{\numberline {37}{\ignorespaces Bảng issues (Báo cáo sự cố)}}{81}{table.37}%
+\contentsline {table}{\numberline {38}{\ignorespaces Bảng notifications (Hệ thống thông báo)}}{82}{table.38}%
+\contentsline {table}{\numberline {39}{\ignorespaces Bảng analytics\_reports (Báo cáo thống kê)}}{82}{table.39}%

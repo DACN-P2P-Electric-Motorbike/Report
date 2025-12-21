@@ -1,29 +1,29 @@
 \subsection{Động cơ của đề tài}
+
 \subsubsection*{Bối cảnh thực tiễn}
-Việt Nam hiện nay là quốc gia có mật độ xe máy cao nhất Đông Nam Á, chiếm hơn 85\% phương tiện giao thông cá nhân. Chính phủ đang thúc đẩy chuyển đổi sang xe máy điện để giảm ô nhiễm không khí, khí thải CO$_2$ và tiếng ồn đô thị. Tuy nhiên, chi phí sở hữu xe điện (bao gồm mua xe, bảo dưỡng, sạc pin) vẫn còn là rào cản với nhiều người dùng, đặc biệt là sinh viên và cư dân ở các đô thị lớn.
 
-Trong bối cảnh đó, với nhu cầu di chuyển cá nhân ngày càng cao trong khi chi phí sở hữu phương tiện cá nhân tăng mạnh, mô hình chia sẻ phương tiện theo hình thức P2P trở thành một hướng đi tiềm năng. Việc phát triển nền tảng chia sẻ xe cá nhân không chỉ giúp giảm gánh nặng tài chính cho người dùng mà còn góp phần giảm thiểu ô nhiễm môi trường và tối ưu hóa việc sử dụng hạ tầng giao thông.
+Việt Nam hiện là quốc gia có mật độ xe máy cao nhất khu vực Đông Nam Á, với phương tiện hai bánh cá nhân chiếm hơn 85\% tổng phương tiện giao thông \cite{dantri2023, kevesko2023}. 
+Trước tình trạng ô nhiễm không khí gia tăng, phát thải carbon và tiếng ồn đô thị, Chính phủ Việt Nam đang tích cực thúc đẩy quá trình chuyển đổi sang xe máy điện như một phần của chiến lược phát triển bền vững \cite{phs2023}. 
+Tuy nhiên, tổng chi phí sở hữu xe điện bao gồm chi phí mua ban đầu, bảo dưỡng và cơ sở hạ tầng sạc pin vẫn là rào cản tài chính đáng kể đối với nhiều người dùng tiềm năng, đặc biệt là sinh viên và cư dân đô thị tại các thành phố lớn \cite{vnbusiness2023}.
 
-Đồng thời, sự phát triển của công nghệ số và các nền tảng thương mại điện tử tạo điều kiện thuận lợi để hiện thực hóa mô hình này. Việc triển khai một hệ thống P2P vehicle sharing có khả năng kết nối an toàn, minh bạch và thuận tiện sẽ là một giải pháp thiết thực và mang ý nghĩa xã hội lớn.
+Trong bối cảnh này, nhu cầu di chuyển cá nhân ngày càng tăng cùng với chi phí sở hữu phương tiện tăng cao đã tạo ra môi trường thuận lợi cho mô hình chia sẻ phương tiện ngang hàng (P2P). 
+Việc phát triển nền tảng chia sẻ phương tiện cá nhân không chỉ giảm gánh nặng tài chính cho người dùng mà còn đóng góp vào tính bền vững môi trường thông qua việc giảm số lượng xe tư nhân và tối ưu hóa việc sử dụng cơ sở hạ tầng giao thông. 
+Hơn nữa, sự phát triển của công nghệ số và các nền tảng thương mại điện tử đã tạo nền tảng kỹ thuật cần thiết để hiện thực hóa các mô hình kinh tế chia sẻ này. Triển khai hệ thống chia sẻ phương tiện P2P đảm bảo kết nối an toàn, minh bạch và thuận tiện vừa là giải pháp thực tiễn, vừa mang ý nghĩa xã hội quan trọng.
 
-\subsubsection*{Vấn đề tồn tại:}
-\begin{itemize}
-    \item Phương tiện cá nhân trong cộng đồng \textbf{ít được sử dụng} (nhàn rỗi vào phần lớn thời gian).
-    \item Các nghiên cứu về mô hình \textit{sharing economy} (Airbnb, Uber, xe đạp điện công cộng, car-sharing) đều xuất phát từ thực tế:
-    \begin{itemize}
-        \item Tài sản cá nhân (xe, nhà, dụng cụ) thường chỉ sử dụng \textbf{10--20\% thời gian trong ngày}, phần còn lại bị \textbf{under-utilized (dư thừa/nhàn rỗi)}.
-        \item Với bối cảnh đô thị Việt Nam, các phương tiện cá nhân nói chung cũng gặp tình trạng tương tự: chỉ phục vụ nhu cầu di chuyển ngắn hạn, còn lại đỗ tại khu dân cư, ký túc xá hoặc bãi giữ xe.
-    \end{itemize}
-    \item Người dùng ngắn hạn (ví dụ sinh viên, khách thuê trọ) có \textbf{nhu cầu di chuyển linh hoạt} nhưng không muốn/không thể mua xe.
-    \item Các hệ thống chia sẻ xe điện tập trung (như DatBike thử nghiệm, VinFast thuê pin) \textbf{tốn chi phí vận hành lớn}, khó mở rộng đến từng khu dân cư nhỏ.
-\end{itemize}
+\subsubsection*{Vấn đề tồn tại}
 
-\subsubsection*{Tính cấp thiết:}
+Động cơ thúc đẩy nghiên cứu này xuất phát từ một số quan sát quan trọng về mức độ sử dụng tài nguyên và đặc điểm di chuyển trong các cộng đồng đô thị Việt Nam. 
 
-Việc xây dựng một nền tảng \textbf{P2P sharing} cho phép cư dân \textbf{cho thuê – thuê lại xe điện} trong cùng cộng đồng giúp:
-\begin{itemize}
-    \item Tăng hiệu suất sử dụng xe điện hiện có.
-    \item Giảm chi phí cho người thuê (pay-per-use).
-    \item Góp phần \textbf{thúc đẩy quá trình chuyển đổi xanh}, giảm lượng xe xăng cá nhân.
-    \item Tạo thêm thu nhập cho chủ xe $\rightarrow$ khuyến khích sở hữu xe điện.
-\end{itemize}
+\textit{Thứ nhất}, phương tiện cá nhân trong cộng đồng có tỷ lệ sử dụng cực thấp, ở trạng thái nhàn rỗi trong phần lớn thời gian mỗi ngày. 
+Hiện tượng này phù hợp với các nghiên cứu rộng hơn về kinh tế chia sẻ, cho thấy rằng tài sản cá nhân như xe cộ, nhà ở và thiết bị thường chỉ hoạt động ở mức 10-20\% công suất trong chu kỳ 24 giờ, phần còn lại đại diện cho công suất chưa được khai thác \cite{chen2022}. 
+Trong bối cảnh đô thị Việt Nam, các phương tiện giao thông cá nhân đối mặt với hoàn cảnh tương tự, chúng chủ yếu phục vụ nhu cầu di chuyển ngắn hạn trong khi dành thời gian kéo dài đỗ tại khu dân cư, ký túc xá hoặc bãi đậu xe.
+
+\textit{Thứ hai}, người dùng ngắn hạn, bao gồm sinh viên và cư dân tạm trú, thể hiện nhu cầu di chuyển linh hoạt nhưng thiếu khả năng tài chính hoặc không mong muốn mua phương tiện. Chi phí ban đầu cao của xe máy điện (từ 20-50 triệu đồng) kết hợp với khấu hao và chi phí bảo trì khiến việc sở hữu không hiệu quả về mặt kinh tế đối với người dùng có nhu cầu vận chuyển không thường xuyên. 
+
+\textit{Thứ ba}, các hệ thống chia sẻ xe điện tập trung như các chương trình thử nghiệm của DatBike hoặc mô hình cho thuê pin của VinFast phải gánh chịu chi phí vận hành đáng kể và đối mặt với thách thức về khả năng mở rộng khi triển khai đến các cộng đồng dân cư nhỏ hơn \cite{vnbusiness2023}. Các mô hình tập trung này yêu cầu đầu tư vốn lớn vào đội xe, cơ sở hạ tầng sạc và quản lý logistics, hạn chế tính khả thi trong các môi trường cộng đồng địa phương.
+
+\subsubsection*{Tính cấp thiết}
+
+Tính cấp thiết của việc phát triển nền tảng chia sẻ P2P cho phép cư dân cộng đồng thuê và cho thuê xe máy điện trong mạng lưới địa phương được nhấn mạnh bởi nhiều yếu tố hội tụ. Cách tiếp cận này giải quyết các điểm kém hiệu quả trong hệ thống giao thông hiện tại đồng thời phù hợp với mục tiêu bền vững rộng hơn. Cụ thể, phương pháp này nâng cao hiệu quả sử dụng của các xe điện hiện có bằng cách cho phép chủ xe kiếm tiền từ tài sản nhàn rỗi, từ đó cải thiện lợi tức đầu tư tổng thể. Đối với người thuê, mô hình thanh toán theo sử dụng giảm đáng kể chi phí vận chuyển so với việc sở hữu xe, giúp khả năng tiếp cận phương tiện điện trở nên khả thi hơn đối với các nhóm người dùng bị hạn chế về kinh tế \cite{ert2016}.
+
+Từ góc độ môi trường, việc tạo điều kiện tiếp cận xe điện thông qua chia sẻ P2P góp phần vào các mục tiêu chuyển đổi xanh của Việt Nam bằng cách đẩy nhanh quá trình thay thế phương tiện cá nhân chạy xăng. Sự chuyển đổi này mang lại lợi ích có thể đo lường được về giảm phát thải carbon và cải thiện chất lượng không khí đô thị. Ngoài ra, nền tảng tạo ra nguồn thu nhập bổ sung cho chủ xe, từ đó khuyến khích việc sở hữu xe điện và góp phần mở rộng thị trường. Bản chất dựa trên sự tin cậy của việc chia sẻ cấp độ cộng đồng, kết hợp với các công cụ hỗ trợ công nghệ như ứng dụng di động, hệ thống thanh toán kỹ thuật số và theo dõi GPS, định vị chia sẻ xe máy điện P2P như một giải pháp kịp thời và có khả năng mở rộng cho các thách thức di chuyển đô thị đương đại.

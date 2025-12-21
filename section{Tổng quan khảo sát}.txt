@@ -1,0 +1,346 @@
+\section{Tổng quan khảo sát}
+
+Khảo sát được thực hiện từ ngày 14/10/2025 đến 01/11/2025 nhằm đánh giá nhu cầu sử dụng và mức độ chấp nhận ứng dụng chia sẻ xe máy điện P2P trong cộng đồng. Khảo sát thu hút sự tham gia của 54 người, tất cả đều đã đủ 16 tuổi và đáp ứng điều kiện pháp lý để sử dụng phương tiện giao thông.
+
+\section{Đặc điểm người tham gia}
+
+\subsection{Môi trường sống và vai trò}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/living_environment.png}
+    \caption{Phân bố người tham gia theo môi trường sống}
+    \label{fig:survey-living-env}
+\end{figure}
+
+Kết quả khảo sát cho thấy đa số người tham gia đang sinh sống tại các khu vực có tính cộng đồng cao, trong đó hơn một nửa đang sống tại ký túc xá. Điều này phản ánh đúng nhóm đối tượng mục tiêu của ứng dụng - những người có nhu cầu di chuyển thường xuyên nhưng chưa sở hữu phương tiện cá nhân hoặc đang tìm kiếm giải pháp di chuyển linh hoạt hơn.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/user_role.png}
+    \caption{Phân bố người tham gia theo vai trò}
+    \label{fig:survey-user-role}
+\end{figure}
+
+Về vai trò, sinh viên chiếm tỷ lệ áp đảo, tiếp theo là cư dân thường trú. Nhóm sinh viên đặc biệt có giá trị trong việc thử nghiệm mô hình P2P vì họ thường có lịch trình linh hoạt, quen thuộc với công nghệ và sẵn sàng trải nghiệm các dịch vụ chia sẻ mới.
+
+\subsection{Phân bố địa lý}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/location_distribution.png}
+    \caption{Phân bố khu vực sinh sống của người tham gia}
+    \label{fig:survey-location}
+\end{figure}
+
+Người tham gia khảo sát phân bố rộng khắp các quận nội thành TP.HCM, với mật độ tập trung cao nhất tại khu vực Thủ Đức - nơi có Làng Đại học Quốc gia. Sự phân bố địa lý này cho thấy tiềm năng triển khai ứng dụng trong phạm vi rộng, không chỉ giới hạn ở một khu vực cụ thể.
+
+\section{Hành vi di chuyển hiện tại}
+
+\subsection{Phương tiện sử dụng}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/current_transport.png}
+    \caption{Phương tiện di chuyển hiện tại}
+    \label{fig:survey-current-transport}
+\end{figure}
+
+Xe máy xăng vẫn là phương tiện di chuyển phổ biến nhất, được sử dụng bởi gần như toàn bộ người tham gia khảo sát. Tuy nhiên, đáng chú ý là nhiều người sử dụng kết hợp nhiều phương tiện khác nhau như phương tiện công cộng, đi bộ và xe công nghệ. Điều này chứng tỏ nhu cầu đa dạng hóa phương tiện di chuyển tùy theo hoàn cảnh và mục đích sử dụng.
+
+\subsection{Tần suất và quãng đường di chuyển}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{Images/Survey/daily_trips.png}
+    \includegraphics[width=0.45\textwidth]{Images/Survey/trip_distance.png}
+    \caption{Tần suất và quãng đường di chuyển hàng ngày}
+    \label{fig:survey-trip-frequency}
+\end{figure}
+
+Phần lớn người tham gia thực hiện 2-3 chuyến đi mỗi ngày với quãng đường dao động từ 2-10 km. Đây là khoảng cách lý tưởng cho xe máy điện, phù hợp với dung lượng pin và phạm vi hoạt động của các mẫu xe điện phổ biến hiện nay.
+
+\subsection{Khung giờ di chuyển}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/time_slots.png}
+    \caption{Khung giờ di chuyển trong ngày}
+    \label{fig:survey-time-slots}
+\end{figure}
+
+Khung giờ di chuyển tập trung chủ yếu vào buổi sáng (05:00-10:00) và chiều (14:00-18:00), trùng khớp với giờ học tập và làm việc. Một số lượng đáng kể cũng di chuyển vào buổi trưa và tối, cho thấy nhu cầu sử dụng xe linh hoạt trong suốt cả ngày.
+
+\section{Mức độ quen thuộc với xe máy điện}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/ev_familiarity.png}
+    \caption{Mức độ quen thuộc với xe máy điện}
+    \label{fig:survey-ev-familiarity}
+\end{figure}
+
+Kết quả khảo sát cho thấy mức độ quen thuộc với xe máy điện của người tham gia khá đa dạng. Đáng chú ý là một bộ phận đáng kể chưa có nhiều trải nghiệm với xe điện, điều này vừa là thách thức (cần giáo dục người dùng) vừa là cơ hội (thị trường tiềm năng lớn). Nhóm người dùng có mức độ quen thuộc trung bình và cao sẽ là những early adopters lý tưởng cho giai đoạn pilot.
+
+\section{Cơ sở hạ tầng sạc và đỗ xe}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/parking_charging.png}
+    \caption{Tình trạng chỗ đỗ/sạc xe điện tại nơi ở}
+    \label{fig:survey-infrastructure}
+\end{figure}
+
+Tình trạng cơ sở hạ tầng sạc và đỗ xe tại nơi ở của người tham gia khá tích cực. Một bộ phận đáng kể có sẵn cả chỗ đỗ và chỗ sạc, tạo điều kiện thuận lợi cho việc sở hữu và cho thuê xe điện. Tuy nhiên, vẫn còn một số người chưa có hoặc không rõ về cơ sở hạ tầng này, đây là yếu tố cần được quan tâm trong quá trình triển khai.
+
+\section{Yếu tố quan tâm khi sử dụng xe điện}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/concern_factors.png}
+    \caption{Các yếu tố người dùng quan tâm khi sử dụng xe điện}
+    \label{fig:survey-concerns}
+\end{figure}
+
+Các yếu tố được quan tâm nhiều nhất bao gồm:
+
+\textbf{Pin và quãng đường còn lại} là mối quan tâm hàng đầu, điều này phản ánh lo ngại phổ biến về dung lượng pin của xe điện. Ứng dụng cần hiển thị rõ ràng thông tin này và đảm bảo xe luôn có đủ pin cho chuyến đi.
+
+\textbf{Chi phí thuê xe} là yếu tố quan trọng thứ hai. Người dùng cần biết chính xác họ sẽ trả bao nhiêu và cơ chế tính phí minh bạch.
+
+\textbf{An toàn khi nhận/trả xe} cũng được nhắc đến nhiều. Hệ thống cần có cơ chế xác minh danh tính, đánh giá uy tín và quy trình giao nhận rõ ràng để đảm bảo an toàn cho cả hai bên.
+
+\textbf{Uy tín/chất lượng chủ xe} và \textbf{hỗ trợ sự cố/bảo hiểm} cũng là những yếu tố người dùng đặc biệt chú ý, cho thấy nhu cầu về một hệ thống đánh giá đáng tin cậy và cơ chế bảo vệ quyền lợi người dùng.
+
+\section{Phía chủ xe (Owner)}
+
+\subsection{Tình trạng sở hữu xe điện}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/ev_ownership.png}
+    \caption{Tình trạng sở hữu xe máy điện}
+    \label{fig:survey-ev-ownership}
+\end{figure}
+
+Kết quả khảo sát cho thấy đa số người tham gia chưa sở hữu xe máy điện. Tuy nhiên, đáng chú ý là có một nhóm nhỏ đã sở hữu và một số đang cân nhắc mua xe điện. Đây là nhóm tiềm năng có thể trở thành chủ xe trên nền tảng.
+
+\subsection{Mức độ sẵn sàng cho thuê xe}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/willing_to_rent_out.png}
+    \caption{Mức độ sẵn sàng cho thuê xe trong cộng đồng}
+    \label{fig:survey-willing-rent-out}
+\end{figure}
+
+Mặc dù số lượng người sở hữu xe điện còn hạn chế, nhưng trong số họ, có một bộ phận thể hiện sự quan tâm đến việc cho thuê xe. Điều này cho thấy tiềm năng của mô hình chia sẻ, đặc biệt khi xe điện không được sử dụng.
+
+\subsection{Điều kiện để yên tâm cho thuê}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/owner_requirements.png}
+    \caption{Điều kiện chủ xe cần để yên tâm cho thuê}
+    \label{fig:survey-owner-requirements}
+\end{figure}
+
+Chủ xe tiềm năng đưa ra các yêu cầu quan trọng:
+
+\textbf{Cọc tiền và xác minh danh tính (KYC)} là điều kiện được nhấn mạnh nhiều nhất. Chủ xe muốn đảm bảo người thuê là người đáng tin cậy và có trách nhiệm với tài sản.
+
+\textbf{Quy định bồi thường rõ ràng} khi xảy ra hư hỏng, mất mát hoặc tai nạn. Điều này đòi hỏi hệ thống phải có chính sách bảo hiểm và xử lý tranh chấp minh bạch.
+
+\textbf{Quy định trả đúng giờ} và \textbf{hỗ trợ từ Ban quản lý} cũng được đề cập, cho thấy chủ xe muốn có một nền tảng đáng tin cậy đứng ra bảo vệ quyền lợi của họ.
+
+\subsection{Mức giá cho thuê hợp lý (Owner)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/owner_pricing.png}
+    \caption{Mức giá chủ xe thấy hợp lý}
+    \label{fig:survey-owner-pricing}
+\end{figure}
+
+Chủ xe cho rằng mức giá hợp lý nên dao động trong khoảng từ 1.000-2.000đ/km hoặc tương đương với các mức giá theo giờ. Đây là thông tin quan trọng để xây dựng cơ chế định giá cạnh tranh và hợp lý cho cả hai bên.
+
+\subsection{Điều ngại ngần khi cho thuê}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/owner_concerns.png}
+    \caption{Điều khiến chủ xe ngại cho thuê nhất}
+    \label{fig:survey-owner-concerns}
+\end{figure}
+
+Các mối lo ngại chính của chủ xe bao gồm:
+
+\textbf{Hư hỏng xe và trả muộn} là hai vấn đề được nhắc đến nhiều nhất. Chủ xe lo lắng về việc xe của họ bị sử dụng không đúng cách hoặc không được trả lại đúng hạn.
+
+\textbf{Vi phạm giao thông/phạt nguội} cũng là mối quan tâm lớn, vì trách nhiệm pháp lý có thể ảnh hưởng đến chủ xe.
+
+\textbf{Mất xe/ăn cắp và vệ sinh/bảo quản kém} là những rủi ro khác mà chủ xe muốn được bảo vệ.
+
+Những lo ngại này cần được giải quyết thông qua các chính sách bảo hiểm, cơ chế đánh giá và xử phạt nghiêm ngặt với người thuê vi phạm.
+
+\section{Phía người thuê (Renter)}
+
+\subsection{Mức độ sẵn sàng thuê xe điện}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/willing_to_rent.png}
+    \caption{Mức độ sẵn sàng thuê xe điện trong cộng đồng}
+    \label{fig:survey-willing-rent}
+\end{figure}
+
+Kết quả khảo sát cho thấy mức độ quan tâm và sẵn sàng thuê xe điện khá tích cực. Đa số người tham gia thể hiện sự cởi mở với ý tưởng thuê xe điện từ cộng đồng, với mức độ từ trung bình đến cao. Điều này phản ánh tiềm năng thị trường đáng kể cho mô hình P2P.
+
+\subsection{Mục đích sử dụng xe thuê}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/rental_purposes.png}
+    \caption{Mục đích chủ yếu khi thuê xe}
+    \label{fig:survey-rental-purposes}
+\end{figure}
+
+Các mục đích sử dụng xe thuê rất đa dạng:
+
+\textbf{Đi học/đi làm} là mục đích phổ biến nhất, phản ánh nhu cầu di chuyển hàng ngày của nhóm sinh viên và người đi làm.
+
+\textbf{Tình huống khẩn cấp} được nhắc đến nhiều, cho thấy người dùng cần một giải pháp di chuyển linh hoạt khi phương tiện chính gặp sự cố.
+
+\textbf{Đi chơi/giải trí và đi chợ/siêu thị} cũng là các nhu cầu thường xuyên. Một số ít người còn quan tâm đến việc sử dụng cho giao hàng tạm thời.
+
+\subsection{Ngân sách người thuê thấy ổn}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/renter_budget.png}
+    \caption{Ngân sách thuê xe người dùng thấy hợp lý}
+    \label{fig:survey-renter-budget}
+\end{figure}
+
+Phần lớn người tham gia cho rằng mức giá hợp lý nên ở mức $ \leq $ 30k/giờ hoặc $ \leq $ 2.000đ/km. Điều này cho thấy người dùng mong muốn một mức giá cạnh tranh so với các phương tiện như xe công nghệ, nhưng vẫn chấp nhận trả phí hợp lý cho sự tiện lợi và tính bền vững của xe điện.
+
+Đặc biệt, có sự tương đồng giữa kỳ vọng giá của chủ xe và người thuê, tạo cơ hội cho việc xây dựng mô hình định giá cân bằng lợi ích hai bên.
+
+\subsection{Rào cản khi thuê xe điện}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/rental_barriers.png}
+    \caption{Các yếu tố ngăn cản người dùng thuê xe điện}
+    \label{fig:survey-rental-barriers}
+\end{figure}
+
+Các rào cản chính mà người thuê gặp phải:
+
+\textbf{Khó liên hệ/chưa tin chủ xe} là vấn đề lớn nhất, cho thấy tầm quan trọng của hệ thống xác thực và đánh giá uy tín.
+
+\textbf{Lo ngại an toàn khi nhận/trả xe} phản ánh nhu cầu về quy trình giao dịch minh bạch và an toàn.
+
+\textbf{Không rõ pin/khung giờ rảnh} cho thấy cần có giao diện hiển thị thông tin xe rõ ràng, cập nhật theo thời gian thực.
+
+\textbf{Thanh toán bất tiện} gợi ý cần tích hợp nhiều phương thức thanh toán phổ biến.
+
+\textbf{Lo quyền riêng tư/vị trí} đòi hỏi hệ thống phải có chính sách bảo mật thông tin nghiêm ngặt.
+
+\section{Phương thức thanh toán}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/payment_methods.png}
+    \caption{Phương thức thanh toán người dùng ưa thích}
+    \label{fig:survey-payment-methods}
+\end{figure}
+
+Người dùng thể hiện sự linh hoạt trong việc lựa chọn phương thức thanh toán. \textbf{MoMo} và \textbf{thẻ ngân hàng} là hai phương thức được ưa chuộng nhất, phản ánh xu hướng thanh toán không tiền mặt. Tuy nhiên, \textbf{tiền mặt} vẫn được một số lượng lớn người dùng lựa chọn. Ứng dụng nên hỗ trợ đa dạng các phương thức thanh toán để phục vụ nhiều đối tượng người dùng.
+
+\section{Chính sách cọc và hủy chuyến}
+
+\subsection{Chấp nhận đặt cọc}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/deposit_acceptance.png}
+    \caption{Mức độ chấp nhận đặt cọc khi thuê}
+    \label{fig:survey-deposit-acceptance}
+\end{figure}
+
+Đa số người tham gia chấp nhận việc đặt cọc nếu mức cọc hợp lý, cho thấy sự hiểu biết về tính chất giao dịch P2P và nhu cầu bảo vệ quyền lợi chủ xe. Tuy nhiên, vẫn có một bộ phận cần thêm thông tin hoặc chưa chấp nhận đặt cọc.
+
+\subsection{Mức cọc hợp lý}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/deposit_amount.png}
+    \caption{Mức cọc người dùng thấy hợp lý}
+    \label{fig:survey-deposit-amount}
+\end{figure}
+
+Phần lớn người dùng cho rằng mức cọc từ 100-200k là hợp lý. Một số ít chấp nhận mức cọc cao hơn (200-300k hoặc > 300k). Đây là thông tin quan trọng để thiết lập chính sách cọc cân bằng giữa việc bảo vệ chủ xe và không tạo rào cản tài chính quá lớn cho người thuê.
+
+\subsection{Chính sách hủy chuyến}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/cancellation_policy.png}
+    \caption{Chính sách hủy chuyến người dùng thấy hợp lý}
+    \label{fig:survey-cancellation-policy}
+\end{figure}
+
+Ý kiến về chính sách hủy chuyến khá phân tán:
+
+Nhiều người ủng hộ chính sách \textbf{"Miễn phí nếu hủy trước $ \geq $ 24 giờ"}, cho phép người dùng linh hoạt trong kế hoạch mà không bị phạt nếu hủy sớm.
+
+Một nhóm khác cho rằng nên \textbf{"Có phí nếu hủy trễ (< 2 giờ)"} để bảo vệ quyền lợi chủ xe khi booking bị hủy đột ngột.
+
+Một số ít mong muốn \textbf{"Không muốn mất phí hủy"}, phản ánh nhu cầu về sự linh hoạt tối đa.
+
+Hệ thống nên áp dụng chính sách phân tầng: miễn phí hủy sớm, phí nhẹ nếu hủy trong khoảng thời gian trung bình, và phí cao hơn nếu hủy rất gần giờ thuê.
+
+\section{Mức độ tin tưởng và sẵn sàng giới thiệu}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/recommendation_score.png}
+    \caption{Điểm sẵn lòng giới thiệu ứng dụng cho bạn bè (thang điểm 1-10)}
+    \label{fig:survey-recommendation}
+\end{figure}
+
+Điểm trung bình sẵn lòng giới thiệu ứng dụng cho bạn bè khá tích cực, với nhiều người cho điểm từ 7-10. Điều này phản ánh sự quan tâm và kỳ vọng của người dùng đối với ứng dụng. Tuy nhiên, vẫn có một số người cho điểm thấp hơn (1-5), cho thấy cần giải quyết các lo ngại và rào cản đã được nêu ở trên để tăng mức độ tin tưởng.
+
+\section{Tham gia thử nghiệm (Pilot)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Images/Survey/pilot_participation.png}
+    \caption{Mức độ quan tâm tham gia thử nghiệm pilot}
+    \label{fig:survey-pilot}
+\end{figure}
+
+Kết quả đáng khích lệ cho thấy có một nhóm người dùng sẵn sàng tham gia thử nghiệm nội bộ, đặc biệt với tư cách người thuê xe. Một số khác muốn nhận thông tin kết quả thử nghiệm hoặc tham gia với vai trò chủ xe. Điều này cho thấy có đủ người dùng tiềm năng để triển khai giai đoạn pilot thử nghiệm ứng dụng trong điều kiện thực tế.
+
+\section{Kết luận từ khảo sát}
+
+Kết quả khảo sát cho thấy \textbf{tiềm năng tích cực} cho ứng dụng chia sẻ xe máy điện P2P:
+
+\textbf{Về nhu cầu:} Có nhu cầu rõ ràng về giải pháp di chuyển linh hoạt, đặc biệt trong nhóm sinh viên và người trẻ sống tại các khu vực đô thị. Thói quen di chuyển hàng ngày với quãng đường 2-10km rất phù hợp với xe điện.
+
+\textbf{Về mức độ chấp nhận:} Đa số người tham gia thể hiện sự quan tâm và sẵn sàng sử dụng dịch vụ, với điểm giới thiệu trung bình khá cao. Họ chấp nhận các điều khoản hợp lý như đặt cọc và chính sách hủy có phí.
+
+\textbf{Về rào cản cần giải quyết:}
+\begin{itemize}
+    \item Xây dựng hệ thống xác thực danh tính (KYC) và đánh giá uy tín để tăng độ tin cậy
+    \item Thiết kế quy trình giao nhận xe an toàn, minh bạch
+    \item Hiển thị thông tin pin, giá cả, thời gian rảnh rõ ràng và cập nhật theo thời gian thực
+    \item Tích hợp đa dạng phương thức thanh toán phổ biến
+    \item Xây dựng chính sách bảo hiểm và xử lý tranh chấp công bằng
+    \item Đảm bảo bảo mật thông tin và quyền riêng tư người dùng
+\end{itemize}
+
+\textbf{Về định giá:} Có sự tương đồng giữa kỳ vọng giá của chủ xe và người thuê (khoảng 30k/giờ hoặc 2.000đ/km), tạo cơ hội xây dựng mô hình định giá cân bằng lợi ích.
+
+\textbf{Về pilot:} Có đủ số lượng người dùng quan tâm tham gia thử nghiệm để tri

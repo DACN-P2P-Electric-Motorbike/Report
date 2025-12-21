@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.20)  2 NOV 2025 14:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.10.20)  21 DEC 2025 07:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -23,9 +23,43 @@ File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
+) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2024/01/07 v24.1 The Babel package
+\babel@savecnt=\count195
+\U@D=\dimen141
+\l@unhyphenated=\language79
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count196
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+Package babel Info: Hyphen rules for 'canadian' set to \l@english
+(babel)             (\language0). Reported on input line 102.
+Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 105.
+Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
+(babel)             (\language73). Reported on input line 108.
+) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/babel-vietnamese\vietnamese.ldf
+Language: vietnamese 
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Vietnamese' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 36.
+
+Package babel Info: Hyphen rules for 'vietnamese' set to \l@english
+(babel)             (\language0). Reported on input line 37.
+Package babel Info: Hyphen rules for 'vietnam' set to \l@english
+(babel)             (\language0). Reported on input line 38.
+Loading definitions for the Vietnamese font encoding (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5enc.def
 File: t5enc.def 2006/11/21 v1.4 Vietnamese T5 encoding
 Now handling font encoding T5 ...
 ... processing UTF-8 mapping file for font encoding T5
@@ -182,16 +216,30 @@ File: t5enc.dfu 2006/08/19 v1.1 UTF8 support for Vietnamese
    defining Unicode char U+2039 (decimal 8249)
    defining Unicode char U+203A (decimal 8250)
    defining Unicode char U+2423 (decimal 9251)
-))) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/vntex\vietnam.sty
+))
+
+Package babel Warning: No input encoding specified for Vietnamese on input line 146.
+
+Package babel Info: Making " an active character on input line 147.
+)) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/vi\babel-vietnamese.tex
+Package babel Info: Importing font and identification data for vietnamese
+(babel)             from babel-vi.ini. Reported on input line 11.
+) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-english.tex
+Package babel Info: Importing font and identification data for english
+(babel)             from babel-en.ini. Reported on input line 11.
+)
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 3.
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
+File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/vntex\vietnam.sty
 Package: vietnam 2009/07/12 v1.3 support for Vietnamese
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-LaTeX Font Info:    Trying to load font information for T5+cmr on input line 112.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmr.fd
-File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
@@ -229,11 +277,11 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen141
-\Gin@req@width=\dimen142
+\Gin@req@height=\dimen142
+\Gin@req@width=\dimen143
 )
-\epsfxsize=\dimen143
-\epsfysize=\dimen144
+\epsfxsize=\dimen144
+\epsfysize=\dimen145
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/base\latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup6
@@ -241,9 +289,9 @@ LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/tools\array.sty
 Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
-\col@sep=\dimen145
+\col@sep=\dimen146
 \ar@mcellbox=\box51
-\extrarowheight=\dimen146
+\extrarowheight=\dimen147
 \NC@list=\toks21
 \extratabsurround=\skip50
 \backup@length=\skip51
@@ -267,33 +315,6 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip64
 \f@nch@widthR=\skip65
 \@temptokenb=\toks22
-) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2024/01/07 v24.1 The Babel package
-\babel@savecnt=\count195
-\U@D=\dimen147
-\l@unhyphenated=\language79
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
-\bbl@readstream=\read2
-\bbl@dirlevel=\count196
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
-) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\american.ldf
-Language: american 2017/06/06 v3.3r English support from the babel system
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: Hyphen rules for 'canadian' set to \l@english
-(babel)             (\language0). Reported on input line 102.
-Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 105.
-Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
-(babel)             (\language73). Reported on input line 108.
-))) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/babel/locale/en\babel-american.tex
-Package babel Info: Importing font and identification data for american
-(babel)             from babel-en-US.ini. Reported on input line 11.
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/csquotes\csquotes.sty
 Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
@@ -316,6 +337,28 @@ Package csquotes Info: ... configuration file loaded successfully.
 File: csquotes.cfg 
 )
 Package csquotes Info: Disabling multilingual quotes.
+) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/silence\silence.sty
+Package: silence 2012/07/02 v1.5b Selective filtering of warnings and error messages
+\sl@Save=\count270
+\sl@StateNumber=\count271
+\sl@MessageCount=\count272
+\sl@Casualties=\count273
+\sl@Filter=\toks24
+\sl@Message=\toks25
+\sl@UnexpandedMessage=\toks26
+\sl@Mess@ge=\toks27
+\sl@WarningCount=\count274
+\sl@WarningNumber=\count275
+\sl@WarningCasualties=\count276
+\sl@TempBOW=\toks28
+\sl@BankOfWarnings=\toks29
+LaTeX Info: Redefining \GenericWarning on input line 433.
+\sl@ErrorCount=\count277
+\sl@ErrorNumber=\count278
+\sl@ErrorCasualties=\count279
+\sl@TempBOE=\toks30
+\sl@BankOfErrors=\toks31
+LaTeX Info: Redefining \GenericError on input line 601.
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/xurl\xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
@@ -341,53 +384,53 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 )) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count270
+\lrq@indent=\count280
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-\c@tabx@nest=\count271
-\c@listtotal=\count272
-\c@listcount=\count273
-\c@liststart=\count274
-\c@liststop=\count275
-\c@citecount=\count276
-\c@citetotal=\count277
-\c@multicitecount=\count278
-\c@multicitetotal=\count279
-\c@instcount=\count280
-\c@maxnames=\count281
-\c@minnames=\count282
-\c@maxitems=\count283
-\c@minitems=\count284
-\c@citecounter=\count285
-\c@maxcitecounter=\count286
-\c@savedcitecounter=\count287
-\c@uniquelist=\count288
-\c@uniquename=\count289
-\c@refsection=\count290
-\c@refsegment=\count291
-\c@maxextratitle=\count292
-\c@maxextratitleyear=\count293
-\c@maxextraname=\count294
-\c@maxextradate=\count295
-\c@maxextraalpha=\count296
-\c@abbrvpenalty=\count297
-\c@highnamepenalty=\count298
-\c@lownamepenalty=\count299
-\c@maxparens=\count300
-\c@parenlevel=\count301
-\blx@tempcnta=\count302
-\blx@tempcntb=\count303
-\blx@tempcntc=\count304
-\c@blx@maxsection=\count305
-\blx@maxsegment@0=\count306
-\blx@notetype=\count307
-\blx@parenlevel@text=\count308
-\blx@parenlevel@foot=\count309
-\blx@sectionciteorder@0=\count310
-\blx@sectionciteorderinternal@0=\count311
-\blx@entrysetcounter=\count312
-\blx@biblioinstance=\count313
+\c@tabx@nest=\count281
+\c@listtotal=\count282
+\c@listcount=\count283
+\c@liststart=\count284
+\c@liststop=\count285
+\c@citecount=\count286
+\c@citetotal=\count287
+\c@multicitecount=\count288
+\c@multicitetotal=\count289
+\c@instcount=\count290
+\c@maxnames=\count291
+\c@minnames=\count292
+\c@maxitems=\count293
+\c@minitems=\count294
+\c@citecounter=\count295
+\c@maxcitecounter=\count296
+\c@savedcitecounter=\count297
+\c@uniquelist=\count298
+\c@uniquename=\count299
+\c@refsection=\count300
+\c@refsegment=\count301
+\c@maxextratitle=\count302
+\c@maxextratitleyear=\count303
+\c@maxextraname=\count304
+\c@maxextradate=\count305
+\c@maxextraalpha=\count306
+\c@abbrvpenalty=\count307
+\c@highnamepenalty=\count308
+\c@lownamepenalty=\count309
+\c@maxparens=\count310
+\c@parenlevel=\count311
+\blx@tempcnta=\count312
+\blx@tempcntb=\count313
+\blx@tempcntc=\count314
+\c@blx@maxsection=\count315
+\blx@maxsegment@0=\count316
+\blx@notetype=\count317
+\blx@parenlevel@text=\count318
+\blx@parenlevel@foot=\count319
+\blx@sectionciteorder@0=\count320
+\blx@sectionciteorderinternal@0=\count321
+\blx@entrysetcounter=\count322
+\blx@biblioinstance=\count323
 \labelnumberwidth=\skip66
 \labelalphawidth=\skip67
 \biblabelsep=\skip68
@@ -399,97 +442,84 @@ File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 \blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language80
-\c@mincomprange=\count314
-\c@maxcomprange=\count315
-\c@mincompwidth=\count316
+\c@mincomprange=\count324
+\c@maxcomprange=\count325
+\c@mincompwidth=\count326
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\blx-dm.def
 File: blx-dm.def 2023/03/05 v3.19 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex style data model...
-Package biblatex Info: ... file 'apa.dbx' found.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\apa.dbx
-File: apa.dbx 2025/08/27 v9.20 APA biblatex style data model
-)
+Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count317
-\c@savedafterword=\count318
-\c@annotator=\count319
-\c@savedannotator=\count320
-\c@author=\count321
-\c@savedauthor=\count322
-\c@bookauthor=\count323
-\c@savedbookauthor=\count324
-\c@commentator=\count325
-\c@savedcommentator=\count326
-\c@editor=\count327
-\c@savededitor=\count328
-\c@editora=\count329
-\c@savededitora=\count330
-\c@editorb=\count331
-\c@savededitorb=\count332
-\c@editorc=\count333
-\c@savededitorc=\count334
-\c@foreword=\count335
-\c@savedforeword=\count336
-\c@holder=\count337
-\c@savedholder=\count338
-\c@introduction=\count339
-\c@savedintroduction=\count340
-\c@namea=\count341
-\c@savednamea=\count342
-\c@nameb=\count343
-\c@savednameb=\count344
-\c@namec=\count345
-\c@savednamec=\count346
-\c@translator=\count347
-\c@savedtranslator=\count348
-\c@shortauthor=\count349
-\c@savedshortauthor=\count350
-\c@shorteditor=\count351
-\c@savedshorteditor=\count352
-\c@narrator=\count353
-\c@savednarrator=\count354
-\c@execproducer=\count355
-\c@savedexecproducer=\count356
-\c@execdirector=\count357
-\c@savedexecdirector=\count358
-\c@with=\count359
-\c@savedwith=\count360
-\c@labelname=\count361
-\c@savedlabelname=\count362
-\c@institution=\count363
-\c@savedinstitution=\count364
-\c@lista=\count365
-\c@savedlista=\count366
-\c@listb=\count367
-\c@savedlistb=\count368
-\c@listc=\count369
-\c@savedlistc=\count370
-\c@listd=\count371
-\c@savedlistd=\count372
-\c@liste=\count373
-\c@savedliste=\count374
-\c@listf=\count375
-\c@savedlistf=\count376
-\c@location=\count377
-\c@savedlocation=\count378
-\c@organization=\count379
-\c@savedorganization=\count380
-\c@origlocation=\count381
-\c@savedoriglocation=\count382
-\c@origpublisher=\count383
-\c@savedorigpublisher=\count384
-\c@publisher=\count385
-\c@savedpublisher=\count386
-\c@language=\count387
-\c@savedlanguage=\count388
-\c@origlanguage=\count389
-\c@savedoriglanguage=\count390
-\c@citation=\count391
-\c@savedcitation=\count392
+\c@afterword=\count327
+\c@savedafterword=\count328
+\c@annotator=\count329
+\c@savedannotator=\count330
+\c@author=\count331
+\c@savedauthor=\count332
+\c@bookauthor=\count333
+\c@savedbookauthor=\count334
+\c@commentator=\count335
+\c@savedcommentator=\count336
+\c@editor=\count337
+\c@savededitor=\count338
+\c@editora=\count339
+\c@savededitora=\count340
+\c@editorb=\count341
+\c@savededitorb=\count342
+\c@editorc=\count343
+\c@savededitorc=\count344
+\c@foreword=\count345
+\c@savedforeword=\count346
+\c@holder=\count347
+\c@savedholder=\count348
+\c@introduction=\count349
+\c@savedintroduction=\count350
+\c@namea=\count351
+\c@savednamea=\count352
+\c@nameb=\count353
+\c@savednameb=\count354
+\c@namec=\count355
+\c@savednamec=\count356
+\c@translator=\count357
+\c@savedtranslator=\count358
+\c@shortauthor=\count359
+\c@savedshortauthor=\count360
+\c@shorteditor=\count361
+\c@savedshorteditor=\count362
+\c@labelname=\count363
+\c@savedlabelname=\count364
+\c@institution=\count365
+\c@savedinstitution=\count366
+\c@lista=\count367
+\c@savedlista=\count368
+\c@listb=\count369
+\c@savedlistb=\count370
+\c@listc=\count371
+\c@savedlistc=\count372
+\c@listd=\count373
+\c@savedlistd=\count374
+\c@liste=\count375
+\c@savedliste=\count376
+\c@listf=\count377
+\c@savedlistf=\count378
+\c@location=\count379
+\c@savedlocation=\count380
+\c@organization=\count381
+\c@savedorganization=\count382
+\c@origlocation=\count383
+\c@savedoriglocation=\count384
+\c@origpublisher=\count385
+\c@savedorigpublisher=\count386
+\c@publisher=\count387
+\c@savedpublisher=\count388
+\c@language=\count389
+\c@savedlanguage=\count390
+\c@origlanguage=\count391
+\c@savedoriglanguage=\count392
 \c@pageref=\count393
 \c@savedpageref=\count394
 \shorthandwidth=\skip74
@@ -529,22 +559,17 @@ File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
 \biburllcskip=\muskip20
 \c@smartand=\count403
 )
-Package biblatex Info: Trying to load bibliography style 'apa'...
-Package biblatex Info: ... file 'apa.bbx' found.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\apa.bbx
-File: apa.bbx 2025/08/27 v9.20 APA biblatex references style
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\numeric.bbx
+File: numeric.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count404
 \c@bbx:relatedtotal=\count405
-)
-Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defined, overwriting.
-Package biblatex Info: Delimiter 'nameyeardelim' in context 'biblist' already defined, overwriting.
-Package biblatex Info: Delimiter 'nonameyeardelim' in context 'bib' already defined, overwriting.
-Package biblatex Info: Delimiter 'nonameyeardelim' in context 'biblist' already defined, overwriting.
-)
+))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/cbx\numeric.cbx
@@ -583,7 +608,9 @@ Package biblatex Info: ... and expl3
 Package: xparse 2023-10-10 L3 Experimental document command parser
 )
 Package: blx-case-expl3 2023/03/05 v3.19 expl3 case changing code for biblatex
-)) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
+))
+Package biblatex Info: Redefining '\cite' on input line 21.
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/appendix\appendix.sty
 Package: appendix 2020/02/08 v1.2c extra appendix facilities
 \c@@pps=\count407
 \c@@ppsavesec=\count408
@@ -738,7 +765,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2021/08/26 v2.01 AMS text
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks24
+\@emptytoks=\toks32
 \ex@=\dimen261
 )) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -776,34 +803,34 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \dotsspace@=\muskip21
 \c@parentequation=\count457
 \dspbrk@lvl=\count458
-\tag@help=\toks25
+\tag@help=\toks33
 \row@=\count459
 \column@=\count460
 \maxfields@=\count461
-\andhelp@=\toks26
+\andhelp@=\toks34
 \eqnshift@=\dimen264
 \alignsep@=\dimen265
 \tagshift@=\dimen266
 \tagwidth@=\dimen267
 \totwidth@=\dimen268
 \lineht@=\dimen269
-\@envbody=\toks27
+\@envbody=\toks35
 \multlinegap=\skip89
 \multlinetaggap=\skip90
-\mathdisplay@stack=\toks28
+\mathdisplay@stack=\toks36
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/amscls\amsthm.sty
 Package: amsthm 2020/05/29 v2.20.6
-\thm@style=\toks29
-\thm@bodyfont=\toks30
-\thm@headfont=\toks31
-\thm@notefont=\toks32
-\thm@headpunct=\toks33
+\thm@style=\toks37
+\thm@bodyfont=\toks38
+\thm@headfont=\toks39
+\thm@notefont=\toks40
+\thm@headpunct=\toks41
 \thm@preskip=\skip91
 \thm@postskip=\skip92
 \thm@headsep=\skip93
-\dth@everypar=\toks34
+\dth@everypar=\toks42
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/tools\multicol.sty
 Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
 \c@tracingmulticols=\count462
@@ -890,10 +917,10 @@ Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
 \LT@rows=\count474
 \c@LT@tables=\count475
 \c@LT@chunks=\count476
-\LT@p@ftn=\toks35
+\LT@p@ftn=\toks43
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amscd.sty
 Package: amscd 2017/04/14 v2.1 AMS Commutative Diagrams
-\athelp@=\toks36
+\athelp@=\toks44
 \minaw@=\dimen280
 \bigaw@=\dimen281
 \minCDarrowwidth=\dimen282
@@ -909,7 +936,7 @@ Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 114.
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/pict2e\p2e-pdftex.def
 File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
 )
-\pIIe@GRAPH=\toks37
+\pIIe@GRAPH=\toks45
 \@arclen=\dimen283
 \@arcrad=\dimen284
 \pIIe@tempdima=\dimen285
@@ -1031,7 +1058,7 @@ Package color Info: Driver file: pdftex.def on input line 149.
 \mdf@subsubtitleinneraboveskip@length=\skip141
 \mdf@subsubtitleinnerbelowskip@length=\skip142
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/pgf/frontendlayer\tikz.sty (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgf.sty (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/pgf/utilities\pgfrcs.sty (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks38
+\pgfutil@everybye=\toks46
 \pgfutil@tempdima=\dimen312
 \pgfutil@tempdimb=\dimen313
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfutil-latex.def
@@ -1043,10 +1070,10 @@ Package: pgf 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/pgf/basiclayer\pgfcore.sty (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/pgf/systemlayer\pgfsys.sty (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks39
-\pgfkeys@temptoks=\toks40
+\pgfkeys@pathtoks=\toks47
+\pgfkeys@temptoks=\toks48
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks41
+\pgfkeys@tmptoks=\toks49
 ))
 \pgf@x=\dimen314
 \pgf@y=\dimen315
@@ -1064,9 +1091,9 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \c@pgf@countb=\count487
 \c@pgf@countc=\count488
 \c@pgf@countd=\count489
-\t@pgf@toka=\toks42
-\t@pgf@tokb=\toks43
-\t@pgf@tokc=\toks44
+\t@pgf@toka=\toks50
+\t@pgf@tokb=\toks51
+\t@pgf@tokc=\toks52
 \pgf@sys@id@count=\count490
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
@@ -1107,9 +1134,9 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@dimen=\dimen324
 \pgfmath@count=\count493
 \pgfmath@box=\box140
-\pgfmath@toks=\toks45
-\pgfmath@stack@operand=\toks46
-\pgfmath@stack@operation=\toks47
+\pgfmath@toks=\toks53
+\pgfmath@stack@operand=\toks54
+\pgfmath@stack@operation=\toks55
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.trigonometric.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.random.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.comparison.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.base.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.round.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.misc.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfunctions.integerarithmetics.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathcalc.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count494
 )) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/math\pgfint.code.tex) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
@@ -1192,8 +1219,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen351
 \pgffor@skip=\dimen352
-\pgffor@stack=\toks48
-\pgffor@toks=\toks49
+\pgffor@stack=\toks56
+\pgffor@toks=\toks57
 )) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryplothandlers.code.tex
@@ -1300,9 +1327,9 @@ Package caption Info: New subtype `subtable' on input line 238.
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count516
-\float@exts=\toks50
+\float@exts=\toks58
 \float@box=\box155
-\@float@everytoks=\toks51
+\@float@everytoks=\toks59
 \@floatcapt=\box156
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/lastpage\lastpage.sty
 Package: lastpage 2025/01/27 v2.1e lastpage: 2.09 or 2e? (HMM)
@@ -1360,7 +1387,7 @@ Package: relsize 2013/03/29 ver 4.1
 \algocf@algobox=\box164
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/tools\enumerate.sty
 Package: enumerate 2023/07/04 v3.00 enumerate extensions (DPC)
-\@enLab=\toks52
+\@enLab=\toks60
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/tools\tabularx.sty
 Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
 \TX@col@width=\dimen376
@@ -1369,7 +1396,7 @@ Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
 \TX@target=\dimen379
 \TX@delta=\dimen380
 \TX@cols=\count522
-\TX@ftn=\toks53
+\TX@ftn=\toks61
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/multirow\multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip189
@@ -1380,7 +1407,7 @@ Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 Package: enumitem 2025/02/06 v3.11 Customized lists
 \labelindent=\skip191
 \enit@outerparindent=\dimen382
-\enit@toks=\toks54
+\enit@toks=\toks62
 \enit@inbox=\box165
 \enit@count@id=\count524
 \enitdp@description=\count525
@@ -1390,7 +1417,7 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 \rotFPtop=\skip192
 \rotFPbot=\skip193
 \rot@float@box=\box166
-\rot@mess@toks=\toks55
+\rot@mess@toks=\toks63
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
@@ -1407,7 +1434,7 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 \Gm@layoutheight=\dimen388
 \Gm@layouthoffset=\dimen389
 \Gm@layoutvoffset=\dimen390
-\Gm@dimlist=\toks56
+\Gm@dimlist=\toks64
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg)) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
@@ -1417,7 +1444,7 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \aftertitleunit=\skip195
 \ttl@plus=\dimen391
 \ttl@minus=\dimen392
-\ttl@toksa=\toks57
+\ttl@toksa=\toks65
 \titlewidth=\dimen393
 \titlewidthlast=\dimen394
 \titlewidthfirst=\dimen395
@@ -1441,7 +1468,7 @@ Package: ragged2e 2023/06/22 v3.6 ragged2e Package
 Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 \rotheadsize=\dimen396
 \c@nlinenum=\count530
-\TeXr@lab=\toks58
+\TeXr@lab=\toks66
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibraryarrows.code.tex
 File: tikzlibraryarrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.code.tex
@@ -1549,11 +1576,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 )
 \Hy@SectionHShift=\skip266
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 92.
+Package hyperref Info: Option `colorlinks' set `true' on input line 117.
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count544
 \lst@gtempboxa=\box171
-\lst@token=\toks59
+\lst@token=\toks67
 \lst@length=\count545
 \lst@currlwidth=\dimen409
 \lst@column=\count546
@@ -1572,24 +1599,55 @@ File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 File: listings.cfg 2023/02/27 1.9 listings configuration
 ))
 Package: listings 2023/02/27 1.9 (Carsten Heinz)
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/newunicodechar\newunicodechar.sty
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/datetime2\datetime2.sty
+Package: datetime2 2021/03/21 v1.5.7 (NLCT) date and time formats
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/tracklang\tracklang.sty
+Package: tracklang 2025/03/11 v1.6.6 (NLCT) Track Languages
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/tracklang\tracklang.tex)
+Package tracklang Info: Tracking dialect `vietnamese' (language `vietnamese') on input line 264.
+Package tracklang Info: Tracking dialect `english' (language `english') on input line 264.
+Package tracklang Info: Tracking dialect `vietnamese' (language `vietnamese') on input line 264.
+Package tracklang Info: Tracking dialect `english' (language `english') on input line 264.
+) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkeyval.tex (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.tex
+\XKV@toks=\toks68
+\XKV@tempa@toks=\toks69
+)
+\XKV@depth=\count552
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+Package tracklang Info: Tracking dialect `viVN' (language `vietnamese') on input line 217.
+
+
+Package datetime2 Warning: Date-Time Language Module `vietnamese' not installed on input line 1913.
+
+(C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/datetime2-english\datetime2-english.ldf
+File: datetime2-english.ldf 2019/10/21 v1.05 (NLCT)
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/datetime2-english\datetime2-english-base.ldf
+File: datetime2-english-base.ldf 2019/10/21 v1.05 (NLCT)
+))
+
+Package datetime2 Warning: Date-Time Language Module `viVN' not installed on input line 1913.
+
+) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/newunicodechar\newunicodechar.sty
 Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/ulem\ulem.sty
 \UL@box=\box173
 \UL@hyphenbox=\box174
 \UL@skip=\skip267
-\UL@hook=\toks60
+\UL@hook=\toks70
 \UL@height=\dimen413
-\UL@pe=\count552
+\UL@pe=\count553
 \UL@pixel=\dimen414
 \ULC@box=\box175
 Package: ulem 2019/11/18
 \ULdepth=\dimen415
 )
-\c@theorem=\count553
-\c@property=\count554
-\c@proposition=\count555
-\c@exer=\count556
+\c@theorem=\count554
+\c@property=\count555
+\c@proposition=\count556
+\c@exer=\count557
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
@@ -1597,43 +1655,43 @@ File: lstlang2.sty 2023/02/27 1.9 listings language file
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang3.sty
 File: lstlang3.sty 2023/02/27 1.9 listings language file
 )
-\c@subsubsubsection=\count557
+\c@subsubsubsection=\count558
  (main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 219.
-LaTeX Font Info:    ... okay on input line 219.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 219.
-LaTeX Font Info:    ... okay on input line 219.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 219.
-LaTeX Font Info:    ... okay on input line 219.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 219.
-LaTeX Font Info:    ... okay on input line 219.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 219.
-LaTeX Font Info:    ... okay on input line 219.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 219.
-LaTeX Font Info:    ... okay on input line 219.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 219.
-LaTeX Font Info:    ... okay on input line 219.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 219.
-LaTeX Font Info:    ... okay on input line 219.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 219.
-LaTeX Font Info:    ... okay on input line 219.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 219.
-LaTeX Font Info:    ... okay on input line 219.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 245.
+LaTeX Font Info:    ... okay on input line 245.
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count558
+\scratchcounter=\count559
 \scratchdimen=\dimen416
 \scratchbox=\box176
-\nofMPsegments=\count559
-\nofMParguments=\count560
-\everyMPshowfont=\toks61
-\MPscratchCnt=\count561
+\nofMPsegments=\count560
+\nofMParguments=\count561
+\everyMPshowfont=\toks71
+\MPscratchCnt=\count562
 \MPscratchDim=\dimen417
-\MPnumerator=\count562
-\makeMPintoPDFobject=\count563
-\everyMPtoPDFconversion=\toks62
+\MPnumerator=\count563
+\makeMPintoPDFobject=\count564
+\everyMPtoPDFconversion=\toks72
 ) (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
@@ -1646,57 +1704,35 @@ Package grfext Info: Graphics extension search list:
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package biblatex Info: Trying to load language 'american' -> 'american-apa'...
-Package biblatex Info: ... file 'american-apa.lbx' found.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\american-apa.lbx
-File: american-apa.lbx 2025/08/27 v9.20 APA biblatex localisation
-Package biblatex Info: Trying to load language 'american'...
-Package biblatex Info: ... file 'american.lbx' found.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\american.lbx
-File: american.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
-Package biblatex Info: ... file 'english-apa.lbx' found.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\english-apa.lbx
-File: english-apa.lbx 2025/08/27 v9.20 APA biblatex localisation
+Package biblatex Info: Trying to load language 'vietnamese'...
+Package biblatex Info: ... file 'vietnamese.lbx' not found.
+
+
+Package biblatex Warning: Language 'vietnamese' not supported.
+(biblatex)                Using dummy definitions on input line 245.
+
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
+(C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
 File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-)))
-Package biblatex Info: Trying to load language 'american'...
-Package biblatex Info: ... file 'american.lbx' found.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\american.lbx
-File: american.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
-Package biblatex Info: ... file 'english-apa.lbx' found.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex-apa\english-apa.lbx
-File: english-apa.lbx 2025/08/27 v9.20 APA biblatex localisation
-Package biblatex Info: Trying to load language 'american'...
-Package biblatex Info: ... file 'american.lbx' found.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\american.lbx
-File: american.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.lbx
-File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
-)))))
+)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
 \openout3 = `main.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'main.bbl' not found.
-
-No file main.bbl.
-Package biblatex Info: Reference section=0 on input line 219.
-Package biblatex Info: Reference segment=0 on input line 219.
+Package biblatex Info: ... file 'main.bbl' found.
+ (main.bbl)
+Package biblatex Info: Reference section=0 on input line 245.
+Package biblatex Info: Reference segment=0 on input line 245.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: rotating package is loaded.
 Package caption Info: End \AtBeginDocument code.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1731,192 +1767,151 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 219.
+Package hyperref Info: Link coloring ON on input line 245.
+(main.out) (main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
 
-\c@lstlisting=\count564
-<Images/hcmut.png, id=6, 514.3215pt x 491.9178pt>
+\c@lstlisting=\count565
+<Images/hcmut.png, id=484, 514.3215pt x 491.9178pt>
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 245.
+Package pdftex.def Info: Images/hcmut.png  used on input line 271.
 (pdftex.def)             Requested size: 142.26378pt x 136.0622pt.
-LaTeX Font Info:    Calculating math sizes for size <15> on input line 269.
+LaTeX Font Info:    Calculating math sizes for size <15> on input line 296.
+
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <15> not available
-(Font)              size <14.4> substituted on input line 269.
+(Font)              size <14.4> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.49995> not available
-(Font)              size <10.95> substituted on input line 269.
+(Font)              size <10.95> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <7.5> not available
-(Font)              size <7> substituted on input line 269.
+(Font)              size <7> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <15> not available
-(Font)              size <14.4> substituted on input line 269.
+(Font)              size <14.4> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.49995> not available
-(Font)              size <10.95> substituted on input line 269.
+(Font)              size <10.95> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <7.5> not available
-(Font)              size <7> substituted on input line 269.
+(Font)              size <7> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <15> not available
-(Font)              size <14.4> substituted on input line 269.
+(Font)              size <14.4> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.49995> not available
-(Font)              size <10.95> substituted on input line 269.
+(Font)              size <10.95> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <7.5> not available
-(Font)              size <7> substituted on input line 269.
+(Font)              size <7> substituted on input line 296.
 
-LaTeX Font Info:    Trying to load font information for U+msa on input line 269.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 296.
 (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 269.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 296.
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 269.
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 296.
  (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/base\ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <15> not available
-(Font)              size <14.4> substituted on input line 269.
+(Font)              size <14.4> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <10.49995> not available
-(Font)              size <10.95> substituted on input line 269.
+(Font)              size <10.95> substituted on input line 296.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <7.5> not available
-(Font)              size <7> substituted on input line 269.
+(Font)              size <7> substituted on input line 296.
 
 [1
 
-{C:/Users/ADMIN/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Images/hcmut.png>]
+{C:/Users/ADMIN/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map} <./Images/hcmut.png>] (Intro/protestation.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.31 \newpage
+              [1]) (Intro/acknoeledgement.tex [2] [3]) (Intro/abstract-vn.tex [4]) (Intro/abstract-en.tex [5] [6]) [7] (main.toc [8
+
+] [9] [10] [11])
+\tf@toc=\write6
+\openout6 = `main.toc'.
+
+ [12] (main.lof
+LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 29.
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
+File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+) [13
+
+])
+\tf@lof=\write7
+\openout7 = `main.lof'.
+
+ [14] (main.lot)
+\tf@lot=\write8
+\openout8 = `main.lot'.
+
+ [15
+
+] (Intro/Motivation/cont.tex
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 312.
+Package pdftex.def Info: Images/hcmut.png  used on input line 22.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 1 undefined on input line 312.
-
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.312 \newpage
-               [1]
+l.22 
+      [1
+
+]) (Intro/Objectives/cont.tex
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 322.
+Package pdftex.def Info: Images/hcmut.png  used on input line 8.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
-
-LaTeX Warning: Reference `LastPage' on page 2 undefined on input line 322.
-
-[2]
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.8     \item ƒ
+               ê·∫£m b·∫£o c√°c y·∫øu t·ªë tin c·∫≠y v√† an to√†n trong giao... [2]) (Intro/Scope/cont.tex) (Intro/Significance/cont.tex
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 327.
+Package pdftex.def Info: Images/hcmut.png  used on input line 7.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
-
-LaTeX Warning: Reference `LastPage' on page 3 undefined on input line 327.
-
-[3]
-No file main.toc.
-\tf@toc=\write6
-\openout6 = `main.toc'.
-
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.7 \end{itemize}
+                  [3])
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 332.
+Package pdftex.def Info: Images/hcmut.png  used on input line 399.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
-LaTeX Warning: Reference `LastPage' on page 4 undefined on input line 332.
-
-[4]
-No file main.lof.
-\tf@lof=\write7
-\openout7 = `main.lof'.
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 337.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 5 undefined on input line 337.
-
-[5]
-No file main.lot.
-\tf@lot=\write8
-\openout8 = `main.lot'.
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 342.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 6 undefined on input line 342.
-
-[6] (Intro/Motivation/cont.tex
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 25.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 7 undefined on input line 25.
-
-[7]) (Intro/Objectives/cont.tex) (Intro/Scope/cont.tex
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 12.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 8 undefined on input line 12.
-
-[8]) (Intro/Significance/cont.tex)
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 359.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 9 undefined on input line 359.
-
-[9]
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 361.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 10 undefined on input line 361.
-
-[10] (Knowledge/Base/cont.tex
-
-Package csquotes Warning: No space factor codes for 'T5' encoding.
-(csquotes)                Punctuation tracker may fail on input line 24.
-
-
-LaTeX Warning: Citation 'flipkartCCC2025' on page 11 undefined on input line 24.
-
-
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.399 \newpage
+               [4] (Knowledge/Base/cont.tex
 Underfull \hbox (badness 3168) in paragraph at lines 34--34
 \T5/cmr/m/n/12 d‡ch vˆ vª sinh,
  []
@@ -1931,69 +1926,84 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 50.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
-LaTeX Warning: Reference `LastPage' on page 11 undefined on input line 50.
-
-[11]
+pdfTeX warning (ext4): destination with the same identifier (name{page.5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.50     \item \textbf
+                      {Hi·ªáu ·ª©ng m·∫°ng (network effect):} C√†ng nhi·ªÅu ... [5]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 74.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
-
-LaTeX Warning: Reference `LastPage' on page 12 undefined on input line 74.
-
-[12])
+pdfTeX warning (ext4): destination with the same identifier (name{page.6}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.74 \end{itemize}
+                   [6])
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 368.
+Package pdftex.def Info: Images/hcmut.png  used on input line 403.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
-
-LaTeX Warning: Reference `LastPage' on page 13 undefined on input line 368.
-
-[13] (Related/cont.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.7}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.403 \newpage
+               [7] (Related/cont.tex
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 45.
+Package pdftex.def Info: Images/hcmut.png  used on input line 22.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
-
-LaTeX Warning: Reference `LastPage' on page 14 undefined on input line 45.
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 74--74
-[]|\T5/cmr/m/n/12 Xanh SM
- []
-
-
-Underfull \hbox (badness 3746) in paragraph at lines 74--74
-[]|\T5/cmr/m/n/12 Taxi/xe ^^_iªn t™p
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
-[]|\T5/cmr/bx/n/12 ^^^∑ t†i
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 77--77
-\T5/cmr/bx/n/12 nghi∂n
- []
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 2 on input line 79.
-
-)
+pdfTeX warning (ext4): destination with the same identifier (name{page.8}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.22 
+      [8]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 372.
+Package pdftex.def Info: Images/hcmut.png  used on input line 46.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
+pdfTeX warning (ext4): destination with the same identifier (name{page.9}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.46 ... c·ª©u h·ªçc thu·∫≠t v·ªÅ vehicle sharing}
+                                                   [9]
 
-LaTeX Warning: Reference `LastPage' on page 15 undefined on input line 372.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[15] (System Elictication/User/cont.tex
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 94.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.10}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.94     \item \textbf
+                      {Trust (0.15):} M·ª©c ƒë·ªô tin c·∫≠y hi·ªán t·∫°i tro... [10]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 115.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.11}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.115 
+       [11])
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 407.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.12}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.407 \newpage
+               [12] (System Elictication/User/cont.tex
 Overfull \hbox (9.14722pt too wide) in alignment at lines 8--22
  [] [] [] 
  []
@@ -2033,46 +2043,47 @@ File: Images/hcmut.png Graphic file (type png)
 Package pdftex.def Info: Images/hcmut.png  used on input line 62.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
-LaTeX Warning: Reference `LastPage' on page 16 undefined on input line 62.
-
-[16]) (System Elictication/Function_require/cont.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.13}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.62 \end{longtable}
+                     [13]) (System Elictication/Function_require/cont.tex
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 15.
+Package pdftex.def Info: Images/hcmut.png  used on input line 22.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
-
-LaTeX Warning: Reference `LastPage' on page 17 undefined on input line 15.
-
-[17]) (System Elictication/Non_function_require/cont.tex
+pdfTeX warning (ext4): destination with the same identifier (name{page.14}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.22     \item ƒ
+                ê·∫∑t xe theo th·ªùi gian. [14]) (System Elictication/Non_function_require/cont.tex
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 6.
+Package pdftex.def Info: Images/hcmut.png  used on input line 50.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 
-
-LaTeX Warning: Reference `LastPage' on page 18 undefined on input line 6.
-
-[18]) (System Elictication/Data_require/cont.tex)
+pdfTeX warning (ext4): destination with the same identifier (name{page.15}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.50 
+      [15]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 378.
+Package pdftex.def Info: Images/hcmut.png  used on input line 73.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 19 undefined on input line 378.
-
-[19]
+ [16])
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 378.
+Package pdftex.def Info: Images/hcmut.png  used on input line 413.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 20 undefined on input line 378.
-
-[20] (System Analysis/Usecase/cont.tex
-<Images/Usecase/system.png, id=138, 5464.415pt x 2995.19pt>
+ [17]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 413.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [18] (System Analysis/Usecase/cont.tex
+<Images/Usecase/system.png, id=943, 5464.415pt x 2995.19pt>
 File: Images/Usecase/system.png Graphic file (type png)
 <use Images/Usecase/system.png>
 Package pdftex.def Info: Images/Usecase/system.png  used on input line 7.
@@ -2081,17 +2092,13 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 27.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 21 undefined on input line 27.
-
-[21 <./Images/Usecase/system.png>]
-<Images/Usecase/renter.png, id=148, 3187.91pt x 2396.955pt>
+ [19 <./Images/Usecase/system.png>]
+<Images/Usecase/renter.png, id=950, 3187.91pt x 2396.955pt>
 File: Images/Usecase/renter.png Graphic file (type png)
 <use Images/Usecase/renter.png>
 Package pdftex.def Info: Images/Usecase/renter.png  used on input line 35.
 (pdftex.def)             Requested size: 386.96024pt x 290.95047pt.
-<Images/Usecase/owner.png, id=149, 2308.625pt x 2376.88pt>
+<Images/Usecase/owner.png, id=951, 2308.625pt x 2376.88pt>
 File: Images/Usecase/owner.png Graphic file (type png)
 <use Images/Usecase/owner.png>
 Package pdftex.def Info: Images/Usecase/owner.png  used on input line 46.
@@ -2100,12 +2107,8 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 49.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 22 undefined on input line 49.
-
-[22 <./Images/Usecase/renter.png>]
-<Images/Usecase/admin.png, id=156, 2702.095pt x 1610.015pt>
+ [20 <./Images/Usecase/renter.png>]
+<Images/Usecase/admin.png, id=958, 2702.095pt x 1610.015pt>
 File: Images/Usecase/admin.png Graphic file (type png)
 <use Images/Usecase/admin.png>
 Package pdftex.def Info: Images/Usecase/admin.png  used on input line 53.
@@ -2114,806 +2117,1648 @@ File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 97.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 23 undefined on input line 97.
-
-[23 <./Images/Usecase/owner.png> <./Images/Usecase/admin.png>]
-LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 149.
- (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/vntex\t5cmtt.fd
-File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
+ [21 <./Images/Usecase/owner.png> <./Images/Usecase/admin.png>]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 158.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 24 undefined on input line 158.
-
-[24]
+ [22]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 158.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 25 undefined on input line 158.
-
-[25]
+ [23]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 198.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 26 undefined on input line 198.
-
-[26]
+ [24]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 270.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 27 undefined on input line 270.
-
-[27]
+ [25]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 304.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 28 undefined on input line 304.
-
-[28]
+ [26]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 376.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 29 undefined on input line 376.
-
-[29]
+ [27]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 412.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 30 undefined on input line 412.
-
-[30]
+ [28]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 480.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 31 undefined on input line 480.
-
-[31]
+ [29]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 514.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 32 undefined on input line 514.
-
-[32]
+ [30]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 556.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 33 undefined on input line 556.
-
-[33]
+ [31]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 620.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 34 undefined on input line 620.
-
-[34]
+ [32]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 654.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 35 undefined on input line 654.
-
-[35]
+ [33]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 694.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 36 undefined on input line 694.
-
-[36]
+ [34]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 734.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 37 undefined on input line 734.
-
-[37]) (System Analysis/Business process/cont.tex
-
-LaTeX Warning: Reference `fig:rent-activity' on page 38 undefined on input line 6.
-
+ [35]) (System Analysis/Business process/cont.tex
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 7.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 38 undefined on input line 7.
-
-[38]
-
-LaTeX Warning: Reference `fig:return-activity' on page 39 undefined on input line 23.
-
-<Images/Activity/rent.png, id=248, 5151.245pt x 6062.65pt>
+ [36]
+<Images/Activity/rent.png, id=1064, 5151.245pt x 6066.665pt>
 File: Images/Activity/rent.png Graphic file (type png)
 <use Images/Activity/rent.png>
-Package pdftex.def Info: Images/Activity/rent.png  used on input line 41.
-(pdftex.def)             Requested size: 455.24408pt x 535.71655pt.
+Package pdftex.def Info: Images/Activity/rent.png  used on input line 37.
+(pdftex.def)             Requested size: 432.48048pt x 509.31868pt.
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 44.
+Package pdftex.def Info: Images/hcmut.png  used on input line 40.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 39 undefined on input line 44.
-
-[39]
-<Images/Activity/return.png, id=257, 4348.245pt x 5472.445pt>
+ [37]
+<Images/Activity/return.png, id=1070, 4348.245pt x 4673.46pt>
 File: Images/Activity/return.png Graphic file (type png)
 <use Images/Activity/return.png>
 Package pdftex.def Info: Images/Activity/return.png  used on input line 48.
-(pdftex.def)             Requested size: 455.24408pt x 572.9119pt.
+(pdftex.def)             Requested size: 432.48048pt x 464.80618pt.
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 52.
+Package pdftex.def Info: Images/hcmut.png  used on input line 51.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 40 undefined on input line 52.
-
-[40 <./Images/Activity/rent.png>]
-
-LaTeX Warning: Reference `fig:regis-activity' on page 41 undefined on input line 56.
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 59.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 41 undefined on input line 59.
-
-[41 <./Images/Activity/return.png>]
-<Images/Activity/submit.png, id=271, 4938.45pt x 4388.395pt>
+ [38 <./Images/Activity/rent.png>]
+<Images/Activity/submit.png, id=1078, 4657.4pt x 5038.825pt>
 File: Images/Activity/submit.png Graphic file (type png)
 <use Images/Activity/submit.png>
 Package pdftex.def Info: Images/Activity/submit.png  used on input line 62.
-(pdftex.def)             Requested size: 455.24408pt x 404.51399pt.
+(pdftex.def)             Requested size: 432.48048pt x 467.8524pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 65.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [39 <./Images/Activity/return.png>]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 74.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 42 undefined on input line 74.
-
-[42 <./Images/Activity/submit.png>]
-<Images/Activity/owner_management.png, id=279, 4737.7pt x 5111.095pt>
+ [40 <./Images/Activity/submit.png>]
+<Images/Activity/owner_management.png, id=1092, 5360.025pt x 5267.68pt>
 File: Images/Activity/owner_management.png Graphic file (type png)
 <use Images/Activity/owner_management.png>
 Package pdftex.def Info: Images/Activity/owner_management.png  used on input line 81.
-(pdftex.def)             Requested size: 455.24408pt x 491.0963pt.
-
-
-LaTeX Warning: Reference `fig:manage-bike-activity' on page 43 undefined on input line 87.
-
+(pdftex.def)             Requested size: 432.48048pt x 424.95966pt.
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 88.
+Package pdftex.def Info: Images/hcmut.png  used on input line 90.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 43 undefined on input line 88.
-
-[43 <./Images/Activity/owner_management.png>]
-
-LaTeX Warning: Reference `fig:admin-activity' on page 44 undefined on input line 105.
-
+ [41 <./Images/Activity/owner_management.png>]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 118.
+Package pdftex.def Info: Images/hcmut.png  used on input line 119.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 44 undefined on input line 118.
-
-[44]
-<Images/Activity/admin.png, id=293, 5741.45pt x 4308.095pt>
+ [42]
+<Images/Activity/admin.png, id=1107, 5793.645pt x 4540.965pt>
 File: Images/Activity/admin.png Graphic file (type png)
 <use Images/Activity/admin.png>
-Package pdftex.def Info: Images/Activity/admin.png  used on input line 126.
-(pdftex.def)             Requested size: 455.24408pt x 341.56505pt.
+Package pdftex.def Info: Images/Activity/admin.png  used on input line 127.
+(pdftex.def)             Requested size: 432.48048pt x 338.96402pt.
 ) (System Analysis/Behavior modeling/cont.tex
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 1.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 45 undefined on input line 1.
-
-[45 <./Images/Activity/admin.png>]
-
-LaTeX Warning: Reference `fig:rent-sequence' on page 46 undefined on input line 6.
-
+ [43 <./Images/Activity/admin.png>]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 45.
+Package pdftex.def Info: Images/hcmut.png  used on input line 38.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 46 undefined on input line 45.
-
-[46]
-
-LaTeX Warning: Reference `fig:return-sequence' on page 47 undefined on input line 46.
-
-<Images/Sequence/rent.png, id=308, 8925.345pt x 12338.095pt>
+ [44]
+<Images/Sequence/rent.png, id=1121, 8969.51pt x 12370.215pt>
 File: Images/Sequence/rent.png Graphic file (type png)
 <use Images/Sequence/rent.png>
-Package pdftex.def Info: Images/Sequence/rent.png  used on input line 74.
-(pdftex.def)             Requested size: 432.48048pt x 597.73798pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 78.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 47 undefined on input line 78.
-
-[47]
-<Images/Sequence/return.png, id=314, 8937.39pt x 13751.375pt>
+Package pdftex.def Info: Images/Sequence/rent.png  used on input line 63.
+(pdftex.def)             Requested size: 432.48048pt x 596.27402pt.
+<Images/Sequence/return.png, id=1122, 8965.495pt x 13775.465pt>
 File: Images/Sequence/return.png Graphic file (type png)
 <use Images/Sequence/return.png>
-Package pdftex.def Info: Images/Sequence/return.png  used on input line 81.
-(pdftex.def)             Requested size: 432.48048pt x 665.36719pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 85.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 48 undefined on input line 85.
-
-[48 <./Images/Sequence/rent.png>]
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 85.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 49 undefined on input line 85.
-
-[49 <./Images/Sequence/return.png>]
-
-LaTeX Warning: Reference `fig:regis-sequence' on page 50 undefined on input line 87.
-
-<Images/Sequence/regis.png, id=328, 11093.445pt x 8290.975pt>
-File: Images/Sequence/regis.png Graphic file (type png)
-<use Images/Sequence/regis.png>
-Package pdftex.def Info: Images/Sequence/regis.png  used on input line 101.
-(pdftex.def)             Requested size: 409.71689pt x 306.15402pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 113.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 50 undefined on input line 113.
-
-[50 <./Images/Sequence/regis.png>]
-
-LaTeX Warning: Reference `fig:manage-sequence' on page 51 undefined on input line 114.
-
-<Images/Sequence/manage.png, id=336, 9391.085pt x 9053.825pt>
-File: Images/Sequence/manage.png Graphic file (type png)
-<use Images/Sequence/manage.png>
-Package pdftex.def Info: Images/Sequence/manage.png  used on input line 121.
-(pdftex.def)             Requested size: 432.48048pt x 416.9369pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 133.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 51 undefined on input line 133.
-
-[51 <./Images/Sequence/manage.png>]
-
-LaTeX Warning: Reference `fig:accident-sequence' on page 52 undefined on input line 143.
-
-<Images/Sequence/accident.png, id=344, 8234.765pt x 6203.175pt>
-File: Images/Sequence/accident.png Graphic file (type png)
-<use Images/Sequence/accident.png>
-Package pdftex.def Info: Images/Sequence/accident.png  used on input line 161.
-(pdftex.def)             Requested size: 455.24408pt x 342.92676pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 165.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 52 undefined on input line 165.
-
-[52]
-
-LaTeX Warning: Reference `fig:notification-sequence' on page 53 undefined on input line 166.
-
-<Images/Sequence/notification.png, id=350, 7584.335pt x 6990.115pt>
-File: Images/Sequence/notification.png Graphic file (type png)
-<use Images/Sequence/notification.png>
-Package pdftex.def Info: Images/Sequence/notification.png  used on input line 183.
-(pdftex.def)             Requested size: 455.24408pt x 419.49547pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 186.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 53 undefined on input line 186.
-
-[53 <./Images/Sequence/accident.png>]
-
-LaTeX Warning: Reference `fig:admin-approve-sequence' on page 54 undefined on input line 189.
-
-<Images/Sequence/admin_approve.png, id=358, 7861.37pt x 11824.175pt>
-File: Images/Sequence/admin_approve.png Graphic file (type png)
-<use Images/Sequence/admin_approve.png>
-Package pdftex.def Info: Images/Sequence/admin_approve.png  used on input line 194.
-(pdftex.def)             Requested size: 455.24408pt x 684.70207pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 198.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 54 undefined on input line 198.
-
-[54 <./Images/Sequence/notification.png>]
-Overfull \vbox (19.57852pt too high) has occurred while \output is active []
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 198.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 55 undefined on input line 198.
-
-[55 <./Images/Sequence/admin_approve.png>]
-
-LaTeX Warning: Reference `fig:admin-statistic-sequence' on page 56 undefined on input line 221.
-
-<Images/Sequence/admin_statistic.png, id=373, 7556.23pt x 6805.425pt>
-File: Images/Sequence/admin_statistic.png Graphic file (type png)
-<use Images/Sequence/admin_statistic.png>
-Package pdftex.def Info: Images/Sequence/admin_statistic.png  used on input line 233.
-(pdftex.def)             Requested size: 455.24408pt x 409.96936pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 237.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 56 undefined on input line 237.
-
-[56]
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 250.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 57 undefined on input line 250.
-
-[57 <./Images/Sequence/admin_statistic.png>]
-
-LaTeX Warning: Reference `fig:admin-user-management-sequence' on page 58 undefined on input line 252.
-
-
-LaTeX Warning: Reference `fig:trust-score-sequence' on page 58 undefined on input line 276.
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 281.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 58 undefined on input line 281.
-
-[58]
-<Images/Sequence/admin_user_management.png, id=390, 9206.395pt x 10820.425pt>
-File: Images/Sequence/admin_user_management.png Graphic file (type png)
-<use Images/Sequence/admin_user_management.png>
-Package pdftex.def Info: Images/Sequence/admin_user_management.png  used on input line 305.
-(pdftex.def)             Requested size: 455.24408pt x 534.94403pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 309.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 59 undefined on input line 309.
-
-[59]
-<Images/Sequence/admin_trust_score.png, id=396, 7018.22pt x 8411.425pt>
-File: Images/Sequence/admin_trust_score.png Graphic file (type png)
-<use Images/Sequence/admin_trust_score.png>
-Package pdftex.def Info: Images/Sequence/admin_trust_score.png  used on input line 312.
-(pdftex.def)             Requested size: 455.24408pt x 545.60669pt.
-) (System Analysis/DataFlow/cont.tex
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 1.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 60 undefined on input line 1.
-
-[60 <./Images/Sequence/admin_user_management.png>])
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 384.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 61 undefined on input line 384.
-
-[61 <./Images/Sequence/admin_trust_score.png>] (System Design/Architecture/cont.tex
-Overfull \hbox (9.14722pt too wide) in alignment at lines 42--46
- [] [] [] 
- []
-
-
-Overfull \hbox (9.14722pt too wide) in alignment at lines 46--51
- [] [] [] 
- []
-
-
-Overfull \hbox (9.14722pt too wide) in alignment at lines 51--54
- [] [] [] 
- []
-
-
-Overfull \hbox (9.14722pt too wide) in alignment at lines 54--68
- [] [] [] 
- []
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 68.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 62 undefined on input line 68.
-
-[62]
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 94.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 63 undefined on input line 94.
-
-[63]
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 131.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 64 undefined on input line 131.
-
-[64]
-<Images/Arch/mvc.png, id=431, 1027.84pt x 578.16pt>
-File: Images/Arch/mvc.png Graphic file (type png)
-<use Images/Arch/mvc.png>
-Package pdftex.def Info: Images/Arch/mvc.png  used on input line 210.
-(pdftex.def)             Requested size: 364.18784pt x 204.86192pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--239
-
- []
-
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 239.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 65 undefined on input line 239.
-
-[65 <./Images/Arch/mvc.png (PNG copy)>]
-<Images/Arch/mvp.png, id=439, 1027.84pt x 578.16pt>
-File: Images/Arch/mvp.png Graphic file (type png)
-<use Images/Arch/mvp.png>
-Package pdftex.def Info: Images/Arch/mvp.png  used on input line 246.
-(pdftex.def)             Requested size: 364.18784pt x 204.86192pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 275.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 66 undefined on input line 275.
-
-[66 <./Images/Arch/mvp.png (PNG copy)>]
-<Images/Arch/mvvm.png, id=447, 1027.84pt x 578.16pt>
-File: Images/Arch/mvvm.png Graphic file (type png)
-<use Images/Arch/mvvm.png>
-Package pdftex.def Info: Images/Arch/mvvm.png  used on input line 280.
-(pdftex.def)             Requested size: 364.18784pt x 204.86192pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 305.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 67 undefined on input line 305.
-
-[67 <./Images/Arch/mvvm.png (PNG copy)>]
-<Images/Arch/clean.png, id=454, 774.895pt x 569.12625pt>
-File: Images/Arch/clean.png Graphic file (type png)
-<use Images/Arch/clean.png>
-Package pdftex.def Info: Images/Arch/clean.png  used on input line 314.
-(pdftex.def)             Requested size: 409.71689pt x 300.92337pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 320.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 68 undefined on input line 320.
-
-[68 <./Images/Arch/clean.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 331--331
-[]|\T5/cmr/m/n/12 UseCase In-ter-ac-tor,
- []
-
-
-Underfull \hbox (badness 1348) in paragraph at lines 331--331
-\T5/cmr/m/n/12 In-put-Bound-ary, Out-
- []
-
-
-Underfull \hbox (badness 3229) in paragraph at lines 333--334
-[]|\T5/cmr/m/n/12 Ch˘a logic nghiªp vˆ
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 335--335
-[]|\T5/cmr/m/n/12 DataAccessInterface,
- []
-
-<Images/Arch/clean_flow.png, id=460, 813.0375pt x 554.07pt>
-File: Images/Arch/clean_flow.png Graphic file (type png)
-<use Images/Arch/clean_flow.png>
-Package pdftex.def Info: Images/Arch/clean_flow.png  used on input line 373.
-(pdftex.def)             Requested size: 334.00505pt x 227.62204pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 395.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 69 undefined on input line 395.
-
-[69]) (System Design/Techstack/cont.tex
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 8.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 70 undefined on input line 8.
-
-[70 <./Images/Arch/clean_flow.png (PNG copy)>]
+Package pdftex.def Info: Images/Sequence/return.png  used on input line 69.
+(pdftex.def)             Requested size: 432.48048pt x 664.43083pt.
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 72.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 71 undefined on input line 72.
-
-[71]
+ [45]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 116.
+Package pdftex.def Info: Images/hcmut.png  used on input line 74.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 72 undefined on input line 116.
-
-[72]
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 147.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 73 undefined on input line 147.
-
-[73]
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 181.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 74 undefined on input line 181.
-
-[74] (System Design/Architecture/deployment.tex
-<Images/Deploy/arch.png, id=502, 3697.815pt x 3758.04pt>
-File: Images/Deploy/arch.png Graphic file (type png)
-<use Images/Deploy/arch.png>
-Package pdftex.def Info: Images/Deploy/arch.png  used on input line 4.
-(pdftex.def)             Requested size: 318.66946pt x 323.81592pt.
-))
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 389.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 75 undefined on input line 389.
-
-[75 <./Images/Deploy/arch.png>] (System Details/Database/cont.tex
-<Images/Design/DB/EERD.png, id=510, 8274.915pt x 6387.865pt>
-File: Images/Design/DB/EERD.png Graphic file (type png)
-<use Images/Design/DB/EERD.png>
-Package pdftex.def Info: Images/Design/DB/EERD.png  used on input line 5.
-(pdftex.def)             Requested size: 432.48048pt x 333.83765pt.
-File: Images/hcmut.png Graphic file (type png)
-<use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 28.
-(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 76 undefined on input line 28.
-
-[76 <./Images/Design/DB/EERD.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 44--48
-\T5/cmr/bx/n/10.95 ThuÎc tΩnh chΩnh: \T5/cmtt/m/n/10.95 id\T5/cmr/m/n/10.95 , \T5/cmtt/m/n/10.95 renterId (FK)\T5/cmr/m/n/10.95 , \T5/cmtt/m/n/10.95 vehicleId (FK)\T5/cmr/m/n/10.95 , \T5/cmtt/m/n/10.95 startTime\T5/cmr/m/n/10.95 , \T5/cmtt/m/n/10.95 endTime\T5/cmr/m/n/10.95 ,
- []
-
-
-Underfull \hbox (badness 2856) in paragraph at lines 51--55
-\T5/cmr/bx/n/10.95 ThuÎc tΩnh chΩnh: \T5/cmtt/m/n/10.95 id\T5/cmr/m/n/10.95 , \T5/cmtt/m/n/10.95 bookingId (FK)\T5/cmr/m/n/10.95 , \T5/cmtt/m/n/10.95 transactionId\T5/cmr/m/n/10.95 , \T5/cmtt/m/n/10.95 amount\T5/cmr/m/n/10.95 , \T5/cmtt/m/n/10.95 method\T5/cmr/m/n/10.95 , \T5/cmtt/m/n/10.95 status\T5/cmr/m/n/10.95 ,
- []
-
+ [46 <./Images/Sequence/rent.png>]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
 Package pdftex.def Info: Images/hcmut.png  used on input line 76.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 77 undefined on input line 76.
-
-[77]
-<Images/Design/DB/user-notify.png, id=524, 3501.08pt x 1650.165pt>
-File: Images/Design/DB/user-notify.png Graphic file (type png)
-<use Images/Design/DB/user-notify.png>
-Package pdftex.def Info: Images/Design/DB/user-notify.png  used on input line 86.
-(pdftex.def)             Requested size: 227.62204pt x 107.26448pt.
-<Images/Design/DB/admin-report.png, id=525, 2457.18pt x 1533.73pt>
-File: Images/Design/DB/admin-report.png Graphic file (type png)
-<use Images/Design/DB/admin-report.png>
-Package pdftex.def Info: Images/Design/DB/admin-report.png  used on input line 100.
-(pdftex.def)             Requested size: 227.62204pt x 142.05502pt.
-<Images/Design/DB/owner-vehicle.png, id=526, 2577.63pt x 2055.68pt>
-File: Images/Design/DB/owner-vehicle.png Graphic file (type png)
-<use Images/Design/DB/owner-vehicle.png>
-Package pdftex.def Info: Images/Design/DB/owner-vehicle.png  used on input line 114.
-(pdftex.def)             Requested size: 227.62204pt x 181.52147pt.
+ [47 <./Images/Sequence/return.png>]
+<Images/Sequence/regis.png, id=1142, 11121.55pt x 8315.065pt>
+File: Images/Sequence/regis.png Graphic file (type png)
+<use Images/Sequence/regis.png>
+Package pdftex.def Info: Images/Sequence/regis.png  used on input line 87.
+(pdftex.def)             Requested size: 409.71689pt x 306.28232pt.
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 118.
+Package pdftex.def Info: Images/hcmut.png  used on input line 98.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 78 undefined on input line 118.
-
-[78 <./Images/Design/DB/user-notify.png> <./Images/Design/DB/admin-report.png>]
-<Images/Design/DB/renter-booking.png, id=538, 3199.955pt x 2095.83pt>
-File: Images/Design/DB/renter-booking.png Graphic file (type png)
-<use Images/Design/DB/renter-booking.png>
-Package pdftex.def Info: Images/Design/DB/renter-booking.png  used on input line 128.
-(pdftex.def)             Requested size: 227.62204pt x 149.0576pt.
-<Images/Design/DB/vehicle-booking.png, id=539, 4259.915pt x 1614.03pt>
-File: Images/Design/DB/vehicle-booking.png Graphic file (type png)
-<use Images/Design/DB/vehicle-booking.png>
-Package pdftex.def Info: Images/Design/DB/vehicle-booking.png  used on input line 148.
-(pdftex.def)             Requested size: 227.62204pt x 86.22292pt.
+ [48 <./Images/Sequence/regis.png>]
+<Images/Sequence/manage.png, id=1150, 9423.205pt x 9077.915pt>
+File: Images/Sequence/manage.png Graphic file (type png)
+<use Images/Sequence/manage.png>
+Package pdftex.def Info: Images/Sequence/manage.png  used on input line 104.
+(pdftex.def)             Requested size: 432.48048pt x 416.52258pt.
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 152.
+Package pdftex.def Info: Images/hcmut.png  used on input line 115.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [49 <./Images/Sequence/manage.png>]
+<Images/Sequence/accident.png, id=1158, 8262.87pt x 6227.265pt>
+File: Images/Sequence/accident.png Graphic file (type png)
+<use Images/Sequence/accident.png>
+Package pdftex.def Info: Images/Sequence/accident.png  used on input line 141.
+(pdftex.def)             Requested size: 455.24408pt x 343.02325pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 145.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [50]
+<Images/Sequence/notification.png, id=1165, 7612.44pt x 7014.205pt>
+File: Images/Sequence/notification.png Graphic file (type png)
+<use Images/Sequence/notification.png>
+Package pdftex.def Info: Images/Sequence/notification.png  used on input line 162.
+(pdftex.def)             Requested size: 455.24408pt x 419.44278pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 165.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [51 <./Images/Sequence/accident.png>]
+<Images/Sequence/admin_approve.png, id=1174, 7889.475pt x 11848.265pt>
+File: Images/Sequence/admin_approve.png Graphic file (type png)
+<use Images/Sequence/admin_approve.png>
+Package pdftex.def Info: Images/Sequence/admin_approve.png  used on input line 173.
+(pdftex.def)             Requested size: 455.24408pt x 683.566pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 177.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [52 <./Images/Sequence/notification.png>]
+Overfull \vbox (18.75414pt too high) has occurred while \output is active []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 177.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [53 <./Images/Sequence/admin_approve.png>]
+<Images/Sequence/admin_statistic.png, id=1188, 7700.77pt x 6829.515pt>
+File: Images/Sequence/admin_statistic.png Graphic file (type png)
+<use Images/Sequence/admin_statistic.png>
+Package pdftex.def Info: Images/Sequence/admin_statistic.png  used on input line 209.
+(pdftex.def)             Requested size: 455.24408pt x 403.70905pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 213.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [54]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 226.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [55 <./Images/Sequence/admin_statistic.png>]
+Underfull \hbox (badness 1533) in paragraph at lines 238--250
+\T5/cmr/m/n/10.95 - N∏u Ad-min muËn kh‚a t†i kho£n, nh™p l˛ do \TS1/cmr/m/n/10.95 ^^Y \T5/cmr/m/n/10.95 Ad-min-Con-troller c™p nh™t sta-
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 254.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[56]
+<Images/Sequence/admin_user_management.png, id=1207, 9431.235pt x 10844.515pt>
+File: Images/Sequence/admin_user_management.png Graphic file (type png)
+<use Images/Sequence/admin_user_management.png>
+Package pdftex.def Info: Images/Sequence/admin_user_management.png  used on input line 275.
+(pdftex.def)             Requested size: 455.24408pt x 523.39351pt.
+<Images/Sequence/admin_trust_score.png, id=1208, 7146.7pt x 8435.515pt>
+File: Images/Sequence/admin_trust_score.png Graphic file (type png)
+<use Images/Sequence/admin_trust_score.png>
+Package pdftex.def Info: Images/Sequence/admin_trust_score.png  used on input line 281.
+(pdftex.def)             Requested size: 455.24408pt x 537.25821pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 284.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [57]) (System Analysis/Class Diagram/cont.tex
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 1.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [58 <./Images/Sequence/admin_user_management.png>]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 1.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [59 <./Images/Sequence/admin_trust_score.png>]
+<Images/Class/diagram.png, id=1227, 10310.52pt x 10981.025pt>
+File: Images/Class/diagram.png Graphic file (type png)
+<use Images/Class/diagram.png>
+Package pdftex.def Info: Images/Class/diagram.png  used on input line 5.
+(pdftex.def)             Requested size: 455.24408pt x 484.74164pt.
+<Images/Class/Inheritance.png, id=1228, 7355.48pt x 4625.28pt>
+File: Images/Class/Inheritance.png Graphic file (type png)
+<use Images/Class/Inheritance.png>
+Package pdftex.def Info: Images/Class/Inheritance.png  used on input line 18.
+(pdftex.def)             Requested size: 455.24408pt x 286.25626pt.
 
 
-LaTeX Warning: Reference `LastPage' on page 79 undefined on input line 152.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-[79 <./Images/Design/DB/owner-vehicle.png> <./Images/Design/DB/renter-booking.png>]
-<Images/Design/DB/booking-payment.png, id=548, 3778.115pt x 1413.28pt>
-File: Images/Design/DB/booking-payment.png Graphic file (type png)
-<use Images/Design/DB/booking-payment.png>
-Package pdftex.def Info: Images/Design/DB/booking-payment.png  used on input line 162.
-(pdftex.def)             Requested size: 227.62204pt x 85.13817pt.
-<Images/Design/DB/user.png, id=549, 2914.89pt x 2497.33pt>
-File: Images/Design/DB/user.png Graphic file (type png)
-<use Images/Design/DB/user.png>
-Package pdftex.def Info: Images/Design/DB/user.png  used on input line 175.
-(pdftex.def)             Requested size: 227.62204pt x 194.9891pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 29.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[60 <./Images/Class/diagram.png>]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 56.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [61 <./Images/Class/Inheritance.png>]
+<Images/Class/Composition.png, id=1243, 7427.75pt x 8535.89pt>
+File: Images/Class/Composition.png Graphic file (type png)
+<use Images/Class/Composition.png>
+Package pdftex.def Info: Images/Class/Composition.png  used on input line 61.
+(pdftex.def)             Requested size: 432.48048pt x 496.89241pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 75.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [62 <./Images/Class/Composition.png>]
+<Images/Class/Association.png, id=1250, 7046.325pt x 4581.115pt>
+File: Images/Class/Association.png Graphic file (type png)
+<use Images/Class/Association.png>
+Package pdftex.def Info: Images/Class/Association.png  used on input line 79.
+(pdftex.def)             Requested size: 432.48048pt x 281.14622pt.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 94.
+ (C:\Users\ADMIN\AppData\Local\Programs\MiKTeX\tex/latex/base\ts1cmtt.fd
+File: ts1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 392.
+Package pdftex.def Info: Images/hcmut.png  used on input line 105.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 80 undefined on input line 392.
-
-[80 <./Images/Design/DB/vehicle-booking.png> <./Images/Design/DB/booking-payment.png> <./Images/Design/DB/user.png>]
+ [63 <./Images/Class/Association.png>]
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 395.
+Package pdftex.def Info: Images/hcmut.png  used on input line 166.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [64])
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 420.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [65] (System Design/Architecture/cont.tex
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 430.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [66]
+Underfull \hbox (badness 7238) in paragraph at lines 442--442
+[]|\T5/cmr/bx/n/12 ThuÎc tΩnh chßt
+ []
 
 
-LaTeX Warning: Reference `LastPage' on page 81 undefined on input line 395.
+Underfull \hbox (badness 10000) in paragraph at lines 452--452
+[]|\T5/cmr/m/n/12 Trung bºnh
+ []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 454--454
+[]|\T5/cmr/m/n/12 Trung bºnh
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 464.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[67]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 492.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [68]
+<Images/Arch/clean.png, id=1299, 774.895pt x 569.12625pt>
+File: Images/Arch/clean.png Graphic file (type png)
+<use Images/Arch/clean.png>
+Package pdftex.def Info: Images/Arch/clean.png  used on input line 499.
+(pdftex.def)             Requested size: 386.96024pt x 284.20638pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 506.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [69 <./Images/Arch/clean.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 518--518
+[]|\T5/cmr/m/n/12 UseCase In-ter-ac-tor,
+ []
+
+
+Underfull \hbox (badness 1348) in paragraph at lines 518--518
+\T5/cmr/m/n/12 In-put-Bound-ary, Out-
+ []
+
+
+Underfull \hbox (badness 3229) in paragraph at lines 520--521
+[]|\T5/cmr/m/n/12 Ch˘a logic nghiªp vˆ
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 522--522
+[]|\T5/cmr/m/n/12 DataAccessInterface,
+ []
+
+<Images/Arch/clean_flow.png, id=1308, 813.0375pt x 554.07pt>
+File: Images/Arch/clean_flow.png Graphic file (type png)
+<use Images/Arch/clean_flow.png>
+Package pdftex.def Info: Images/Arch/clean_flow.png  used on input line 529.
+(pdftex.def)             Requested size: 334.00505pt x 227.62204pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 538.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[70 <./Images/Arch/clean_flow.png (PNG copy)>]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 572.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [71]) (System Design/Techstack/cont.tex
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 1.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [72]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 57.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[73]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 67.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [74]
+Overfull \hbox (11.43748pt too wide) in paragraph at lines 78--91
+ [][] 
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 111.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[75]) (System Design/Database/cont.tex
+<Images/Design/DB/EERD.png, id=1359, 8234.765pt x 5508.58pt>
+File: Images/Design/DB/EERD.png Graphic file (type png)
+<use Images/Design/DB/EERD.png>
+Package pdftex.def Info: Images/Design/DB/EERD.png  used on input line 4.
+(pdftex.def)             Requested size: 432.48048pt x 289.23pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 8.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [76]
+\colField=\skip268
+\colConst=\skip269
+\colDesc=\skip270
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 18--23
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 23--29
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 29--32
+ [] [] [] 
+ []
+
+
+Overfull \hbox (2.97525pt too wide) in paragraph at lines 39--39
+[]|\T5/cmr/m/n/10.95 password_hash| 
+ []
+
+
+Underfull \hbox (badness 6792) in paragraph at lines 40--41
+[]|\T5/cmr/m/n/10.95 ENUM: AC-TIVE, IN-AC-TIVE, SUS-
+ []
+
+
+Overfull \hbox (34.23582pt too wide) in paragraph at lines 44--44
+[]|\T5/cmr/m/n/10.95 trust_last_calculated| 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 32--47
+ [] [] [] 
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 47.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[77 <./Images/Design/DB/EERD.png>]
+Overfull \hbox (7.54723pt too wide) in alignment at lines 54--59
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 59--61
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 63--63
+[]|\T5/cmr/m/n/10.95 PK, FK $[]\OMS/cmsy/m/n/10.95 !$[] \T5/cmr/m/n/10.95 users.id, ON
+ []
+
+
+Overfull \hbox (4.67813pt too wide) in paragraph at lines 65--65
+[]|\T5/cmr/m/n/10.95 license_number| 
+ []
+
+
+Overfull \hbox (19.33533pt too wide) in paragraph at lines 66--66
+[]|\T5/cmr/m/n/10.95 verification_status| 
+ []
+
+
+Underfull \hbox (badness 2717) in paragraph at lines 66--66
+[]|\T5/cmr/m/n/10.95 NOT NULL, de-fault 'PEND-
+ []
+
+
+Underfull \hbox (badness 4328) in paragraph at lines 66--67
+[]|\T5/cmr/m/n/10.95 ENUM: PEND-ING, VER-I-FIED, RE-
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 61--67
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 74--79
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 79--81
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--83
+[]|\T5/cmr/m/n/10.95 PK, FK $[]\OMS/cmsy/m/n/10.95 !$[] \T5/cmr/m/n/10.95 users.id, ON
+ []
+
+
+Overfull \hbox (11.94594pt too wide) in paragraph at lines 85--85
+[]|\T5/cmr/m/n/10.95 id_card_number| 
+ []
+
+
+Overfull \hbox (20.795pt too wide) in paragraph at lines 86--86
+[]|\T5/cmr/m/n/10.95 id_card_front_url| 
+ []
+
+
+Overfull \hbox (19.54823pt too wide) in paragraph at lines 87--87
+[]|\T5/cmr/m/n/10.95 id_card_back_url| 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 81--88
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 95--100
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 100--102
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 104--104
+[]|\T5/cmr/m/n/10.95 PK, FK $[]\OMS/cmsy/m/n/10.95 !$[] \T5/cmr/m/n/10.95 users.id, ON
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 102--107
+ [] [] [] 
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 107.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[78]
+Overfull \hbox (7.54723pt too wide) in alignment at lines 114--119
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 119--124
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 124--126
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
+[]|\T5/cmr/m/n/10.95 ENUM: STAN-DARD, PRE-MIUM,
+ []
+
+
+Overfull \hbox (6.50269pt too wide) in paragraph at lines 135--135
+[]|\T5/cmr/m/n/10.95 price_per_hour| 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 126--142
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 149--154
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 154--159
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 159--161
+ [] [] [] 
+ []
+
+
+Overfull \hbox (13.40558pt too wide) in paragraph at lines 168--168
+[]|\T5/cmr/m/n/10.95 actual_end_time| 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+[]|\T5/cmr/m/n/10.95 ENUM: PEND-ING, AP-PROVED,
+ []
+
+
+Overfull \hbox (4.37404pt too wide) in paragraph at lines 173--173
+[]|\T5/cmr/m/n/10.95 start_longitude| 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 161--178
+ [] [] [] 
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 178.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[79]
+Overfull \hbox (7.54723pt too wide) in alignment at lines 185--190
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 190--192
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+[]|\T5/cmr/m/n/10.95 ENUM: CARD, E_WALLET,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
+[]|\T5/cmr/m/n/10.95 ENUM: PEND-ING, COM-PLETED,
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 192--202
+ [] [] [] 
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 202.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[80]
+Overfull \hbox (7.54723pt too wide) in alignment at lines 209--214
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 214--216
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1603) in paragraph at lines 219--219
+[]|\T5/cmr/m/n/10.95 FK $[]\OMS/cmsy/m/n/10.95 !$[] \T5/cmr/m/n/10.95 book-ings.id, UNIQUE,
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 216--224
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 231--236
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 236--238
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 246--247
+[]|\T5/cmr/m/n/10.95 ENUM: OPEN, IN_PROGRESS, RE-
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 238--249
+ [] [] [] 
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 249.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
 [81]
+Overfull \hbox (7.54723pt too wide) in alignment at lines 256--261
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 261--263
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 263--273
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 280--285
+ [] [] [] 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 285--287
+ [] [] [] 
+ []
+
+
+Overfull \hbox (2.21497pt too wide) in paragraph at lines 294--294
+[]|\T5/cmr/m/n/10.95 total_bookings| 
+ []
+
+
+Overfull \hbox (25.66043pt too wide) in paragraph at lines 296--296
+[]|\T5/cmr/m/n/10.95 vehicle_distribution| 
+ []
+
+
+Overfull \hbox (7.54723pt too wide) in alignment at lines 287--298
+ [] [] [] 
+ []
+
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 398.
+Package pdftex.def Info: Images/hcmut.png  used on input line 298.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-
-LaTeX Warning: Reference `LastPage' on page 82 undefined on input line 398.
-
 [82]
+<Images/Design/DB/user-notify.png, id=1399, 3778.115pt x 1891.065pt>
+File: Images/Design/DB/user-notify.png Graphic file (type png)
+<use Images/Design/DB/user-notify.png>
+Package pdftex.def Info: Images/Design/DB/user-notify.png  used on input line 329.
+(pdftex.def)             Requested size: 364.19664pt x 182.27887pt.
+<Images/Design/DB/admin-report.png, id=1400, 2413.015pt x 1529.715pt>
+File: Images/Design/DB/admin-report.png Graphic file (type png)
+<use Images/Design/DB/admin-report.png>
+Package pdftex.def Info: Images/Design/DB/admin-report.png  used on input line 343.
+(pdftex.def)             Requested size: 364.19664pt x 230.87119pt.
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 405.
+Package pdftex.def Info: Images/hcmut.png  used on input line 347.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [83 <./Images/Design/DB/user-notify.png>]
+<Images/Design/DB/owner-vehicle.png, id=1408, 3023.295pt x 1935.23pt>
+File: Images/Design/DB/owner-vehicle.png Graphic file (type png)
+<use Images/Design/DB/owner-vehicle.png>
+Package pdftex.def Info: Images/Design/DB/owner-vehicle.png  used on input line 357.
+(pdftex.def)             Requested size: 364.19664pt x 233.10345pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 368.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [84 <./Images/Design/DB/admin-report.png> <./Images/Design/DB/owner-vehicle.png>]
+<Images/Design/DB/renter-booking.png, id=1416, 3721.905pt x 2698.08pt>
+File: Images/Design/DB/renter-booking.png Graphic file (type png)
+<use Images/Design/DB/renter-booking.png>
+Package pdftex.def Info: Images/Design/DB/renter-booking.png  used on input line 371.
+(pdftex.def)             Requested size: 364.19664pt x 263.97775pt.
+<Images/Design/DB/vehicle-booking.png, id=1417, 6327.64pt x 2051.665pt>
+File: Images/Design/DB/vehicle-booking.png Graphic file (type png)
+<use Images/Design/DB/vehicle-booking.png>
+Package pdftex.def Info: Images/Design/DB/vehicle-booking.png  used on input line 386.
+(pdftex.def)             Requested size: 455.24408pt x 147.60706pt.
+<Images/Design/DB/booking-payment.png, id=1418, 3762.055pt x 2051.665pt>
+File: Images/Design/DB/booking-payment.png Graphic file (type png)
+<use Images/Design/DB/booking-payment.png>
+Package pdftex.def Info: Images/Design/DB/booking-payment.png  used on input line 396.
+(pdftex.def)             Requested size: 364.19664pt x 198.6043pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--399
+
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 400.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[85 <./Images/Design/DB/renter-booking.png> <./Images/Design/DB/vehicle-booking.png>]
+<Images/Design/DB/user.png, id=1426, 4344.23pt x 2738.23pt>
+File: Images/Design/DB/user.png Graphic file (type png)
+<use Images/Design/DB/user.png>
+Package pdftex.def Info: Images/Design/DB/user.png  used on input line 417.
+(pdftex.def)             Requested size: 364.19664pt x 229.55016pt.
+) (System Design/UIUX/cont.tex
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 5.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [86 <./Images/Design/DB/booking-payment.png> <./Images/Design/DB/user.png>]
+<Images/Design/UIUX/onboard/ob1.png, id=1434, 782.925pt x 1694.33pt>
+File: Images/Design/UIUX/onboard/ob1.png Graphic file (type png)
+<use Images/Design/UIUX/onboard/ob1.png>
+Package pdftex.def Info: Images/Design/UIUX/onboard/ob1.png  used on input line 13.
+(pdftex.def)             Requested size: 145.68143pt x 315.25587pt.
+<Images/Design/UIUX/onboard/ob2.png, id=1435, 782.925pt x 1694.33pt>
+File: Images/Design/UIUX/onboard/ob2.png Graphic file (type png)
+<use Images/Design/UIUX/onboard/ob2.png>
+Package pdftex.def Info: Images/Design/UIUX/onboard/ob2.png  used on input line 19.
+(pdftex.def)             Requested size: 145.68143pt x 315.25587pt.
+<Images/Design/UIUX/onboard/ob3.png, id=1436, 782.925pt x 1694.33pt>
+File: Images/Design/UIUX/onboard/ob3.png Graphic file (type png)
+<use Images/Design/UIUX/onboard/ob3.png>
+Package pdftex.def Info: Images/Design/UIUX/onboard/ob3.png  used on input line 25.
+(pdftex.def)             Requested size: 145.68143pt x 315.25587pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 33.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [87 <./Images/Design/UIUX/onboard/ob1.png (PNG copy)> <./Images/Design/UIUX/onboard/ob2.png (PNG copy)> <./Images/Design/UIUX/onboard/ob3.png (PNG copy)>]
+<Images/Design/UIUX/auth/regis.png, id=1443, 376.40625pt x 815.045pt>
+File: Images/Design/UIUX/auth/regis.png Graphic file (type png)
+<use Images/Design/UIUX/auth/regis.png>
+Package pdftex.def Info: Images/Design/UIUX/auth/regis.png  used on input line 39.
+(pdftex.def)             Requested size: 145.68143pt x 315.45357pt.
+<Images/Design/UIUX/auth/otp.png, id=1444, 752.8125pt x 1630.09pt>
+File: Images/Design/UIUX/auth/otp.png Graphic file (type png)
+<use Images/Design/UIUX/auth/otp.png>
+Package pdftex.def Info: Images/Design/UIUX/auth/otp.png  used on input line 45.
+(pdftex.def)             Requested size: 145.68143pt x 315.44115pt.
+<Images/Design/UIUX/auth/login.png, id=1445, 376.40625pt x 815.045pt>
+File: Images/Design/UIUX/auth/login.png Graphic file (type png)
+<use Images/Design/UIUX/auth/login.png>
+Package pdftex.def Info: Images/Design/UIUX/auth/login.png  used on input line 51.
+(pdftex.def)             Requested size: 145.68143pt x 315.45357pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 58.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [88 <./Images/Design/UIUX/auth/regis.png (PNG copy)> <./Images/Design/UIUX/auth/otp.png (PNG copy)> <./Images/Design/UIUX/auth/login.png (PNG copy)>]
+<Images/Design/UIUX/Home/home.png, id=1451, 376.40625pt x 815.045pt>
+File: Images/Design/UIUX/Home/home.png Graphic file (type png)
+<use Images/Design/UIUX/Home/home.png>
+Package pdftex.def Info: Images/Design/UIUX/Home/home.png  used on input line 66.
+(pdftex.def)             Requested size: 145.68143pt x 315.45357pt.
+<Images/Design/UIUX/Home/filter.png, id=1452, 748.7975pt x 1640.1275pt>
+File: Images/Design/UIUX/Home/filter.png Graphic file (type png)
+<use Images/Design/UIUX/Home/filter.png>
+Package pdftex.def Info: Images/Design/UIUX/Home/filter.png  used on input line 72.
+(pdftex.def)             Requested size: 145.68143pt x 319.0853pt.
+<Images/Design/UIUX/Home/details.png, id=1453, 748.7975pt x 1640.1275pt>
+File: Images/Design/UIUX/Home/details.png Graphic file (type png)
+<use Images/Design/UIUX/Home/details.png>
+Package pdftex.def Info: Images/Design/UIUX/Home/details.png  used on input line 78.
+(pdftex.def)             Requested size: 145.68143pt x 319.0853pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 86.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [89 <./Images/Design/UIUX/Home/home.png (PNG copy)> <./Images/Design/UIUX/Home/filter.png (PNG copy)> <./Images/Design/UIUX/Home/details.png (PNG copy)>]
+<Images/Design/UIUX/renter/date.png, id=1459, 376.40625pt x 815.045pt>
+File: Images/Design/UIUX/renter/date.png Graphic file (type png)
+<use Images/Design/UIUX/renter/date.png>
+Package pdftex.def Info: Images/Design/UIUX/renter/date.png  used on input line 93.
+(pdftex.def)             Requested size: 145.68143pt x 315.45357pt.
+<Images/Design/UIUX/renter/add-pay.png, id=1460, 376.40625pt x 815.045pt>
+File: Images/Design/UIUX/renter/add-pay.png Graphic file (type png)
+<use Images/Design/UIUX/renter/add-pay.png>
+Package pdftex.def Info: Images/Design/UIUX/renter/add-pay.png  used on input line 99.
+(pdftex.def)             Requested size: 145.68143pt x 315.45357pt.
+<Images/Design/UIUX/renter/pay.png, id=1461, 376.40625pt x 815.045pt>
+File: Images/Design/UIUX/renter/pay.png Graphic file (type png)
+<use Images/Design/UIUX/renter/pay.png>
+Package pdftex.def Info: Images/Design/UIUX/renter/pay.png  used on input line 105.
+(pdftex.def)             Requested size: 145.68143pt x 315.45357pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 136.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [90 <./Images/Design/UIUX/renter/date.png (PNG copy)> <./Images/Design/UIUX/renter/add-pay.png (PNG copy)> <./Images/Design/UIUX/renter/pay.png (PNG copy)>]
+<Images/Design/UIUX/owner/profile.png, id=1467, 376.40625pt x 815.045pt>
+File: Images/Design/UIUX/owner/profile.png Graphic file (type png)
+<use Images/Design/UIUX/owner/profile.png>
+Package pdftex.def Info: Images/Design/UIUX/owner/profile.png  used on input line 143.
+(pdftex.def)             Requested size: 145.68143pt x 315.45357pt.
+<Images/Design/UIUX/owner/my-bike.png, id=1468, 752.8125pt x 1630.09pt>
+File: Images/Design/UIUX/owner/my-bike.png Graphic file (type png)
+<use Images/Design/UIUX/owner/my-bike.png>
+Package pdftex.def Info: Images/Design/UIUX/owner/my-bike.png  used on input line 149.
+(pdftex.def)             Requested size: 145.68143pt x 315.44115pt.
+<Images/Design/UIUX/owner/add.png, id=1469, 752.8125pt x 1830.84pt>
+File: Images/Design/UIUX/owner/add.png Graphic file (type png)
+<use Images/Design/UIUX/owner/add.png>
+Package pdftex.def Info: Images/Design/UIUX/owner/add.png  used on input line 155.
+(pdftex.def)             Requested size: 145.68143pt x 354.28857pt.
+)
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 427.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [91 <./Images/Design/UIUX/owner/profile.png (PNG copy)> <./Images/Design/UIUX/owner/my-bike.png (PNG copy)> <./Images/Design/UIUX/owner/add.png>] (Implement/cont.tex
+<Images/Arch/arch-w-tech.png, id=1476, 9089.96pt x 6415.97pt>
+File: Images/Arch/arch-w-tech.png Graphic file (type png)
+<use Images/Arch/arch-w-tech.png>
+Package pdftex.def Info: Images/Arch/arch-w-tech.png  used on input line 5.
+(pdftex.def)             Requested size: 455.24408pt x 321.3068pt.
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 28.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [92 <./Images/Arch/arch-w-tech.png>]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 48.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [93]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 70.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [94]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 95.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [95]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 116.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [96]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 139.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [97]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 164.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [98]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 189.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [99]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 215.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [100]
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+[]\T5/cmr/m/n/10.95 Dialog y∂u c¶u nh™p can-cel-la-tion rea-son. Client g˚i PATCH re-quest ^^_∏n
+ []
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 241.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[101]
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 265.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [102]
+Underfull \hbox (badness 3907) in paragraph at lines 278--281
+\T5/cmr/m/n/10.95 Method n†y check xem userId c‚ trong con-nec-tion Map khÊng. N∏u on-line, call
+ []
 
 
-LaTeX Warning: Reference `LastPage' on page 83 undefined on input line 405.
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
+\T5/cmr/m/n/10.95 gate-way.sendToUser(userId, event-Type, pay-load). Gate-way emit mes-sage ^^_∏n room
+ []
 
-[83] (Refs/cont.tex)
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 293.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[103])
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 430.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [104] (Plan/cont.tex
+<Images/gantt-chart.png, id=1547, 1851.91875pt x 1060.96375pt>
+File: Images/gantt-chart.png Graphic file (type png)
+<use Images/gantt-chart.png>
+Package pdftex.def Info: Images/gantt-chart.png  used on input line 17.
+(pdftex.def)             Requested size: 455.24408pt x 260.8045pt.
+)
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 446.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+ [105 <./Images/gantt-chart.png>]
 
-LaTeX Warning: Empty bibliography on input line 410.
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
 
 
-Package lastpage Warning: Rerun to get the references right on input line 413.
+Package biblatex Warning: Bibliography string 'december' untranslated
+(biblatex)                at entry 'dantri2023' on input line 447.
 
 
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'dantri2023' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'december' untranslated
+(biblatex)                at entry 'kevesko2023' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'kevesko2023' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'phs2023' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'vnbusiness2023' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'chen2022' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'chen2022' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'chen2022' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'ert2016' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'ert2016' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'ert2016' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'flipkartCCC2025' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'grab2022' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'nguyen2021' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'nguyen2021' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'nguyen2021' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'vinfast2024' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'tran2023' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'tran2023' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'tran2023' on input line 447.
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 447.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[106]
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'vbike2024' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'airbnb2023' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Bibliography string 'andothers' untranslated
+(biblatex)                at entry 'gibbs2018' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'gibbs2018' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'gibbs2018' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'andothers' untranslated
+(biblatex)                at entry 'guttentag2019' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'guttentag2019' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'guttentag2019' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'andothers' untranslated
+(biblatex)                at entry 'ferrero2018' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'ferrero2018' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'ferrero2018' on input line 447.
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 448--448
+[]\T5/cmr/m/n/12 Fabrizio Fer-rero []. ^^P  Car-sharing ser-vices: An an-no-tated re-view^^Q.
+ []
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'hawlitschek2016' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'hawlitschek2016' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'hawlitschek2016' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'jorge2014' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'jorge2014' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'jorge2014' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'li2018' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'li2018' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'li2018' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'shaheen2019' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'luong2022' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'luong2022' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'luong2022' on input line 447.
+
+
+Underfull \hbox (badness 1337) in paragraph at lines 448--448
+[]\T5/cmr/m/n/12 Anh T. Lu-ong [] Mai P. Huynh. ^^P  Trust Mech-a-nisms in Viet-namese E-
+ []
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'bardhi2012' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'bardhi2012' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'bardhi2012' on input line 447.
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 447.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[107]
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'bass2021' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'richards2020' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'biorn2018' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'biorn2018' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'biorn2018' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'and' untranslated
+(biblatex)                at entry 'amatya2020' on input line 447.
+
+
+Package biblatex Warning: Bibliography string 'in' untranslated
+(biblatex)                at entry 'amatya2020' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'pages' untranslated
+(biblatex)                at entry 'amatya2020' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'nest2024' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'techempower2024' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Underfull \hbox (badness 1888) in paragraph at lines 448--448
+[]\T5/cmr/m/n/12 TechEmpower. \T5/cmr/m/it/12 Web Frame-work Bench-marks\T5/cmr/m/n/12 . 2024. \T5/cmr/m/sc/12 url\T5/cmr/m/n/12 : [][]$[]\T5/cmtt/m/n/12 https : / / www .
+ []
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'postgresql2024' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdatelong.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdatelong.
+
+
+Package biblatex Warning: Bibliography string 'urlseen' untranslated
+(biblatex)                at entry 'postgis2024' on input line 447.
+
+
+Package biblatex Warning: Using fallback definition for \mkbibdateshort.
+(biblatex)                The command should be defined in the .lbx file.
+(biblatex)                If you see this message, the .lbx file could not be
+(biblatex)                loaded, is faulty or does not contain a definition
+(biblatex)                for \mkbibdateshort.
+
+File: Images/hcmut.png Graphic file (type png)
+<use Images/hcmut.png>
+Package pdftex.def Info: Images/hcmut.png  used on input line 449.
+(pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
+[108] (SubTable/cont.tex
+
+Package hyperref Warning: The anchor of a bookmark and its parent's must not
+(hyperref)                be the same. Added a new anchor on input line 6.
+
+) 
 AED: lastpage setting LastPage
 File: Images/hcmut.png Graphic file (type png)
 <use Images/hcmut.png>
-Package pdftex.def Info: Images/hcmut.png  used on input line 413.
+Package pdftex.def Info: Images/hcmut.png  used on input line 453.
 (pdftex.def)             Requested size: 34.13838pt x 34.13751pt.
-
-LaTeX Warning: Reference `LastPage' on page 84 undefined on input line 413.
-
-[84]
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
-(main.aux)
+[109] (main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
@@ -2923,41 +3768,24 @@ L3 programming layer <2024-01-04>
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.6pt have occurred.
 
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  3456E8CECFFB5B9AE36ED236354F9FFB;12597.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 73AA029B08FE050FD5D0CC0942D13400;24587.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 42871 strings out of 474486
- 840596 string characters out of 5743754
+ 45892 strings out of 474486
+ 914889 string characters out of 5743754
  1953542 words of memory out of 5000000
- 64114 multiletter control sequences out of 15000+600000
- 588293 words of font info for 105 fonts, out of 8000000 for 9000
+ 66967 multiletter control sequences out of 15000+600000
+ 589159 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 119i,24n,154p,1186b,5237s stack positions out of 10000i,1000n,20000p,200000b,200000s
- <C:\Users\ADMIN\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\ADMIN\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/urw/zapfding/uzdr.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx8.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnitt10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr8.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
-Output written on main.pdf (85 pages, 19665864 bytes).
+ 119i,25n,154p,1347b,1703s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\ADMIN\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcbx1095.pk> <C:\Users\ADMIN\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tctt1095.pk> <C:\Users\ADMIN\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1095.pk> <C:\Users\ADMIN\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vncsc10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnitt10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr17.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnr8.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt10.pfb><C:/Users/ADMIN/AppData/Local/Programs/MiKTeX/fonts/type1/vntex/vnr/vntt12.pfb>
+Output written on main.pdf (125 pages, 31853921 bytes).
 PDF statistics:
- 739 PDF objects out of 1000 (max. 8388607)
- 232 named destinations out of 1000 (max. 500000)
- 183 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1793 PDF objects out of 2073 (max. 8388607)
+ 347 named destinations out of 1000 (max. 500000)
+ 1228 words of extra memory for PDF output out of 10000 (max. 10000000)
 
