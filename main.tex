@@ -41,7 +41,10 @@
 \newcommand{\nam}{\number\year}
 
 \DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
-
+\DefineBibliographyStrings{english}{
+  references = {{TÀI LIỆU THAM KHẢO}},
+  urlseen    = {Truy cập ngày},
+}
 \defbibenvironment{bibliography}
   {\list
      {\printtext[labelnumberwidth]{%
@@ -66,9 +69,7 @@
 %     \textbf{Source:} #2%
 %   }%
 % }
-\DefineBibliographyStrings{english}{
-  references = {Tài liệu tham khảo},
-}
+
 \usepackage{vcell}
 \usepackage{tabularray}
 %\usepackage{soul}
@@ -444,7 +445,9 @@ Ngoài các chương chính, báo cáo còn bao gồm phần tóm tắt (tiếng
 % \input{Refs/cont}
 
 \newpage
-\printbibliography
+\addcontentsline{toc}{section}{Tài Liệu tham khảo}
+\section*{Tài Liệu tham khảo}
+\printbibliography[heading=none]
 
 \newpage
 \section*{Phụ lục}

@@ -33,10 +33,12 @@
 \contentsline {figure}{\numberline {31}{\ignorespaces Quan hệ giữa \texttt {Vehicle} và \texttt {Booking} (1:N)}}{85}{figure.caption.40}%
 \contentsline {figure}{\numberline {32}{\ignorespaces Quan hệ giữa \texttt {Booking} và \texttt {Payment} (1:N)}}{86}{figure.caption.41}%
 \contentsline {figure}{\numberline {33}{\ignorespaces Quan hệ kế thừa giữa User với Renter, User, Admin}}{86}{figure.caption.42}%
-\contentsline {figure}{\numberline {34}{\ignorespaces Giao diện khởi tạo tài khoản (UC-01)}}{87}{figure.caption.43}%
-\contentsline {figure}{\numberline {35}{\ignorespaces Giao diện khởi tạo tài khoản (UC-01)}}{88}{figure.caption.44}%
-\contentsline {figure}{\numberline {36}{\ignorespaces Tìm kiếm và xem xe (UC-02, UC-03)}}{89}{figure.caption.45}%
-\contentsline {figure}{\numberline {37}{\ignorespaces Quy trình đặt thuê xe (UC-04, UC-06)}}{90}{figure.caption.46}%
-\contentsline {figure}{\numberline {38}{\ignorespaces Quản lý xe và thu nhập (UC-08, UC-09, UC-15)}}{91}{figure.caption.47}%
-\contentsline {figure}{\numberline {39}{\ignorespaces Sơ đồ triển khai hệ thống}}{92}{figure.caption.48}%
-\contentsline {figure}{\numberline {40}{\ignorespaces Biểu đồ Gantt kế hoạch đồ án kỳ sau}}{105}{figure.caption.49}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Site Map - Ứng dụng di động (Renter/Owner)}}{87}{figure.caption.43}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Site Map - Bảng điều khiển quản trị (Admin Web Dashboard)}}{88}{figure.caption.44}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Giao diện khởi tạo tài khoản (UC-01)}}{89}{figure.caption.45}%
+\contentsline {figure}{\numberline {37}{\ignorespaces Giao diện khởi tạo tài khoản (UC-01)}}{90}{figure.caption.46}%
+\contentsline {figure}{\numberline {38}{\ignorespaces Tìm kiếm và xem xe (UC-02, UC-03)}}{91}{figure.caption.47}%
+\contentsline {figure}{\numberline {39}{\ignorespaces Quy trình đặt thuê xe (UC-04, UC-06)}}{92}{figure.caption.48}%
+\contentsline {figure}{\numberline {40}{\ignorespaces Quản lý xe và thu nhập (UC-08, UC-09, UC-15)}}{93}{figure.caption.49}%
+\contentsline {figure}{\numberline {41}{\ignorespaces Sơ đồ triển khai hệ thống}}{94}{figure.caption.50}%
+\contentsline {figure}{\numberline {42}{\ignorespaces Biểu đồ Gantt kế hoạch đồ án giai đoạn 2}}{107}{figure.caption.51}%

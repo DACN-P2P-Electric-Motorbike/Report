@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {4}Hệ thống đề xuất}{13}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Mô tả hệ thống}{13}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Yêu cầu chức năng}{14}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Phân tích yêu cầu phi chức năng}{15}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.3}Yêu cầu phi chức năng}{15}{subsection.4.3}%
 \contentsline {section}{\numberline {5}Phân tích hệ thống}{19}{section.5}%
 \contentsline {subsection}{\numberline {5.1} Mô hình hóa tương tác}{19}{subsection.5.1}%
 \contentsline {subsubsection}{\numberline {5.1.1}Use case diagram}{19}{subsubsection.5.1.1}%
@@ -70,53 +70,56 @@
 \contentsline {subsection}{\numberline {6.3}Thiết kế cơ sở dữ liệu}{77}{subsection.6.3}%
 \contentsline {subsubsection}{\numberline {6.3.1}Các thực thể chính}{77}{subsubsection.6.3.1}%
 \contentsline {subsubsection}{\numberline {6.3.2}Quan hệ giữa các thực thể}{83}{subsubsection.6.3.2}%
-\contentsline {subsection}{\numberline {6.4}Thiết kế giao diện người dùng}{87}{subsection.6.4}%
-\contentsline {subsubsection}{\numberline {6.4.1}Onboarding}{87}{subsubsection.6.4.1}%
-\contentsline {subsubsection}{\numberline {6.4.2}Đăng nhập – Đăng ký}{88}{subsubsection.6.4.2}%
-\contentsline {subsubsection}{\numberline {6.4.3}Trang chủ \& Tìm kiếm xe}{89}{subsubsection.6.4.3}%
-\contentsline {subsubsection}{\numberline {6.4.4}Đặt thuê \& Thanh toán}{90}{subsubsection.6.4.4}%
-\contentsline {subsubsection}{\numberline {6.4.5}Quản lý xe (dành cho chủ xe)}{91}{subsubsection.6.4.5}%
-\contentsline {section}{\numberline {7}Triển khai}{92}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Tổng quan hệ thống}{92}{subsection.7.1}%
-\contentsline {subsubsection}{\numberline {7.1.1}Phía Client-side}{92}{subsubsection.7.1.1}%
-\contentsline {subsubsection}{\numberline {7.1.2}Phía Server-side}{92}{subsubsection.7.1.2}%
-\contentsline {subsubsection}{\numberline {7.1.3}Giao tiếp realtime và không đồng bộ}{93}{subsubsection.7.1.3}%
-\contentsline {subsubsection}{\numberline {7.1.4}Lưu trữ và external integration}{93}{subsubsection.7.1.4}%
-\contentsline {subsection}{\numberline {7.2}MODULE 1: Authentication \& User Management}{93}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Mục tiêu}{93}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Công nghệ sử dụng}{93}{subsubsection.7.2.2}%
-\contentsline {subsubsection}{\numberline {7.2.3}Quy trình đăng ký người dùng}{94}{subsubsection.7.2.3}%
-\contentsline {subsubsection}{\numberline {7.2.4}Quy trình đăng nhập}{94}{subsubsection.7.2.4}%
-\contentsline {subsubsection}{\numberline {7.2.5}Cơ chế xác thực JWT}{94}{subsubsection.7.2.5}%
-\contentsline {subsubsection}{\numberline {7.2.6}Quy trình reset mật khẩu}{95}{subsubsection.7.2.6}%
-\contentsline {subsubsection}{\numberline {7.2.7}Quy trình nâng cấp lên OWNER}{95}{subsubsection.7.2.7}%
-\contentsline {subsection}{\numberline {7.3}MODULE 2: Vehicle Management}{96}{subsection.7.3}%
-\contentsline {subsubsection}{\numberline {7.3.1}Mục tiêu}{96}{subsubsection.7.3.1}%
-\contentsline {subsubsection}{\numberline {7.3.2}Công nghệ sử dụng}{96}{subsubsection.7.3.2}%
-\contentsline {subsubsection}{\numberline {7.3.3}State machine của Vehicle}{96}{subsubsection.7.3.3}%
-\contentsline {subsubsection}{\numberline {7.3.4}Quy trình đăng ký xe mới}{96}{subsubsection.7.3.4}%
-\contentsline {subsubsection}{\numberline {7.3.5}Quy trình tìm kiếm xe}{97}{subsubsection.7.3.5}%
-\contentsline {subsubsection}{\numberline {7.3.6}Quy trình cập nhật thông tin xe}{97}{subsubsection.7.3.6}%
-\contentsline {subsubsection}{\numberline {7.3.7}Quy trình xóa xe}{98}{subsubsection.7.3.7}%
-\contentsline {subsection}{\numberline {7.4}MODULE 3: Booking System}{98}{subsection.7.4}%
-\contentsline {subsubsection}{\numberline {7.4.1}Mục tiêu}{98}{subsubsection.7.4.1}%
-\contentsline {subsubsection}{\numberline {7.4.2}Công nghệ sử dụng}{98}{subsubsection.7.4.2}%
-\contentsline {subsubsection}{\numberline {7.4.3}State machine của Booking}{99}{subsubsection.7.4.3}%
-\contentsline {subsubsection}{\numberline {7.4.4}Quy trình tạo booking}{99}{subsubsection.7.4.4}%
-\contentsline {subsubsection}{\numberline {7.4.5}Quy trình owner approve booking}{100}{subsubsection.7.4.5}%
-\contentsline {subsubsection}{\numberline {7.4.6}Quy trình owner reject booking}{100}{subsubsection.7.4.6}%
-\contentsline {subsubsection}{\numberline {7.4.7}Quy trình renter cancel booking}{101}{subsubsection.7.4.7}%
-\contentsline {subsubsection}{\numberline {7.4.8}Auto-expiry của pending bookings}{101}{subsubsection.7.4.8}%
-\contentsline {subsection}{\numberline {7.5}MODULE 4: Notification System}{101}{subsection.7.5}%
-\contentsline {subsubsection}{\numberline {7.5.1}Mục tiêu}{101}{subsubsection.7.5.1}%
-\contentsline {subsubsection}{\numberline {7.5.2}Công nghệ sử dụng}{102}{subsubsection.7.5.2}%
-\contentsline {subsubsection}{\numberline {7.5.3}Kiến trúc Hybrid}{102}{subsubsection.7.5.3}%
-\contentsline {subsubsection}{\numberline {7.5.4}Event-driven notification flow}{102}{subsubsection.7.5.4}%
-\contentsline {subsubsection}{\numberline {7.5.5}WebSocket connection management}{103}{subsubsection.7.5.5}%
-\contentsline {subsubsection}{\numberline {7.5.6}Notification delivery flow}{103}{subsubsection.7.5.6}%
-\contentsline {subsubsection}{\numberline {7.5.7}Badge count management}{104}{subsubsection.7.5.7}%
-\contentsline {section}{\numberline {8}Kế hoạch dự kiến cho giai đoạn 2 - Đồ Án Tốt Nghiệp}{105}{section.8}%
-\contentsline {section}{Phụ lục}{109}{figure.caption.49}%
-\contentsline {subsection}{A. Tài liệu pháp lý liên quan}{109}{section*.50}%
-\contentsline {subsection}{B. Kết quả khảo sát nhu cầu cộng đồng}{109}{section*.50}%
-\contentsline {subsection}{C. Tài liệu thiết kế bổ sung}{109}{section*.50}%
+\contentsline {subsection}{\numberline {6.4}Thiết kế giao diện}{87}{subsection.6.4}%
+\contentsline {subsubsection}{\numberline {6.4.1}Site Map của hệ thống}{87}{subsubsection.6.4.1}%
+\contentsline {subsubsection}{\numberline {6.4.2}Onboarding}{89}{subsubsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.3}Đăng nhập – Đăng ký}{90}{subsubsection.6.4.3}%
+\contentsline {subsubsection}{\numberline {6.4.4}Trang chủ \& Tìm kiếm xe}{91}{subsubsection.6.4.4}%
+\contentsline {subsubsection}{\numberline {6.4.5}Đặt thuê \& Thanh toán}{92}{subsubsection.6.4.5}%
+\contentsline {subsubsection}{\numberline {6.4.6}Quản lý xe (dành cho chủ xe)}{93}{subsubsection.6.4.6}%
+\contentsline {section}{\numberline {7}Triển khai}{94}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Tổng quan hệ thống}{94}{subsection.7.1}%
+\contentsline {subsubsection}{\numberline {7.1.1}Phía Client-side}{94}{subsubsection.7.1.1}%
+\contentsline {subsubsection}{\numberline {7.1.2}Phía Server-side}{94}{subsubsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.3}Giao tiếp realtime và không đồng bộ}{95}{subsubsection.7.1.3}%
+\contentsline {subsubsection}{\numberline {7.1.4}Lưu trữ và external integration}{95}{subsubsection.7.1.4}%
+\contentsline {subsection}{\numberline {7.2}MODULE 1: Authentication \& User Management}{95}{subsection.7.2}%
+\contentsline {subsubsection}{\numberline {7.2.1}Mục tiêu}{95}{subsubsection.7.2.1}%
+\contentsline {subsubsection}{\numberline {7.2.2}Công nghệ sử dụng}{95}{subsubsection.7.2.2}%
+\contentsline {subsubsection}{\numberline {7.2.3}Quy trình đăng ký người dùng}{96}{subsubsection.7.2.3}%
+\contentsline {subsubsection}{\numberline {7.2.4}Quy trình đăng nhập}{96}{subsubsection.7.2.4}%
+\contentsline {subsubsection}{\numberline {7.2.5}Cơ chế xác thực JWT}{96}{subsubsection.7.2.5}%
+\contentsline {subsubsection}{\numberline {7.2.6}Quy trình reset mật khẩu}{97}{subsubsection.7.2.6}%
+\contentsline {subsubsection}{\numberline {7.2.7}Quy trình nâng cấp lên OWNER}{97}{subsubsection.7.2.7}%
+\contentsline {subsection}{\numberline {7.3}MODULE 2: Vehicle Management}{98}{subsection.7.3}%
+\contentsline {subsubsection}{\numberline {7.3.1}Mục tiêu}{98}{subsubsection.7.3.1}%
+\contentsline {subsubsection}{\numberline {7.3.2}Công nghệ sử dụng}{98}{subsubsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.3}State machine của Vehicle}{98}{subsubsection.7.3.3}%
+\contentsline {subsubsection}{\numberline {7.3.4}Quy trình đăng ký xe mới}{98}{subsubsection.7.3.4}%
+\contentsline {subsubsection}{\numberline {7.3.5}Quy trình tìm kiếm xe}{99}{subsubsection.7.3.5}%
+\contentsline {subsubsection}{\numberline {7.3.6}Quy trình cập nhật thông tin xe}{99}{subsubsection.7.3.6}%
+\contentsline {subsubsection}{\numberline {7.3.7}Quy trình xóa xe}{100}{subsubsection.7.3.7}%
+\contentsline {subsection}{\numberline {7.4}MODULE 3: Booking System}{100}{subsection.7.4}%
+\contentsline {subsubsection}{\numberline {7.4.1}Mục tiêu}{100}{subsubsection.7.4.1}%
+\contentsline {subsubsection}{\numberline {7.4.2}Công nghệ sử dụng}{100}{subsubsection.7.4.2}%
+\contentsline {subsubsection}{\numberline {7.4.3}State machine của Booking}{101}{subsubsection.7.4.3}%
+\contentsline {subsubsection}{\numberline {7.4.4}Quy trình tạo booking}{101}{subsubsection.7.4.4}%
+\contentsline {subsubsection}{\numberline {7.4.5}Quy trình owner approve booking}{102}{subsubsection.7.4.5}%
+\contentsline {subsubsection}{\numberline {7.4.6}Quy trình owner reject booking}{102}{subsubsection.7.4.6}%
+\contentsline {subsubsection}{\numberline {7.4.7}Quy trình renter cancel booking}{103}{subsubsection.7.4.7}%
+\contentsline {subsubsection}{\numberline {7.4.8}Auto-expiry của pending bookings}{103}{subsubsection.7.4.8}%
+\contentsline {subsection}{\numberline {7.5}MODULE 4: Notification System}{103}{subsection.7.5}%
+\contentsline {subsubsection}{\numberline {7.5.1}Mục tiêu}{103}{subsubsection.7.5.1}%
+\contentsline {subsubsection}{\numberline {7.5.2}Công nghệ sử dụng}{104}{subsubsection.7.5.2}%
+\contentsline {subsubsection}{\numberline {7.5.3}Kiến trúc Hybrid}{104}{subsubsection.7.5.3}%
+\contentsline {subsubsection}{\numberline {7.5.4}Event-driven notification flow}{104}{subsubsection.7.5.4}%
+\contentsline {subsubsection}{\numberline {7.5.5}WebSocket connection management}{105}{subsubsection.7.5.5}%
+\contentsline {subsubsection}{\numberline {7.5.6}Notification delivery flow}{105}{subsubsection.7.5.6}%
+\contentsline {subsubsection}{\numberline {7.5.7}Badge count management}{106}{subsubsection.7.5.7}%
+\contentsline {section}{\numberline {8}Kế hoạch dự kiến cho giai đoạn 2 - Đồ Án Tốt Nghiệp}{107}{section.8}%
+\contentsline {section}{Tài Liệu tham khảo}{108}{figure.caption.51}%
+\contentsline {section}{Phụ lục}{111}{figure.caption.51}%
+\contentsline {subsection}{A. Tài liệu pháp lý liên quan}{111}{section*.52}%
+\contentsline {subsection}{B. Kết quả khảo sát nhu cầu cộng đồng}{111}{section*.52}%
+\contentsline {subsection}{C. Tài liệu thiết kế bổ sung}{111}{section*.52}%
+\contentsline {subsection}{D. Mã nguồn hệ thống}{111}{section*.52}%

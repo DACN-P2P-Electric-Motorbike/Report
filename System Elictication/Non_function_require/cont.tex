@@ -38,12 +38,11 @@
 %     \item Hỗ trợ đa ngôn ngữ (tiếng Việt, tiếng Anh).
 %     \item Chế độ tiết kiệm pin và dữ liệu.
 % \end{itemize}
-\subsection{Phân tích yêu cầu phi chức năng}
-
-Yêu cầu phi chức năng được phân tích chi tiết theo từng nhóm, với các chỉ số định lượng cụ thể nhằm đảm bảo khả năng đo lường, kiểm thử và đánh giá khách quan trong quá trình phát triển và triển khai hệ thống.
+\subsection{Yêu cầu phi chức năng}
+Yêu cầu phi chức năng được phân tích chi tiết theo từng nhóm, với các chỉ số định lượng cụ thể nhằm đảm bảo khả năng đo lường, 
+kiểm thử và đánh giá khách quan trong quá trình phát triển và triển khai hệ thống.
 
 \subsubsection*{Hiệu suất}
-
 Hệ thống phải đảm bảo thời gian phản hồi trung bình dưới 2 giây cho 95\% các thao tác cơ bản (tìm kiếm xe, xem chi tiết xe, đặt thuê) khi tải đồng thời 200 người dùng trong cùng một khu vực địa lý (bán kính 5 km). 
 
 Hệ thống phải xử lý được ít nhất 1000 giao dịch đặt thuê hoàn tất mỗi giờ mà không làm giảm hiệu suất dưới ngưỡng quy định. 
@@ -53,7 +52,6 @@ Hệ thống phải xử lý được ít nhất 1000 giao dịch đặt thuê h
 Cập nhật vị trí xe thời gian thực qua WebSocket phải đạt tần suất không quá 1 yêu cầu mỗi 10 giây để giảm tiêu thụ pin và dữ liệu.
 
 \subsubsection*{Khả năng mở rộng}
-
 Kiến trúc hệ thống phải hỗ trợ mở rộng ngang (horizontal scaling) để phục vụ tối đa 10.000 người dùng hoạt động đồng thời mà chỉ cần thêm các instance backend mà không thay đổi mã nguồn chính. 
 
 Việc thêm loại phương tiện mới (ví dụ: xe đạp điện, xe máy xăng) chỉ yêu cầu bổ sung dưới 5 entity mới trong cơ sở dữ liệu và không vượt quá 200 dòng code thay đổi trong backend. 
@@ -63,7 +61,6 @@ Thêm một khu vực hoạt động mới (ví dụ: một trường đại h�
 Hệ thống phải cho phép tích hợp dịch vụ bên thứ ba (thanh toán, bản đồ, thông báo push) thông qua các adapter riêng biệt, với thời gian tích hợp một dịch vụ mới không vượt quá 40 giờ phát triển.
 
 \subsubsection*{Bảo mật}
-
 Tất cả dữ liệu nhạy cảm (thông tin cá nhân, số CCCD, thông tin thanh toán) phải được mã hóa tại trạng thái nghỉ (at-rest) bằng AES-256 và mã hóa trong quá trình truyền tải (in-transit) bằng TLS 1.3.
 
 Xác thực hai yếu tố (2FA) bắt buộc đối với các giao dịch tài chính (rút tiền thu nhập của chủ xe, hoàn tiền đặt cọc) và thay đổi thông tin nhạy cảm (số điện thoại, email).
@@ -73,7 +70,6 @@ Dữ liệu vị trí GPS và lịch sử di chuyển phải được lưu trữ
 Hệ thống phải tuân thủ Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân tại Việt Nam, bao gồm quyền truy cập, sửa đổi và xóa dữ liệu của người dùng trong vòng 72 giờ kể từ khi nhận yêu cầu.
 
 \subsubsection*{Độ tin cậy và khả năng chịu lỗi}
-
 Thời gian hoạt động của hệ thống (uptime) phải đạt ít nhất 99.9\% hàng tháng, được đo lường qua monitoring tool (ví dụ: Prometheus + Grafana).
 
 Cơ sở dữ liệu phải thực hiện sao lưu tự động hàng ngày với điểm phục hồi (RPO) không quá 5 phút và thời gian phục hồi (RTO) dưới 30 phút trong trường hợp sự cố.
@@ -83,7 +79,6 @@ Cơ sở dữ liệu phải thực hiện sao lưu tự động hàng ngày vớ
 Hệ thống phải triển khai cơ chế circuit breaker và retry với exponential backoff cho các dịch vụ bên thứ ba, đồng thời ghi log đầy đủ mọi lỗi để hỗ trợ phân tích nguyên nhân gốc rễ trong vòng dưới 4 giờ.
 
 \subsubsection*{Trải nghiệm người dùng và khả năng tiếp cận}
-
 Giao diện phải đạt điểm System Usability Scale (SUS) trung bình ít nhất 80/100 dựa trên kiểm thử với tối thiểu 20 người dùng thực tế đại diện cho đối tượng mục tiêu (sinh viên và cư dân đô thị).
 
 Ứng dụng phải tương thích hoàn toàn với các thiết bị chạy Android 8.0+ và iOS 13+, hỗ trợ màn hình từ 4.7 inch đến 12.9 inch mà không mất chức năng hoặc bố cục.
@@ -93,9 +88,7 @@ Hỗ trợ đầy đủ hai ngôn ngữ tiếng Việt và tiếng Anh, với kh
 Ứng dụng phải cung cấp chế độ tiết kiệm dữ liệu (tắt tải hình ảnh tự động, giảm chất lượng thumbnail) và chế độ tối (dark mode) để giảm tiêu thụ pin ít nhất 15\% so với chế độ thông thường theo đo lường trên thiết bị thực tế.
 
 \subsubsection*{Khả năng bảo trì và quan sát}
-
 Hệ thống phải cung cấp đầy đủ metrics (latency, error rate, throughput) qua endpoint Prometheus và dashboard Grafana để giám sát thời gian thực.
-
 Mọi thay đổi mã nguồn phải đạt độ phủ kiểm thử đơn vị (unit test coverage) ít nhất 80\% cho các module core (booking, payment, trust score).
 
 Thời gian triển khai một phiên bản mới (CI/CD) lên môi trường production không vượt quá 15 phút với zero-downtime deployment.

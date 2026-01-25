@@ -1,8 +1,29 @@
-\subsection{Thiết kế giao diện người dùng}
+\subsection{Thiết kế giao diện}
+\subsubsection{Site Map của hệ thống}
 
-Giao diện người dùng được thiết kế và triển khai hoàn toàn bằng Flutter với BLoC pattern, tuân thủ Material 3 Design, tối ưu cho thiết bị di động (iOS \& Android).
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{Images/Design/UIUX/flow/mobileapp.png}
+    \caption{Site Map - Ứng dụng di động (Renter/Owner)}
+    \label{fig:sitemap-mobile}
+\end{figure}
 
-Các màn hình được prototype trên Figma (xem phụ lục C).
+Để đảm bảo tính nhất quán và trải nghiệm người dùng tốt, trước khi đi vào chi tiết các màn hình giao diện, nhóm thực hiện thiết kế site map tổng thể cho hai phần chính của hệ thống:
+\begin{itemize}
+    \item \textbf{Ứng dụng di động (Mobile App)} dành cho người dùng cuối (Renter và Owner – có thể chuyển đổi vai trò). Giao diện người dùng được thiết kế và triển khai hoàn toàn bằng Flutter với BLoC pattern, tuân thủ Material 3 Design, tối ưu cho thiết bị di động (iOS \& Android).
+    \item \textbf{Bảng điều khiển quản trị (Admin Web Dashboard)} dành cho quản trị viên.
+\end{itemize}
+Site map được xây dựng dựa trên các use case chính (UC-01 đến UC-17) và luồng nghiệp vụ đã phân tích, 
+nhằm thể hiện rõ cấu trúc điều hướng, các màn hình chính và mối quan hệ giữa chúng.
+
+\small\textbf{* Các màn hình được prototype trên Figma (xem phụ lục C).}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1.0\textwidth]{Images/Design/UIUX/flow/admin.png}
+    \caption{Site Map - Bảng điều khiển quản trị (Admin Web Dashboard)}
+    \label{fig:sitemap-admin}
+\end{figure}
 
 \subsubsection{Onboarding}
 
